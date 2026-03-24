@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -129,7 +129,7 @@ li {
     <div class="container">
      <section id="privacy-policy">
         <h1>Privacy Policy</h1>
-        <p><strong>Last updated: September 13, 2025</strong></p>
+        <p><strong>Last updated: March 13, 2026</strong></p>
 
         <div class="table-of-contents">
     <h3>Table of Contents</h3>
@@ -178,8 +178,7 @@ li {
 </div>
 
 <h3>Sensitive Information</h3>
-<p>We do not collect biometric identifiers and we do not perform facial recognition. Users may voluntarily submit a selfie for acne analysis; we do not create biometric templates and we delete images immediately after processing.</p>
-
+<p>We do not collect biometric identifiers for the purpose of identifying you, and we do not perform facial recognition to authenticate users or recognize you across sessions. Users may voluntarily submit a selfie for acne-related analysis; we do not create biometric templates for identity purposes. TrueDepth/ARKit signals used during the scan (such as face detected/lost and pose angles) are processed in real time to guide the scan and are not stored as persistent biometric profile data. Selfie images may be stored when needed to provide analysis, profile display, and progress/history features, as described in the “Image Retention” section below.</p>
 <h3>Payment Data</h3>
 <p>If you make purchases, we may collect data necessary to process your payment, such as your payment instrument number and the security code associated with your payment instrument. All payment data is stored by Apple. You can find their privacy notice <a href="https://www.apple.com/legal/privacy/en-ww/">here</a>.</p>
 
@@ -214,7 +213,10 @@ li {
 
          <h3>Images Containing Faces (Selfies)</h3>
 <p>Users can voluntarily upload a facial image for acne analysis. We do not perform facial recognition or biometric identification. We only analyze visible skin features related to acne.</p>
-
+<h3>TrueDepth API Data (Face Scan)</h3>
+<p>On supported iOS devices, we use Apple's TrueDepth-based ARKit face tracking during the face-scan flow. During this scan, we process: (i) face tracking status (face detected/lost), (ii) face pose angles (yaw/pitch), and (iii) a camera frame (selfie image) captured for acne analysis.</p>
+<p>We do not use this data for identity verification. We do not perform facial recognition, we do not create biometric templates, and we do not store depth maps as biometric identifiers.</p>
+         
         <h2 id="how-process">2. How Do We Process Your Information?</h2>
         <p>We process your data to provide, improve, and secure our services. This includes:</p>
         <ul>
@@ -224,9 +226,11 @@ li {
         </ul>
 
          <h3>AI Processing of Images</h3>
-<p>When you submit an image for acne analysis, the image is transmitted to our AI processor (OpenAI API) solely to generate acne insights. We do not use the image to identify you or to build biometric templates.</p>
+<p>When you submit an image for acne analysis, the image is transmitted to our contracted AI processors (including OpenAI and AILABAPI) solely to generate acne insights. We do not use the image to identify you or to build biometric templates.</p>
 <p>If the user chooses to display the image in their profile, we store that image to provide the profile feature and historical tracking.</p>
 
+         <h3>How We Use TrueDepth / ARKit Data</h3>
+<p>Face scans are initiated only when you use the in-app face-scan flow. We use TrueDepth-based ARKit face tracking to detect whether a face is present, to measure face pose (for example yaw and pitch) to guide you to hold steady and turn your head as instructed, and to capture a camera frame (selfie) for acne-related analysis. We do not use TrueDepth data for Face ID, identity verification, or user recognition.</p>
 
      <h2 id="legal-basis">3. What Legal Bases Do We Rely On to Process Your Personal Information?</h2>
 
@@ -269,7 +273,7 @@ li {
 <h3>Vendors, Consultants, and Other Third-Party Service Providers</h3>
 
          <h4>First-Party Storage</h4>
-<p>Profile images are stored by us (first party) solely to provide profile display and history features. We do not sell images and we do not share them with advertising partners.</p>
+<p>Images may be stored on infrastructure we control (for example cloud storage and databases provided through our service providers) to provide acne analysis, profile display, and progress/history features. We do not sell images and we do not share them with advertising partners.</p>
 
 <p>We may share your data with third-party vendors, service providers, contractors, or agents ("third parties") who perform services for us or on our behalf and require access to such information to do that work.</p>
 
@@ -279,7 +283,7 @@ li {
     <li>They cannot do anything with your personal information unless we have instructed them to do so.</li>
     <li>They will not share your personal information with any organization apart from us.</li>
     <li>They commit to protecting the data they hold on our behalf and to retaining it only for the period we instruct.</li>
-    <li>They will retain the data for no longer than one year and will be subject to the same terms as our use.</li>
+   <li>They retain data only as instructed by us and in line with this privacy policy, including the retention periods described below where applicable.</li>
 </ul>
 
 <p>The categories of third parties with whom we may share personal information include:</p>
@@ -289,9 +293,8 @@ li {
     <li><strong>Data Storage Service Providers</strong></li>
 </ul>
 
-         <h3>AI Service Provider (OpenAI)</h3>
-<p>We share images you submit only with OpenAI (our AI processing provider) for real-time inference. OpenAI acts as our processor under contractual obligations and does not use your images to train models. We do not share images with any other third parties.</p>
-
+<h3>AI Service Providers</h3>
+<p>To provide acne-related analysis and image processing features, we may share submitted images with contracted AI processors, including <strong>OpenAI</strong> and <strong>AILABAPI</strong>, solely to perform the service you request (for example generating insights or applying image processing). These providers act as processors under contractual obligations, must not use your images for purposes unrelated to providing our service, and must not sell your personal data. We do not share images with advertising partners.</p>
 
 <h3>Business Transfers</h3>
 <p>We may share or transfer your information in connection with, or during negotiations of, any merger, sale of company assets, financing, or acquisition of all or a portion of our business to another company.</p>
@@ -334,8 +337,7 @@ li {
 </ul>
 
          <h3>International Transfers for AI Processing</h3>
-<p>Image processing via the OpenAI API may involve transfers outside your country. We rely on appropriate safeguards (such as Standard Contractual Clauses) for such transfers. Details are available upon request.</p>
-
+<p>Image processing via third-party AI processors (including OpenAI and AILABAPI) and related cloud infrastructure may involve transfers outside your country. Where required, we rely on appropriate safeguards (such as Standard Contractual Clauses). Details are available upon request.</p>
 
         
         <h2 id="data-retention">7. How Long Do We Keep Your Information?</h2>
@@ -357,7 +359,8 @@ li {
          <h3>Image Retention</h3>
 <p>Images submitted for acne analysis and chosen by the user to appear in their profile are stored securely and encrypted at rest. We keep these images until the user deletes them from the app, or for a maximum of 24 months after the last account activity, whichever occurs first. When deleted by the user or upon account deletion, images are permanently removed from our storage within 30 days.</p>
 
-
+<h3>TrueDepth / ARKit Data Retention</h3>
+<p>Real-time TrueDepth/ARKit tracking signals used during the scan (such as face detected/lost and pose angles) are ephemeral and are not retained as account profile data after the scan session ends. Temporary files created on the device during capture may be removed as part of normal app operation.</p>
 
         <h2 id="data-security">8. How Do We Keep Your Information Safe?</h2>
 
