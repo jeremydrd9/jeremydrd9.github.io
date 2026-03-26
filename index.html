@@ -1,174 +1,630 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AcneTrack</title>
-    <style>
-        /* Styles généraux */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
-    line-height: 1.6;
-}
-
-/* Conteneur principal */
-.container {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Titres */
-h1 {
-    text-align: center;
-    color: #FFC8A2; /* Nouveau code couleur */
-}
-
-h2, h3 {
-    color: #444;
-    border-bottom: 2px solid #FFC8A2; /* Bordure sous les titres */
-    padding-bottom: 5px;
-    margin-top: 30px;
-}
-
-/* Paragraphes et listes */
-p {
-    text-align: justify;
-    margin-bottom: 15px;
-}
-
-ul {
-    padding-left: 20px;
-}
-
-li {
-    margin-bottom: 8px;
-}
-
-        /* Ajout du style pour l'en-tête */
-    .header {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    .header .logo {
-      max-width: 120px;
-      height: auto;
-      margin-bottom: 10px;
-    }
-    .header h2 {
-      color: #FFC8A2;
-      margin: 10px 0;
-    }
-    .header p {
-      color: #333;
-      font-size: 1rem;
-      margin: 0 0 10px 0;
-    }
-
-/* Table des matières */
-.table-of-contents {
-    background: #FFEAE0; /* Fond de la table des matières */
-    padding: 15px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-}
-
-.table-of-contents ul {
-    list-style: none;
-    padding: 0;
-}
-
-.table-of-contents li {
-    margin-bottom: 5px;
-}
-
-.table-of-contents a {
-    text-decoration: none;
-    color: #333; /* Texte des liens en foncé */
-    font-weight: bold;
-}
-
-.table-of-contents a:hover {
-    text-decoration: underline;
-    color: #FFAF91; /* Un léger changement au survol */
-}
-
-/* Mise en valeur des sections importantes */
-.highlight {
-    background-color: #FFEAE0; /* Nouveau fond pour les encadrés */
-    padding: 10px;
-    border-left: 5px solid #FFAF91; /* Légèrement plus foncé */
-    margin: 20px 0;
-}
-
-/* Pied de page */
-.footer {
-    text-align: center;
-    margin-top: 40px;
-    font-size: 14px;
-    color: #777;
-}
-
-/* Boutons stylisés */
-button {
-    background-color: #FFC8A2;
-    color: #fff;
-    border: none;
-    padding: 12px 24px;
-    margin: 10px 10px 20px 0;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-button:hover {
-    background-color: #FFAF91;
-}
-
-
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AcneTrack – AI-Powered Acne Tracking App</title>
+  <meta name="description" content="AcneTrack helps you track your acne journey with AI-powered skin analysis, daily routines, food & product scanning, and personalized coaching — available on iOS & Android.">
+  <link rel="canonical" href="https://acne-track.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://acne-track.com/">
+  <meta property="og:title" content="AcneTrack – AI-Powered Acne Tracking App">
+  <meta property="og:description" content="Track your acne journey with AI coaching, daily routines, progress photos, and smart scanners. Free on iOS & Android.">
+  <meta property="og:site_name" content="AcneTrack">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="AcneTrack – AI-Powered Acne Tracking App">
+  <meta name="twitter:description" content="Track your acne journey with AI coaching, daily routines, and smart scanners.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "AcneTrack",
+    "description": "AI-powered acne tracking app. Analyze your skin, monitor progress, and get personalized insights.",
+    "operatingSystem": "iOS, Android",
+    "applicationCategory": "HealthApplication",
+    "offers": { "@type": "Offer", "price": "0" },
+    "author": { "@type": "Organization", "name": "Bsr Labs", "email": "contact@acne-track.com" },
+    "url": "https://acne-track.com/"
+  }
+  </script>
+  <link rel="stylesheet" href="style.css?v=19">
 </head>
 <body>
 
-     <!-- En-tête -->
-  <div class="header">
-    <h2>AcneTrack - Clear your acne</h2>
-    <p>Track your acne journey with AcneTrack!</p>
+<!-- ─── Navigation ─── -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="/" class="nav-brand">
+      <img src="assets/Logo_Acnetrack.png" alt="" class="nav-logo" aria-hidden="true">
+      AcneTrack
+    </a>
+    <ul class="nav-links">
+      <li><a href="/" class="active">Home</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="https://apps.apple.com/us/app/acnetrack-your-acne-journey/id6743371480" class="nav-store-btn nav-store-apple" target="_blank" rel="noopener">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11"/></svg>
+        <span>App Store</span>
+      </a>
+      <a href="https://play.google.com/store/apps/details?id=com.acnetrack.app" class="nav-store-btn nav-store-google" target="_blank" rel="noopener">
+        <svg width="15" height="15" viewBox="0 0 20 22" fill="none" aria-hidden="true"><path d="M1.5 1.3C1.2 1.6 1 2.1 1 2.7v16.6c0 .6.2 1.1.5 1.4l.1.1 9.3-9.3v-.2L1.5 1.3z" fill="currentColor" opacity=".8"/><path d="M14 14.3l-3.1-3.1v-.4L14 7.7l.1.1 3.7 2.1c1 .6 1 1.6 0 2.2L14 14.3z" fill="currentColor"/><path d="M14.1 14.2L10.9 11 1.5 20.4c.3.3.9.4 1.5.1l11.1-6.3" fill="currentColor" opacity=".7"/><path d="M14.1 7.8L3 1.5C2.4 1.2 1.8 1.3 1.5 1.6L10.9 11l3.2-3.2z" fill="currentColor" opacity=".6"/></svg>
+        <span>Google Play</span>
+      </a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Open menu" onclick="toggleMobileNav()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </div>
+</nav>
 
-    <div class="container">
+<!-- Mobile nav -->
+<nav class="nav-mobile" id="mobileNav" aria-label="Mobile navigation">
+  <a href="/" class="active" onclick="toggleMobileNav()">Home</a>
+  <a href="#features" onclick="toggleMobileNav()">Features</a>
+  <a href="#contact" onclick="toggleMobileNav()">Contact</a>
+  <a href="https://apps.apple.com/us/app/acnetrack-your-acne-journey/id6743371480" target="_blank" rel="noopener" onclick="toggleMobileNav()">Download on App Store</a>
+  <a href="https://play.google.com/store/apps/details?id=com.acnetrack.app" target="_blank" rel="noopener" onclick="toggleMobileNav()">Get it on Google Play</a>
+</nav>
 
-      <button onclick="location.href='privacy.html'">Privacy Policy</button>
-      <button onclick="location.href='terms.html'">Terms and Conditions</button>
-<h2>Contact & Support</h2>
-<p>Need help or have questions? Contact us directly:</p>
+<!-- ─── Hero ─── -->
+<section class="hero hero-v2">
+  <div class="hero-v2-inner">
 
-<ul>
-  <li>Email: <a href="mailto:contact@acne-track.com">contact@acne-track.com</a></li>
-</ul>
-
-
-
-
-        
-        <div class="footer">
-          <p style="text-align: center; margin-top: 20px;">
-            <a href="privacy.html" style="color: #FFAF91; text-decoration: underline;">Privacy Policy</a> | 
-            <a href="terms.html" style="color: #FFAF91; text-decoration: underline;">Terms & Conditions</a>
-          </p>
-            <p>&copy; 2025 Bsr Labs - AcneTrack. All Rights Reserved.</p>
-        </div>
+    <!-- Left: text -->
+    <div class="hero-v2-text">
+      <h1 class="hero-big">Acne ends when<br>you <span class="hero-big-accent">understand it.</span></h1>
+      <p class="hero-sub">Your personal AI acne coach — daily routines, smart product &amp; food scanners, and measurable progress toward clear skin.</p>
     </div>
 
+    <!-- Right: phone + floating cards -->
+    <div class="phone-scene">
+
+      <!-- Orange halo glow -->
+      <div class="phone-halo"></div>
+
+      <!-- Floating cards: left column -->
+      <div class="phone-cards-left">
+        <div class="float-card">
+          <span class="float-icon">🧬</span>
+          <div>
+            <div class="float-label">Main cause</div>
+            <div class="float-val">Hormonal</div>
+          </div>
+        </div>
+        <div class="float-card">
+          <span class="float-icon">🔥</span>
+          <div>
+            <div class="float-label">Active streak</div>
+            <div class="float-val">7 days</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Phone mockup -->
+      <img src="assets/main-dashboard.png" alt="AcneTrack — acne score dashboard" class="hero-phone-img" width="280" height="572">
+
+      <!-- Floating cards: right column -->
+      <div class="phone-cards-right">
+        <div class="float-card">
+          <div>
+            <div class="float-label">Up to</div>
+            <div class="float-val">89% clearer 🏆</div>
+          </div>
+        </div>
+        <div class="float-card">
+          <span class="float-icon">🧴</span>
+          <div>
+            <div class="float-label">Product compat.</div>
+            <div class="float-val">93% <span>match</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Store buttons below the phone -->
+      <div class="phone-cta-row">
+        <a href="https://apps.apple.com/us/app/acnetrack-your-acne-journey/id6743371480" class="phone-cta-btn" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11"/></svg>
+          <span><small>Download on the</small>App Store</span>
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.acnetrack.app" class="phone-cta-btn" target="_blank" rel="noopener">
+          <svg width="18" height="20" viewBox="0 0 20 22" fill="none" aria-hidden="true"><path d="M1.5 1.3C1.2 1.6 1 2.1 1 2.7v16.6c0 .6.2 1.1.5 1.4l.1.1 9.3-9.3v-.2L1.5 1.3z" fill="currentColor" opacity=".8"/><path d="M14 14.3l-3.1-3.1v-.4L14 7.7l.1.1 3.7 2.1c1 .6 1 1.6 0 2.2L14 14.3z" fill="currentColor"/><path d="M14.1 14.2L10.9 11 1.5 20.4c.3.3.9.4 1.5.1l11.1-6.3" fill="currentColor" opacity=".7"/><path d="M14.1 7.8L3 1.5C2.4 1.2 1.8 1.3 1.5 1.6L10.9 11l3.2-3.2z" fill="currentColor" opacity=".6"/></svg>
+          <span><small>Get it on</small>Google Play</span>
+        </a>
+      </div>
+
+      <!-- Social proof moved below CTA -->
+      <div class="hero-social-proof hero-proof-below">
+        <div class="hero-rating">
+          <span class="stars">★★★★★</span>
+          <span>4.8</span>
+        </div>
+        <div class="hero-divider"></div>
+        <div class="hero-users"><strong>100,000+</strong> users</div>
+      </div>
+
+    </div><!-- /.phone-scene -->
+  </div><!-- /.hero-v2-inner -->
+</section>
+
+<!-- ─── Features overview ─── -->
+<section class="section section-white" id="features">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="eyebrow">Features</span>
+      <h2 class="section-title">Everything you need to clear your skin</h2>
+      <p class="section-sub">From personalized onboarding to daily tracking and AI coaching — AcneTrack guides you every step of the way.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🧬</div>
+        <h3>Personalized Onboarding</h3>
+        <p>Answer a few questions about your skin type, habits, and triggers. AcneTrack builds a profile tailored exactly to you.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">✅</div>
+        <h3>Daily Routine &amp; Checklist</h3>
+        <p>A morning and evening routine adapted to your profile. Check off steps, build consistency, and watch your streak grow.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📸</div>
+        <h3>Progress Tracking</h3>
+        <p>Take progress photos and visualize your skin journey over days, weeks, and months. Measurable improvement, always.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">💬</div>
+        <h3>AI Coach — 24/7</h3>
+        <p>Ask anything about acne, routines, or ingredients. Your personal skin coach is always available, always patient.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Acne Cause Finder ─── -->
+<section class="section section-alt" id="cause">
+  <div class="section-inner">
+    <div class="cause-layout">
+      <div class="cause-text">
+        <h2>Stop struggling<br>with your skin alone.</h2>
+        <p>Most apps just track breakouts. AcneTrack connects the dots — analyzing your food, sleep, stress, and daily habits to reveal the real trigger behind your skin.</p>
+        <p>No more guessing. Your skin has a story, and AcneTrack reads it.</p>
+      </div>
+      <div class="cause-visual">
+        <div class="cause-board">
+          <p class="cause-board-prompt">Your potential acne triggers</p>
+          <div class="cause-pill-grid">
+            <div class="cause-pill cause-pill-active">🧬 Hormones</div>
+            <div class="cause-pill">🥛 Dairy</div>
+            <div class="cause-pill">😣 Stress</div>
+            <div class="cause-pill">😴 Bad sleep</div>
+            <div class="cause-pill">🍭 Sugar</div>
+            <div class="cause-pill">💧 Dehydration</div>
+            <div class="cause-pill">📱 Phone screen</div>
+            <div class="cause-pill">☕ Caffeine</div>
+            <div class="cause-pill">🥤 Protein shakes</div>
+            <div class="cause-pill">🌫️ Pollution</div>
+            <div class="cause-pill">🛏️ Dirty pillow</div>
+            <div class="cause-pill">🤚 Touching face</div>
+            <div class="cause-pill">💦 Sweat</div>
+            <div class="cause-pill">🌾 Gluten</div>
+            <div class="cause-pill">🦠 Gym bacteria</div>
+            <div class="cause-pill">🚬 Smoking</div>
+            <div class="cause-pill">🌶️ Spicy food</div>
+            <div class="cause-pill">🌿 Lack of fiber</div>
+            <div class="cause-pill">💄 Makeup</div>
+            <div class="cause-pill">🪮 Hair products</div>
+            <div class="cause-pill">🍔 Bad diet</div>
+            <div class="cause-pill">💊 Birth control</div>
+            <div class="cause-pill">🧴 Skincare</div>
+          </div>
+          <!-- Stats strip -->
+          <div class="cause-stats">
+            <div class="cause-stat">
+              <span class="cause-stat-val">23</span>
+              <span class="cause-stat-label">Causes tracked</span>
+            </div>
+            <div class="cause-stat">
+              <span class="cause-stat-val">100K+</span>
+              <span class="cause-stat-label">Active users</span>
+            </div>
+            <div class="cause-stat">
+              <span class="cause-stat-val">2.4M+</span>
+              <span class="cause-stat-label">Skin scans</span>
+            </div>
+            <div class="cause-stat">
+              <span class="cause-stat-val">89%</span>
+              <span class="cause-stat-label">Clearer skin</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── AI Tools ─── -->
+<section class="section section-white">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="eyebrow">AI Tools</span>
+      <h2 class="section-title">Powered by AI, built for your skin</h2>
+      <p class="section-sub">Four specialized AI tools that give you insights no generic app can match.</p>
+    </div>
+    <div class="ai-tools-grid">
+      <div class="ai-tool-card">
+        <div class="ai-tool-info">
+          <div class="ai-tool-icon">🔬</div>
+          <span class="tool-badge">Skin Scan</span>
+          <h3>Pimple Scan</h3>
+          <p>Take a close-up photo and get an instant AI analysis of your acne — type, severity, and personalised advice.</p>
+        </div>
+        <div class="ai-tool-img">
+          <img src="assets/skin-scanner.png" alt="Pimple Scan feature" loading="lazy">
+        </div>
+      </div>
+      <div class="ai-tool-card">
+        <div class="ai-tool-info">
+          <div class="ai-tool-icon">🧴</div>
+          <span class="tool-badge">Ingredient Check</span>
+          <h3>Product Scanner</h3>
+          <p>Scan any skincare product and instantly know if it's safe for acne-prone skin — with a compatibility score.</p>
+        </div>
+        <div class="ai-tool-img">
+          <img src="assets/skincare-matches.png" alt="Product Scanner feature" loading="lazy">
+        </div>
+      </div>
+      <div class="ai-tool-card">
+        <div class="ai-tool-info">
+          <div class="ai-tool-icon">🥗</div>
+          <span class="tool-badge">Food Trigger</span>
+          <h3>Food Scanner</h3>
+          <p>Scan what you eat and discover how your diet impacts your skin. Identify your triggers, one meal at a time.</p>
+        </div>
+        <div class="ai-tool-img">
+          <img src="assets/feature-food_scanning.png" alt="Food Scanner feature" loading="lazy">
+        </div>
+      </div>
+      <div class="ai-tool-card">
+        <div class="ai-tool-info">
+          <div class="ai-tool-icon">💬</div>
+          <span class="tool-badge">24/7 Coach</span>
+          <h3>AI Chat Coach</h3>
+          <p>Ask anything about acne, ingredients, or routines. Your personal skin coach answers 24/7, instantly.</p>
+        </div>
+        <div class="ai-tool-img">
+          <img src="assets/ai-chat.png" alt="AI Chat Coach feature" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Routine + Progress ─── -->
+<section class="section section-white">
+  <div class="section-inner">
+    <div class="combo-grid">
+      <div class="combo-item">
+        <div class="combo-text">
+          <span class="eyebrow">Daily Routine</span>
+          <h3>Consistency is the real secret to clear skin.</h3>
+          <p>AcneTrack builds a custom morning and evening routine based on your skin profile. Check off each step, track your streak, and build the habits that actually make a difference.</p>
+        </div>
+        <img src="assets/skincare-routine.png" alt="Your acne routine — morning and night" loading="lazy" class="section-phone-img">
+      </div>
+      <div class="combo-item">
+        <div class="combo-text">
+          <span class="eyebrow">Progress</span>
+          <h3>See your skin transform, week by week.</h3>
+          <p>Take regular progress photos and let AcneTrack visualize your improvement. Track redness, breakout frequency, and overall clarity over time — with data you can actually trust.</p>
+        </div>
+        <img src="assets/evolution-tab.png" alt="Track your skin evolution" loading="lazy" class="section-phone-img">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Results & Reviews ─── -->
+<section class="section section-alt">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="eyebrow">Testimonials</span>
+      <h2 class="section-title">Real users, real transformations</h2>
+      <p class="section-sub">Drag the handle to see the change. Real users, consistent tracking.</p>
+    </div>
+    <div class="results-grid">
+
+      <!-- Card 1 -->
+      <div class="result-card">
+        <div class="ba-slider">
+          <div class="ba-before"><div class="ba-bg ba-p1-before"></div></div>
+          <div class="ba-after-wrap"><div class="ba-bg ba-p1-after"></div></div>
+          <div class="ba-handle">
+            <div class="ba-line"></div>
+            <div class="ba-btn">
+              <svg width="16" height="10" viewBox="0 0 20 12" fill="none" aria-hidden="true"><path d="M1 6L5 2L5 10Z M19 6L15 2L15 10Z" fill="#444" stroke="#444" stroke-width=".5"/></svg>
+            </div>
+          </div>
+          <span class="ba-tag ba-tag-b">Before</span>
+          <span class="ba-tag ba-tag-a">After</span>
+        </div>
+        <div class="ba-score">
+          <span class="ba-score-b">12</span><span class="ba-score-arr">→</span><span class="ba-score-a">78</span>
+          <span style="color:var(--text-muted);font-size:.75rem;font-weight:500">/100 · 12 weeks</span>
+        </div>
+        <div class="result-review">
+          <div class="result-stars">★★★★★</div>
+          <p class="result-quote">"The food scanner is a game changer. I had no idea dairy was triggering my breakouts until AcneTrack connected the dots."</p>
+          <div class="result-author">
+            <div>
+              <strong class="result-name">Evan G.</strong>
+              <div class="result-dur">Using AcneTrack for 3 months</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="result-card">
+        <div class="ba-slider">
+          <div class="ba-before"><div class="ba-bg ba-p2-before"></div></div>
+          <div class="ba-after-wrap"><div class="ba-bg ba-p2-after"></div></div>
+          <div class="ba-handle">
+            <div class="ba-line"></div>
+            <div class="ba-btn">
+              <svg width="16" height="10" viewBox="0 0 20 12" fill="none" aria-hidden="true"><path d="M1 6L5 2L5 10Z M19 6L15 2L15 10Z" fill="#444" stroke="#444" stroke-width=".5"/></svg>
+            </div>
+          </div>
+          <span class="ba-tag ba-tag-b">Before</span>
+          <span class="ba-tag ba-tag-a">After</span>
+        </div>
+        <div class="ba-score">
+          <span class="ba-score-b">22</span><span class="ba-score-arr">→</span><span class="ba-score-a">64</span>
+          <span style="color:var(--text-muted);font-size:.75rem;font-weight:500">/100 · 8 weeks</span>
+        </div>
+        <div class="result-review">
+          <div class="result-stars">★★★★★</div>
+          <p class="result-quote">"I tried so many apps but none felt this personal. The AI coach answered questions my dermatologist never had time for."</p>
+          <div class="result-author">
+            <div>
+              <strong class="result-name">Thomas R.</strong>
+              <div class="result-dur">Using AcneTrack for 7 months</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="result-card">
+        <div class="ba-slider">
+          <div class="ba-before"><div class="ba-bg ba-p3-before"></div></div>
+          <div class="ba-after-wrap"><div class="ba-bg ba-p3-after"></div></div>
+          <div class="ba-handle">
+            <div class="ba-line"></div>
+            <div class="ba-btn">
+              <svg width="16" height="10" viewBox="0 0 20 12" fill="none" aria-hidden="true"><path d="M1 6L5 2L5 10Z M19 6L15 2L15 10Z" fill="#444" stroke="#444" stroke-width=".5"/></svg>
+            </div>
+          </div>
+          <span class="ba-tag ba-tag-b">Before</span>
+          <span class="ba-tag ba-tag-a">After</span>
+        </div>
+        <div class="ba-score">
+          <span class="ba-score-b">8</span><span class="ba-score-arr">→</span><span class="ba-score-a">85</span>
+          <span style="color:var(--text-muted);font-size:.75rem;font-weight:500">/100 · 16 weeks</span>
+        </div>
+        <div class="result-review">
+          <div class="result-stars">★★★★★</div>
+          <p class="result-quote">"Seeing my before/after side by side is incredibly motivating. My skin is genuinely 60% clearer after 6 weeks."</p>
+          <div class="result-author">
+            <div>
+              <strong class="result-name">Léa D.</strong>
+              <div class="result-dur">Using AcneTrack for 6 weeks</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── Final CTA ─── -->
+<section class="cta-section">
+  <h2>Your clearest skin is waiting.</h2>
+  <p>Join thousands already tracking, improving, and understanding their skin with AcneTrack.</p>
+  <div class="cta-store-row">
+    <a href="https://apps.apple.com/us/app/acnetrack-your-acne-journey/id6743371480" class="btn-store-white" target="_blank" rel="noopener">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11"/></svg>
+      <span class="store-label">
+        <small>Download on the</small>
+        App Store
+      </span>
+    </a>
+    <a href="https://play.google.com/store/apps/details?id=com.acnetrack.app" class="btn-store-white" target="_blank" rel="noopener">
+      <svg width="20" height="22" viewBox="0 0 20 22" fill="none" aria-hidden="true">
+        <path d="M1.5 1.3C1.2 1.6 1 2.1 1 2.7v16.6c0 .6.2 1.1.5 1.4l.1.1 9.3-9.3v-.2L1.5 1.3z" fill="currentColor" opacity=".8"/>
+        <path d="M14 14.3l-3.1-3.1v-.4L14 7.7l.1.1 3.7 2.1c1 .6 1 1.6 0 2.2L14 14.3z" fill="currentColor"/>
+        <path d="M14.1 14.2L10.9 11 1.5 20.4c.3.3.9.4 1.5.1l11.1-6.3" fill="currentColor" opacity=".7"/>
+        <path d="M14.1 7.8L3 1.5C2.4 1.2 1.8 1.3 1.5 1.6L10.9 11l3.2-3.2z" fill="currentColor" opacity=".6"/>
+      </svg>
+      <span class="store-label">
+        <small>Get it on</small>
+        Google Play
+      </span>
+    </a>
+  </div>
+</section>
+
+<!-- ─── Contact ─── -->
+<section class="section section-white section-contact-minimal" id="contact">
+  <div class="contact-wrap">
+    <a href="mailto:contact@acne-track.com" class="email-pill-minimal">contact@acne-track.com</a>
+  </div>
+</section>
+
+<!-- ─── Footer ─── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/" class="nav-brand footer-brand-link">
+          <img src="assets/Logo_Acnetrack.png" alt="AcneTrack logo" class="footer-logo">
+          AcneTrack
+        </a>
+        <p>Your personal AI skin coach. Track, understand, and improve your acne journey.</p>
+      </div>
+      <div class="footer-links-col">
+        <h5>App</h5>
+        <ul>
+          <li><a href="https://apps.apple.com/us/app/acnetrack-your-acne-journey/id6743371480" target="_blank" rel="noopener">App Store</a></li>
+          <li><a href="https://play.google.com/store/apps/details?id=com.acnetrack.app" target="_blank" rel="noopener">Google Play</a></li>
+        </ul>
+      </div>
+      <div class="footer-links-col">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms &amp; Conditions</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2026 Bsr Labs — AcneTrack. All rights reserved.</p>
+      <p class="footer-disc">AcneTrack is not a medical device and does not provide medical advice. Consult a dermatologist for any skin-related medical concerns.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ─── Mobile nav ───
+function toggleMobileNav() {
+  document.getElementById('mobileNav').classList.toggle('open');
+}
+
+// ─── Hero scroll animation ───
+// The hero section is 180vh tall. The inner is sticky (100vh).
+// As the user scrolls through those extra 80vh:
+//   0 → 0.42  : headline fades up and lifts out
+//   0 → 0.5   : iPhone rises from below the viewport
+//   0.32 → 0.62: floating cards slide in from the sides
+function initHeroScroll() {
+  if (window.innerWidth < 860) return; // static layout on mobile
+
+  var hero   = document.querySelector('.hero.hero-v2');
+  var text   = document.querySelector('.hero-v2-text');
+  var scene  = document.querySelector('.hero.hero-v2 .phone-scene');
+  var cardsL = document.querySelector('.phone-cards-left');
+  var cardsR = document.querySelector('.phone-cards-right');
+  if (!hero || !text || !scene) return;
+
+  function prog(p, a, b) {
+    return Math.max(0, Math.min(1, (p - a) / (b - a)));
+  }
+
+  // — set initial states —
+  text.style.transform   = 'translateX(-50%) scale(1)';
+  text.style.opacity     = '1';
+  scene.style.transform  = 'translateX(-50%) translateY(50vh) scale(0.92)';
+  cardsL.style.opacity   = '0';
+  cardsL.style.transform = 'translateX(180px)';
+  cardsR.style.opacity   = '0';
+  cardsR.style.transform = 'translateX(-180px)';
+
+  function tick() {
+    var rect  = hero.getBoundingClientRect();
+    var total = hero.offsetHeight - window.innerHeight;
+    if (total <= 0) return;
+    var p = Math.max(0, Math.min(1, -rect.top / total));
+
+    // 1. Headline dezoom + fade — gone by 38% scroll
+    var tP = prog(p, 0.04, 0.38);
+    text.style.opacity   = String(1 - tP);
+    text.style.transform = 'translateX(-50%) scale(' + (1 - tP * 0.16) + ')';
+
+    // 2. iPhone rises across the FULL scroll range (0→1): always moving, zero freeze
+    var sP = p; // linear, 0→1 across entire hero scroll
+    var phoneY     = (1 - sP) * 50;       // 50vh → 0
+    var phoneScale = 0.92 + sP * 0.08;    // 0.92 → 1.0
+    scene.style.transform = 'translateX(-50%) translateY(' + phoneY + 'vh) scale(' + phoneScale + ')';
+
+    // 3. Cards slide out from behind phone — final 35% of scroll
+    var cP = prog(p, 0.65, 1.0);
+    cardsL.style.opacity   = String(cP);
+    cardsL.style.transform = 'translateX(' + ((1 - cP) * 180) + 'px)';
+    cardsR.style.opacity   = String(cP);
+    cardsR.style.transform = 'translateX(' + ((1 - cP) * -180) + 'px)';
+  }
+
+  window.addEventListener('scroll', tick, { passive: true });
+  tick();
+}
+
+// ─── Before / After sliders ───
+(function() {
+  function initSliders() {
+    document.querySelectorAll('.ba-slider').forEach(function(slider) {
+      var afterWrap = slider.querySelector('.ba-after-wrap');
+      var handle    = slider.querySelector('.ba-handle');
+      var dragging  = false;
+
+      function setPos(clientX) {
+        var rect = slider.getBoundingClientRect();
+        var pct  = Math.min(Math.max((clientX - rect.left) / rect.width * 100, 4), 96);
+        afterWrap.style.clipPath = 'inset(0 ' + (100 - pct) + '% 0 0)';
+        handle.style.left = pct + '%';
+        handle.style.transform = 'translateX(-50%)';
+      }
+
+      // Mouse
+      handle.addEventListener('mousedown', function(e) { dragging = true; e.preventDefault(); });
+      window.addEventListener('mouseup',   function()  { dragging = false; });
+      window.addEventListener('mousemove', function(e) { if (dragging) setPos(e.clientX); });
+
+      // Touch
+      handle.addEventListener('touchstart', function(e) { dragging = true; e.preventDefault(); }, { passive: false });
+      window.addEventListener('touchend',   function()  { dragging = false; });
+      window.addEventListener('touchmove',  function(e) { if (dragging) setPos(e.touches[0].clientX); }, { passive: false });
+
+      // Click anywhere on slider
+      slider.addEventListener('click', function(e) {
+        if (!e.target.closest('.ba-handle')) setPos(e.clientX);
+      });
+
+      // Initial: 50%
+      setTimeout(function() { setPos(slider.getBoundingClientRect().left + slider.getBoundingClientRect().width * 0.5); }, 0);
+    });
+  }
+
+  function initCauseCycler() {
+    var pills = document.querySelectorAll('.cause-pill');
+    if (!pills.length) return;
+    var current = 0;
+    // Make pills clickable
+    pills.forEach(function(pill, i) {
+      pill.addEventListener('click', function() {
+        pills[current].classList.remove('cause-pill-active');
+        current = i;
+        pill.classList.add('cause-pill-active');
+        clearInterval(timer);
+        timer = setInterval(advance, 2400);
+      });
+    });
+    function advance() {
+      pills[current].classList.remove('cause-pill-active');
+      current = (current + 1) % pills.length;
+      pills[current].classList.add('cause-pill-active');
+    }
+    var timer = setInterval(advance, 2400);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function() { initSliders(); initHeroScroll(); initCauseCycler(); });
+  } else {
+    initSliders();
+    initHeroScroll();
+    initCauseCycler();
+  }
+})();
+</script>
 </body>
 </html>
