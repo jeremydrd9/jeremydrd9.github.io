@@ -1016,6 +1016,21 @@ ul { margin: 0 0 1rem; }
   color: var(--orange-dark);
 }
 
+/* Footer email */
+.footer-email {
+  display: inline-block;
+  margin-top: 12px;
+  color: rgba(255,255,255,.72);
+  font-size: .9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color .15s, opacity .15s;
+}
+.footer-email:hover {
+  color: #fff;
+  opacity: .95;
+}
+
 /* ─── Legal pages ─── */
 .page-header {
   background: linear-gradient(140deg, #fff, var(--peach-xlight));
@@ -1612,6 +1627,38 @@ footer {
 .result-name { font-weight: 700; font-size: .85rem; color: var(--text); display: block; }
 .result-dur { font-size: .72rem; color: var(--text-muted); }
 
+/* ─── Testimonial "identified cause" badge ─── */
+.result-cause {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(0,0,0,.06);
+  background: linear-gradient(180deg, rgba(255,255,255,.9), rgba(255,255,255,.6));
+}
+.result-cause-label {
+  font-size: .72rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+.result-cause-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  border: 1.5px solid rgba(255,159,109,.22);
+  background: rgba(255,243,237,.75);
+  color: var(--text-body);
+  font-size: .82rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
 /* ─── Responsive ─── */
 @media (max-width: 1000px) {
   .phone-cards-left,
@@ -1737,8 +1784,12 @@ footer {
   /* Testimonials card: reduce “above the fold” footprint */
   .results-grid { max-width: 340px; }
   .result-card { border-radius: 18px; }
-  .result-card .ba-slider { aspect-ratio: 4/5; }
+  /* Keep portrait ratio so faces aren't cropped */
+  .result-card .ba-slider { aspect-ratio: 3/4; }
   .result-card > .ba-score { padding: 9px 14px; font-size: .8rem; }
+  .result-cause { padding: 10px 12px; gap: 8px; }
+  .result-cause-label { font-size: .66rem; }
+  .result-cause-pill { padding: 6px 10px; font-size: .78rem; }
   .result-review { padding: 16px 14px; gap: 6px; }
   .result-stars { font-size: .9rem; }
   .result-quote { font-size: .84rem; }
@@ -1803,7 +1854,8 @@ footer {
 
   /* Even tighter on very small screens */
   .results-grid { max-width: 320px; }
-  .result-card .ba-slider { aspect-ratio: 1/1; }
+  /* Still portrait on very small screens */
+  .result-card .ba-slider { aspect-ratio: 3/4; }
   .combo-item { padding: 16px; }
   .combo-item .section-phone-img { width: 155px; max-width: 155px; }
   .cause-pill-grid--collapsed { max-height: 170px; }
