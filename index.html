@@ -3,22 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AcneTrack – AI-Powered Acne Tracking App</title>
-  <meta name="description" content="AcneTrack helps you track your acne journey with AI-powered skin analysis, daily routines, food & product scanning, and personalized coaching — available on iOS & Android.">
+  <title>Acnetrack – AI-Powered Acne Tracking App (iOS & Android)</title>
+  <meta name="description" content="Acnetrack helps you track your acne journey with AI-powered skin analysis, daily routines, food & product scanning, and personalized coaching — available on iOS & Android.">
   <link rel="canonical" href="https://acne-track.com/">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://acne-track.com/">
-  <meta property="og:title" content="AcneTrack – AI-Powered Acne Tracking App">
+  <meta property="og:title" content="Acnetrack – AI-Powered Acne Tracking App (iOS & Android)">
   <meta property="og:description" content="Track your acne journey with AI coaching, daily routines, progress photos, and smart scanners. Free on iOS & Android.">
-  <meta property="og:site_name" content="AcneTrack">
+  <meta property="og:site_name" content="Acnetrack">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="AcneTrack – AI-Powered Acne Tracking App">
+  <meta name="twitter:title" content="Acnetrack – AI-Powered Acne Tracking App (iOS & Android)">
   <meta name="twitter:description" content="Track your acne journey with AI coaching, daily routines, and smart scanners.">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "MobileApplication",
-    "name": "AcneTrack",
+    "@type": "SoftwareApplication",
+    "name": "Acnetrack",
+    "alternateName": "AcneTrack",
     "description": "AI-powered acne tracking app. Analyze your skin, monitor progress, and get personalized insights.",
     "operatingSystem": "iOS, Android",
     "applicationCategory": "HealthApplication",
@@ -37,7 +38,7 @@
   <div class="nav-inner">
     <a href="/" class="nav-brand">
       <img src="assets/Logo_Acnetrack.png" alt="" class="nav-logo" aria-hidden="true">
-      AcneTrack
+      Acnetrack
     </a>
     <ul class="nav-links">
       <li><a href="/" class="active">Home</a></li>
@@ -111,7 +112,7 @@
         <div class="float-card">
           <div>
             <div class="float-label">Up to</div>
-            <div class="float-val">89% clearer 🏆</div>
+            <div class="float-val">93% clearer 🏆</div>
           </div>
         </div>
         <div class="float-card">
@@ -188,13 +189,13 @@
     <div class="cause-layout">
       <div class="cause-text">
         <h2>Stop struggling<br>with your skin alone.</h2>
-        <p>Most apps just track breakouts. AcneTrack connects the dots — analyzing your food, sleep, stress, and daily habits to reveal the real trigger behind your skin.</p>
-        <p>No more guessing. Your skin has a story, and AcneTrack reads it.</p>
+        <p>AcneTrack connects the dots; analyzing your food, sleep, stress, and daily habits to reveal the real trigger behind your skin.</p>
+        <p>Your skin has a story, and AcneTrack reads it.</p>
       </div>
       <div class="cause-visual">
         <div class="cause-board">
           <p class="cause-board-prompt">Your potential acne triggers</p>
-          <div class="cause-pill-grid">
+          <div class="cause-pill-grid cause-pill-grid--collapsed" id="causePills">
             <div class="cause-pill cause-pill-active">🧬 Hormones</div>
             <div class="cause-pill">🥛 Dairy</div>
             <div class="cause-pill">😣 Stress</div>
@@ -219,10 +220,13 @@
             <div class="cause-pill">💊 Birth control</div>
             <div class="cause-pill">🧴 Skincare</div>
           </div>
+          <button class="cause-more-btn" id="causeMoreBtn" type="button" aria-expanded="false">
+            Show more
+          </button>
           <!-- Stats strip -->
           <div class="cause-stats">
             <div class="cause-stat">
-              <span class="cause-stat-val">23</span>
+              <span class="cause-stat-val">20+</span>
               <span class="cause-stat-label">Causes tracked</span>
             </div>
             <div class="cause-stat">
@@ -230,11 +234,11 @@
               <span class="cause-stat-label">Active users</span>
             </div>
             <div class="cause-stat">
-              <span class="cause-stat-val">2.4M+</span>
+              <span class="cause-stat-val">368K+</span>
               <span class="cause-stat-label">Skin scans</span>
             </div>
             <div class="cause-stat">
-              <span class="cause-stat-val">89%</span>
+              <span class="cause-stat-val">93%</span>
               <span class="cause-stat-label">Clearer skin</span>
             </div>
           </div>
@@ -470,7 +474,7 @@
       <div class="footer-brand">
         <a href="/" class="nav-brand footer-brand-link">
           <img src="assets/Logo_Acnetrack.png" alt="AcneTrack logo" class="footer-logo">
-          AcneTrack
+          Acnetrack
         </a>
         <p>Your personal AI skin coach. Track, understand, and improve your acne journey.</p>
       </div>
@@ -490,8 +494,8 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p class="footer-copy">&copy; 2026 Bsr Labs — AcneTrack. All rights reserved.</p>
-      <p class="footer-disc">AcneTrack is not a medical device and does not provide medical advice. Consult a dermatologist for any skin-related medical concerns.</p>
+      <p class="footer-copy">&copy; 2026 Bsr Labs — Acnetrack. All rights reserved.</p>
+      <p class="footer-disc">Acnetrack is not a medical device and does not provide medical advice. Consult a dermatologist for any skin-related medical concerns.</p>
     </div>
   </div>
 </footer>
@@ -618,12 +622,82 @@ function initHeroScroll() {
     var timer = setInterval(advance, 2400);
   }
 
+  function initCauseMore() {
+    var grid = document.getElementById('causePills');
+    var btn = document.getElementById('causeMoreBtn');
+    if (!grid || !btn) return;
+
+    function setExpanded(expanded) {
+      btn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+      if (expanded) {
+        grid.classList.remove('cause-pill-grid--collapsed');
+        btn.textContent = 'Show less';
+      } else {
+        grid.classList.add('cause-pill-grid--collapsed');
+        btn.textContent = 'Show more';
+      }
+    }
+
+    // Only show the button if we are actually collapsing (mobile)
+    function updateVisibility() {
+      var isMobile = window.matchMedia('(max-width: 680px)').matches;
+      btn.style.display = isMobile ? 'inline-flex' : 'none';
+      if (!isMobile) setExpanded(true);
+      else setExpanded(false);
+    }
+
+    btn.addEventListener('click', function() {
+      var expanded = btn.getAttribute('aria-expanded') === 'true';
+      setExpanded(!expanded);
+    });
+
+    window.addEventListener('resize', updateVisibility, { passive: true });
+    updateVisibility();
+  }
+
+  function initReveal() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    var nodes = Array.from(document.querySelectorAll([
+      '.section-header',
+      '.feature-card',
+      '.ai-tool-card',
+      '.combo-item',
+      '.result-card',
+      '.cause-text',
+      '.cause-board',
+      '.cta-section',
+      'footer .footer-top',
+      'footer .footer-bottom'
+    ].join(',')));
+
+    nodes.forEach(function(n) { n.classList.add('reveal'); });
+
+    if (!('IntersectionObserver' in window)) {
+      nodes.forEach(function(n) { n.classList.add('is-visible'); });
+      return;
+    }
+
+    var io = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+
+    nodes.forEach(function(n) { io.observe(n); });
+  }
+
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', function() { initSliders(); initHeroScroll(); initCauseCycler(); });
+    document.addEventListener('DOMContentLoaded', function() { initSliders(); initHeroScroll(); initCauseCycler(); initCauseMore(); initReveal(); });
   } else {
     initSliders();
     initHeroScroll();
     initCauseCycler();
+    initCauseMore();
+    initReveal();
   }
 })();
 </script>

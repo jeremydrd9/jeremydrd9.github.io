@@ -226,22 +226,23 @@ ul { margin: 0 0 1rem; }
 }
 .nav-store-btn:hover { transform: translateY(-2px); }
 .nav-store-apple {
-  background: linear-gradient(180deg, #FFC3A1 0%, #FFE5D5 100%);
-  color: #333333;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.08);
+  color: #1B1B1B;
 }
 .nav-store-apple:hover {
-  background: linear-gradient(180deg, #FFC3A1 0%, #FFE5D5 100%);
-  box-shadow: 0 4px 16px rgba(255, 159, 109, 0.25);
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(0,0,0,.10);
 }
 .nav-store-google {
-  background: linear-gradient(180deg, #FFECE4 0%, #FFFFFF 100%);
-  border: 1.5px solid #F1D2C1;
-  color: #333333;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.08);
+  color: #1B1B1B;
 }
 .nav-store-google:hover {
-  background: linear-gradient(180deg, #FFECE4 0%, #FFFFFF 100%);
-  border-color: #F1D2C1;
-  box-shadow: 0 4px 16px rgba(255, 159, 109, 0.15);
+  background: #fff;
+  border-color: rgba(0,0,0,.12);
+  box-shadow: 0 6px 18px rgba(0,0,0,.10);
 }
 .nav-store-btn svg { flex-shrink: 0; }
 
@@ -582,6 +583,32 @@ ul { margin: 0 0 1rem; }
 }
 .cause-pill-grid {
   display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px;
+}
+.cause-more-btn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  margin: -2px 0 14px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(0,0,0,.08);
+  background: rgba(255,255,255,.65);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: var(--text-mid);
+  font-family: 'Manrope', sans-serif;
+  font-size: .85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform .15s, background .15s, border-color .15s;
+}
+.cause-more-btn:hover {
+  transform: translateY(-1px);
+  background: rgba(255,255,255,.85);
+  border-color: rgba(255,159,109,.25);
+  color: var(--text);
 }
 .cause-pill {
   display: inline-flex; align-items: center; gap: 5px;
@@ -1599,7 +1626,8 @@ footer {
     position: relative; top: auto;
     height: auto; overflow: visible;
     display: flex; flex-direction: column; align-items: center;
-    padding: 96px 24px 0; gap: 40px;
+    padding: 96px 24px 0;
+    gap: 40px;
     background: linear-gradient(160deg, #fff 0%, #FFF6F0 40%, #FFEADE 100%);
   }
   .hero-v2-text {
@@ -1620,16 +1648,37 @@ footer {
   .footer-top { flex-direction: column; gap: 28px; }
   .footer-disc { text-align: left; }
   .ba-grid { grid-template-columns: 1fr; max-width: 360px; }
-  .results-grid { grid-template-columns: 1fr; max-width: 380px; }
-  .combo-item { flex-direction: column !important; padding: 24px; } .combo-item .section-phone-img { width: 180px; max-width: 180px; }
+  .results-grid { grid-template-columns: 1fr; max-width: 360px; }
+  .combo-item { flex-direction: column !important; padding: 22px; gap: 18px; }
+  .combo-item .section-phone-img { width: 170px; max-width: 170px; }
 }
 @media (max-width: 680px) {
   .nav-links { display: none; }
   .nav-store-pill { display: none; }
-  .nav-store-btn { display: none; }
+  /* Keep tiny store icons visible on mobile */
+  .nav-store-btn {
+    display: inline-flex;
+    padding: 0;
+    width: 38px;
+    height: 38px;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    border-radius: 999px;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,.08);
+    box-shadow: 0 10px 24px rgba(0,0,0,.10);
+  }
+  .nav-store-btn span { display: none; }
+  .nav-right { gap: 8px; }
   .nav-hamburger { display: flex; }
   .nav-inner { border-radius: 20px; padding: 0 16px; }
-  .hero.hero-v2 { padding: 56px 16px 0; }
+  /* Remove side gutters (background is on .hero-v2-inner) */
+  .hero.hero-v2 { padding: 56px 0 0; }
+  .hero-v2-inner {
+    padding-left: max(16px, env(safe-area-inset-left));
+    padding-right: max(16px, env(safe-area-inset-right));
+  }
   .hero-big { font-size: 2.8rem; }
   .section { padding: 60px 20px; }
   .phone-scene { grid-template-columns: 80px 220px 80px; gap: 8px; }
@@ -1641,15 +1690,136 @@ footer {
   .float-val { font-size: .68rem; }
   .float-label { font-size: .5rem; }
   .ai-tools-grid { grid-template-columns: 1fr; }
+  .ai-tool-card {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 22px;
+  }
+  .ai-tool-img {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  .ai-tool-img img { max-height: 220px; }
   .features-grid { grid-template-columns: 1fr; }
   .testimonials-grid { grid-template-columns: 1fr; }
   .legal-layout { padding: 28px 20px 56px; }
   .toc { padding: 18px 20px; }
   .footer-bottom { flex-direction: column; align-items: flex-start; }
 }
+
+@media (max-width: 680px) {
+  /* Hero glow/overlay feels heavy on small screens: make it much more subtle */
+  .hero-v2-inner { background: #FBFAF9; }
+  .hero-v2-inner::before { display: none; }
+  .phone-halo { display: none; }
+  .hero-sub {
+    max-width: none;
+  }
+
+  /* Make store CTA look more "sober" (neutral, translucent) */
+  .phone-cta-row { padding-top: 22px; padding-bottom: 34px; }
+  .phone-cta-btn {
+    background: rgba(20, 20, 20, 0.88);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    box-shadow: 0 10px 26px rgba(0,0,0,.18);
+    min-width: 0;
+  }
+  .phone-cta-btn:hover { opacity: .95; }
+  .phone-cta-btn span small { opacity: .6; }
+
+  /* Before/after handle is oversized on mobile */
+  .ba-handle { width: 34px; }
+  .ba-btn { width: 30px; height: 30px; }
+  .ba-btn svg { transform: scale(.9); }
+  .ba-tag { font-size: .6rem; padding: 3px 9px; }
+
+  /* Testimonials card: reduce “above the fold” footprint */
+  .results-grid { max-width: 340px; }
+  .result-card { border-radius: 18px; }
+  .result-card .ba-slider { aspect-ratio: 4/5; }
+  .result-card > .ba-score { padding: 9px 14px; font-size: .8rem; }
+  .result-review { padding: 16px 14px; gap: 6px; }
+  .result-stars { font-size: .9rem; }
+  .result-quote { font-size: .84rem; }
+  .result-name { font-size: .82rem; }
+  .result-dur { font-size: .7rem; }
+
+  /* Routine/Progress blocks: tighter */
+  .combo-item { padding: 18px; border-radius: 18px; }
+  .combo-item h3 { font-size: 1.15rem; }
+  .combo-item p { font-size: .9rem; }
+
+  /* Causes: collapse + fade so it feels lighter */
+  .cause-board { padding: 18px 16px; }
+  .cause-board-prompt { font-size: .78rem; margin-bottom: 12px; text-align: center; }
+  .cause-pill-grid { gap: 7px; margin-bottom: 12px; justify-content: center; }
+  .cause-pill { padding: 6px 11px; font-size: .74rem; }
+  .cause-pill-grid--collapsed {
+    max-height: 190px;
+    overflow: hidden;
+    position: relative;
+  }
+  .cause-pill-grid--collapsed::after {
+    content: '';
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 58px;
+    background: linear-gradient(180deg, rgba(255,255,255,0), rgba(255,255,255,.95));
+    pointer-events: none;
+  }
+  .cause-more-btn { display: inline-flex; }
+
+  /* Compact stats strip under causes */
+  .cause-stats {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 16px;
+    padding: 14px;
+    border-radius: 16px;
+  }
+  .cause-stat {
+    padding: 10px 6px;
+    border-radius: 12px;
+  }
+  .cause-stat + .cause-stat { border-left: none; }
+  .cause-stat-val { font-size: 1.35rem; margin-bottom: 4px; }
+  .cause-stat-label { font-size: .6rem; }
+}
 @media (max-width: 420px) {
   .phone-scene { grid-template-columns: 0 1fr 0; gap: 0; }
   .phone-cards-left,
   .phone-cards-right { display: none; }
   .phone-frame { width: 240px; }
+  .phone-cta-row {
+    flex-direction: column;
+    align-items: stretch;
+    width: min(340px, 100%);
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 36px;
+  }
+  .phone-cta-btn { min-width: 0; justify-content: center; }
+
+  /* Even tighter on very small screens */
+  .results-grid { max-width: 320px; }
+  .result-card .ba-slider { aspect-ratio: 1/1; }
+  .combo-item { padding: 16px; }
+  .combo-item .section-phone-img { width: 155px; max-width: 155px; }
+  .cause-pill-grid--collapsed { max-height: 170px; }
+}
+
+/* ─── Reveal animations ─── */
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity .55s ease, transform .55s cubic-bezier(.2,.8,.2,1);
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
 }
