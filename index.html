@@ -536,10 +536,18 @@ function initHeroScroll() {
     return Math.max(0, Math.min(1, (p - a) / (b - a)));
   }
 
+  // Initial phone offset: 50vh on laptops, but capped in px so tall/large screens
+  // don't push the phone fully out of view and leave a huge empty band.
+  var maxOff = Math.min(window.innerHeight * 0.5, 400);
+  window.addEventListener('resize', function () {
+    maxOff = Math.min(window.innerHeight * 0.5, 400);
+    tick();
+  }, { passive: true });
+
   // — set initial states —
   text.style.transform   = 'translateX(-50%) scale(1)';
   text.style.opacity     = '1';
-  scene.style.transform  = 'translateX(-50%) translateY(50vh) scale(0.92)';
+  scene.style.transform  = 'translateX(-50%) translateY(' + maxOff + 'px) scale(0.92)';
   cardsL.style.opacity   = '0';
   cardsL.style.transform = 'translateX(180px)';
   cardsR.style.opacity   = '0';
@@ -558,9 +566,9 @@ function initHeroScroll() {
 
     // 2. iPhone rises across the FULL scroll range (0→1): always moving, zero freeze
     var sP = p; // linear, 0→1 across entire hero scroll
-    var phoneY     = (1 - sP) * 50;       // 50vh → 0
+    var phoneY     = (1 - sP) * maxOff;   // capped px offset → 0
     var phoneScale = 0.92 + sP * 0.08;    // 0.92 → 1.0
-    scene.style.transform = 'translateX(-50%) translateY(' + phoneY + 'vh) scale(' + phoneScale + ')';
+    scene.style.transform = 'translateX(-50%) translateY(' + phoneY + 'px) scale(' + phoneScale + ')';
 
     // 3. Cards slide out from behind phone — final 35% of scroll
     var cP = prog(p, 0.65, 1.0);

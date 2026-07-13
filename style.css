@@ -1253,6 +1253,12 @@ footer {
   position: relative;
   z-index: 2; /* sits above the floating cards so they emerge from behind it */
 }
+/* Tall viewports: scale the phone up and settle the headline lower so the
+   sticky hero doesn't show a large empty band between text and phone. */
+@media (min-height: 950px) and (min-width: 861px) {
+  .hero-phone-img { max-width: clamp(320px, 38vh, 440px); }
+  .hero-v2-text { top: clamp(110px, 15vh, 220px); }
+}
 
 /* ─── AI tool image wrap ─── */
 .tool-img-wrap {
