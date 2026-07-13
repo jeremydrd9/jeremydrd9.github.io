@@ -1881,3 +1881,25 @@ footer {
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; transition: none; }
 }
+
+/* ─── Certified technology section ─── */
+.certified-section .section-header { margin-bottom: 36px; }
+.certified-badges {
+  display: flex; align-items: center; justify-content: center;
+  gap: clamp(28px, 6vw, 64px);
+  flex-wrap: wrap;
+}
+.certified-badge { height: 72px; width: auto; }
+.certified-badge-ce { height: 58px; }
+.certified-badge-iso { height: 56px; }
+.certified-note {
+  text-align: center;
+  font-size: .78rem; font-style: italic;
+  color: var(--text-muted);
+  margin-top: 28px;
+}
+@media (max-width: 600px) {
+  .certified-badge { height: 56px; }
+  .certified-badge-ce { height: 44px; }
+  .certified-badge-iso { height: 44px; }
+}
