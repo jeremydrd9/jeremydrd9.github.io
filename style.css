@@ -1885,13 +1885,33 @@ footer {
 /* ─── Certified technology section ─── */
 .certified-section .section-header { margin-bottom: 36px; }
 .certified-badges {
-  display: flex; align-items: center; justify-content: center;
-  gap: clamp(28px, 6vw, 64px);
+  display: flex; align-items: stretch; justify-content: center;
+  gap: clamp(14px, 2.5vw, 24px);
   flex-wrap: wrap;
 }
-.certified-badge { height: 72px; width: auto; }
-.certified-badge-ce { height: 58px; }
-.certified-badge-iso { height: 56px; }
+/* Equal white chips give the three heterogeneous logos one visual weight */
+.certified-chip {
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 14px;
+  width: clamp(150px, 18vw, 200px);
+  padding: 26px 18px 20px;
+  background: #fff;
+  border: 1.5px solid #F0EAE4;
+  border-radius: 20px;
+  box-shadow: 0 4px 18px rgba(0,0,0,.04);
+}
+.certified-chip img {
+  height: 72px; width: auto;
+  display: block;
+}
+.certified-chip .certified-img-iso { height: 45px; margin: 13.5px 0; }
+.certified-chip span {
+  font-family: 'Montserrat', sans-serif;
+  font-size: .8rem; font-weight: 700;
+  color: var(--text-mid);
+  letter-spacing: .02em;
+}
 .certified-note {
   text-align: center;
   font-size: .78rem; font-style: italic;
@@ -1899,7 +1919,7 @@ footer {
   margin-top: 28px;
 }
 @media (max-width: 600px) {
-  .certified-badge { height: 56px; }
-  .certified-badge-ce { height: 44px; }
-  .certified-badge-iso { height: 44px; }
+  .certified-chip { width: 46%; padding: 18px 10px 14px; }
+  .certified-chip img { height: 54px; }
+  .certified-chip .certified-img-iso { height: 34px; margin: 10px 0; }
 }
