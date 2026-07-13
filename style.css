@@ -476,6 +476,10 @@ ul { margin: 0 0 1rem; }
   gap: 18px;
   max-width: var(--max-w-wide); margin: 0 auto;
 }
+/* 6 cards → two clean rows of 3 on desktop */
+@media (min-width: 900px) {
+  .features-grid { grid-template-columns: repeat(3, 1fr); }
+}
 .feature-card {
   background: #fff;
   border: 1px solid var(--border);
