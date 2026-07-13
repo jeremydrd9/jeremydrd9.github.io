@@ -44,7 +44,7 @@
     ← Back to home
   </a>
   <h1>Privacy Policy</h1>
-  <p class="meta">Last updated: March 13, 2026</p>
+  <p class="meta">Last updated: July 8, 2026</p>
 </header>
 
 <!-- ─── Content ─── -->
@@ -101,6 +101,9 @@
     <h3>Sensitive Information</h3>
     <p>We do not collect biometric identifiers for the purpose of identifying you, and we do not perform facial recognition to authenticate users or recognize you across sessions. Users may voluntarily submit a selfie for acne-related analysis; we do not create biometric templates for identity purposes. TrueDepth/ARKit signals used during the scan (such as face detected/lost and pose angles) are processed in real time to guide the scan and are not stored as persistent biometric profile data. Selfie images may be stored when needed to provide analysis, profile display, and progress/history features, as described in the "Image Retention" section below.</p>
 
+    <h3>Health-Related Data</h3>
+    <p>Skin images you submit for analysis, your questionnaire answers about your skin, and the resulting analysis outputs may constitute health-related data under applicable data protection laws (including Article 9 of the GDPR). We process this data <strong>only with your explicit consent</strong>, which you provide when you voluntarily start a scan or complete the skin questionnaire, and solely to deliver the skin-analysis and tracking features you request. You can withdraw your consent at any time by deleting your data in the app or contacting us at <a href="mailto:contact@acne-track.com">contact@acne-track.com</a>. AcneTrack is not a medical device and does not provide medical diagnoses; results are indicative only.</p>
+
     <h3>Payment Data</h3>
     <p>If you make purchases, we may collect data necessary to process your payment, such as your payment instrument number and the security code associated with your payment instrument. All payment data is stored by Apple. You can find their privacy notice <a href="https://www.apple.com/legal/privacy/en-ww/">here</a>.</p>
 
@@ -146,7 +149,8 @@
     </ul>
 
     <h3>AI Processing of Images</h3>
-    <p>When you submit an image for acne analysis, the image is transmitted to our contracted AI processors (including OpenAI and AILABAPI) solely to generate acne insights. We do not use the image to identify you or to build biometric templates.</p>
+    <p>When you submit an image for acne analysis, the image is transmitted to our contracted AI processors (including OpenAI, AILABAPI and Skinive) solely to generate acne insights. We do not use the image to identify you or to build biometric templates.</p>
+    <p>Close-up images of individual skin spots submitted through the Pimple Scan feature are analyzed by <strong>Skinive</strong>, a CE-marked medical software developed by Skinive B.V. (Netherlands) and processed within the European Economic Area, solely to generate the skin insights you request.</p>
     <p>If the user chooses to display the image in their profile, we store that image to provide the profile feature and historical tracking.</p>
 
     <h3>How We Use TrueDepth / ARKit Data</h3>
@@ -160,6 +164,7 @@
     <p>The General Data Protection Regulation (GDPR) and UK GDPR require us to explain the valid legal bases we rely on in order to process your personal information. As such, we may rely on the following legal bases:</p>
     <ul>
       <li><strong>Consent.</strong> We may process your information if you have given us permission (i.e., consent) to use your personal information for a specific purpose. You can withdraw your consent at any time. Contact us to do it.</li>
+      <li><strong>Explicit Consent for Health-Related Data.</strong> Where we process health-related data (such as skin images and skin-analysis results), we rely on your explicit consent under Article 9(2)(a) GDPR, given when you voluntarily use the scan features. You can withdraw it at any time.</li>
       <li><strong>Legal Obligations.</strong> We may process your information where we believe it is necessary for compliance with our legal obligations, such as to cooperate with a law enforcement body or regulatory agency, exercise or defend our legal rights, or disclose your information as evidence in litigation in which we are involved.</li>
       <li><strong>Vital Interests.</strong> We may process your information where we believe it is necessary to protect your vital interests or the vital interests of a third party, such as situations involving potential threats to the safety of any person.</li>
     </ul>
@@ -201,12 +206,13 @@
 
     <p>The categories of third parties with whom we may share personal information include:</p>
     <ul>
-      <li><strong>Data Analytics Services</strong></li>
-      <li><strong>Data Storage Service Providers</strong></li>
+      <li><strong>Data Analytics Services</strong> (such as PostHog, for product analytics and app performance)</li>
+      <li><strong>Data Storage and Backend Service Providers</strong> (such as Supabase, for authentication, data storage and processing infrastructure)</li>
+      <li><strong>Subscription Management Services</strong> (such as RevenueCat, to manage and validate in-app subscriptions)</li>
     </ul>
 
     <h3>AI Service Providers</h3>
-    <p>To provide acne-related analysis and image processing features, we may share submitted images with contracted AI processors, including <strong>OpenAI</strong> and <strong>AILABAPI</strong>, solely to perform the service you request (for example generating insights or applying image processing). These providers act as processors under contractual obligations, must not use your images for purposes unrelated to providing our service, and must not sell your personal data. We do not share images with advertising partners.</p>
+    <p>To provide acne-related analysis and image processing features, we may share submitted images with contracted AI processors, including <strong>OpenAI</strong>, <strong>AILABAPI</strong> and <strong>Skinive B.V.</strong> (a CE-marked medical software provider based in the Netherlands, used for individual skin-spot analysis), solely to perform the service you request (for example generating insights or applying image processing). These providers act as processors under contractual obligations, must not use your images for purposes unrelated to providing our service, and must not sell your personal data. We do not share images with advertising partners.</p>
 
     <h3>Business Transfers</h3>
     <p>We may share or transfer your information in connection with, or during negotiations of, any merger, sale of company assets, financing, or acquisition of all or a portion of our business to another company.</p>
@@ -239,6 +245,7 @@
 
     <h3>International Transfers for AI Processing</h3>
     <p>Image processing via third-party AI processors (including OpenAI and AILABAPI) and related cloud infrastructure may involve transfers outside your country. Where required, we rely on appropriate safeguards (such as Standard Contractual Clauses). Details are available upon request.</p>
+    <p>Images submitted to the Pimple Scan feature are processed by Skinive B.V. within the European Economic Area, so no transfer outside the EEA is involved for that processing.</p>
 
 
     <h2 id="data-retention">7. How Long Do We Keep Your Information?</h2>
@@ -256,6 +263,7 @@
 
     <h3>Image Retention</h3>
     <p>Images submitted for acne analysis and chosen by the user to appear in their profile are stored securely and encrypted at rest. We keep these images until the user deletes them from the app, or for a maximum of 24 months after the last account activity, whichever occurs first. When deleted by the user or upon account deletion, images are permanently removed from our storage within 30 days.</p>
+    <p>Images shared with our contracted AI processors (including Skinive) are used solely to generate the requested analysis; our processors are contractually required to retain data only as long as necessary to provide the service and as instructed by us.</p>
 
     <h3>TrueDepth / ARKit Data Retention</h3>
     <p>Real-time TrueDepth/ARKit tracking signals used during the scan (such as face detected/lost and pose angles) are ephemeral and are not retained as account profile data after the scan session ends. Temporary files created on the device during capture may be removed as part of normal app operation.</p>
