@@ -3,33 +3,174 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Acnetrack – AI-Powered Acne Tracking App (iOS & Android)</title>
-  <meta name="description" content="Acnetrack helps you track your acne journey with AI-powered skin analysis, daily routines, food & product scanning, and personalized coaching — available on iOS & Android.">
+
+  <!-- ─── Primary meta ─── -->
+  <title>AcneTrack — AI Acne Tracker &amp; Skin Analysis App | iOS &amp; Android</title>
+  <meta name="description" content="AI acne tracker: scan your skin for an instant analysis, follow a routine built for you, and scan products &amp; food for your triggers. Free on iOS &amp; Android.">
   <link rel="canonical" href="https://acne-track.com/">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Bsr Labs">
+  <meta name="theme-color" content="#FF9F6D">
+  <link rel="alternate" hreflang="en" href="https://acne-track.com/">
+  <link rel="alternate" hreflang="x-default" href="https://acne-track.com/">
+
+  <!-- ─── Open Graph ─── -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://acne-track.com/">
-  <meta property="og:title" content="Acnetrack – AI-Powered Acne Tracking App (iOS & Android)">
-  <meta property="og:description" content="Track your acne journey with AI coaching, daily routines, progress photos, and smart scanners. Free on iOS & Android.">
-  <meta property="og:site_name" content="Acnetrack">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Acnetrack – AI-Powered Acne Tracking App (iOS & Android)">
-  <meta name="twitter:description" content="Track your acne journey with AI coaching, daily routines, and smart scanners.">
+  <meta property="og:title" content="AcneTrack — AI Acne Tracker &amp; Skin Analysis App">
+  <meta property="og:description" content="Instant AI skin scans, a daily routine built for your skin, and product &amp; food scanners that reveal what's really triggering your acne. Free on iOS &amp; Android.">
+  <meta property="og:site_name" content="AcneTrack">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="https://acne-track.com/assets/og-image.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="AcneTrack app dashboard showing an acne score, main acne cause and healing progress">
+
+  <!-- ─── Twitter ─── -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AcneTrack — AI Acne Tracker &amp; Skin Analysis App">
+  <meta name="twitter:description" content="Instant AI skin scans, daily routines, and product &amp; food scanners that reveal your acne triggers. Free on iOS &amp; Android.">
+  <meta name="twitter:image" content="https://acne-track.com/assets/og-image.jpg">
+  <meta name="twitter:image:alt" content="AcneTrack app dashboard showing an acne score, main acne cause and healing progress">
+
+  <!-- ─── iOS Smart App Banner ─── -->
+  <meta name="apple-itunes-app" content="app-id=6743371480">
+
+  <!-- ─── Icons ─── -->
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/Logo_Acnetrack.png">
+  <link rel="apple-touch-icon" href="assets/Logo_Acnetrack.png">
+
+  <!-- ─── Structured data ─── -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Acnetrack",
-    "alternateName": "AcneTrack",
-    "description": "AI-powered acne tracking app. Analyze your skin, monitor progress, and get personalized insights.",
-    "operatingSystem": "iOS, Android",
-    "applicationCategory": "HealthApplication",
-    "offers": { "@type": "Offer", "price": "0" },
-    "author": { "@type": "Organization", "name": "Bsr Labs", "email": "contact@acne-track.com" },
-    "url": "https://acne-track.com/"
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://acne-track.com/#organization",
+        "name": "Bsr Labs",
+        "url": "https://acne-track.com/",
+        "email": "contact@acne-track.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://acne-track.com/assets/Logo_Acnetrack.png",
+          "width": 512,
+          "height": 512
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://acne-track.com/#website",
+        "url": "https://acne-track.com/",
+        "name": "AcneTrack",
+        "description": "AI acne tracker and skin analysis app.",
+        "inLanguage": "en",
+        "publisher": { "@id": "https://acne-track.com/#organization" }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://acne-track.com/#webpage",
+        "url": "https://acne-track.com/",
+        "name": "AcneTrack — AI Acne Tracker & Skin Analysis App",
+        "isPartOf": { "@id": "https://acne-track.com/#website" },
+        "about": { "@id": "https://acne-track.com/#app" },
+        "primaryImageOfPage": "https://acne-track.com/assets/og-image.jpg",
+        "inLanguage": "en"
+      },
+      {
+        "@type": "MobileApplication",
+        "@id": "https://acne-track.com/#app",
+        "name": "AcneTrack",
+        "alternateName": "Acnetrack",
+        "description": "AI acne tracking app. Scan your skin for an instant acne analysis, follow a daily routine built for your skin profile, scan skincare products and food for compatibility, and track your progress week by week.",
+        "url": "https://acne-track.com/",
+        "operatingSystem": "iOS 15.0+, Android 8.0+",
+        "applicationCategory": "HealthApplication",
+        "applicationSubCategory": "Skin care",
+        "image": "https://acne-track.com/assets/og-image.jpg",
+        "screenshot": [
+          "https://acne-track.com/assets/main-dashboard.webp",
+          "https://acne-track.com/assets/skin-scanner.webp",
+          "https://acne-track.com/assets/skincare-routine.webp",
+          "https://acne-track.com/assets/evolution-tab.webp"
+        ],
+        "featureList": [
+          "AI pimple scan and acne severity score",
+          "Personalized morning and evening skincare routine",
+          "Skincare product scanner with compatibility score",
+          "Food scanner to identify dietary acne triggers",
+          "24/7 AI skin coach",
+          "Progress photos and skin evolution tracking"
+        ],
+        "installUrl": [
+          "https://apps.apple.com/us/app/acnetrack-your-acne-journey/id6743371480",
+          "https://play.google.com/store/apps/details?id=com.acnetrack.app"
+        ],
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        },
+        "publisher": { "@id": "https://acne-track.com/#organization" },
+        "author": { "@id": "https://acne-track.com/#organization" }
+      }
+    ]
   }
   </script>
-  <link rel="stylesheet" href="style.css?v=22">
-  <link rel="icon" type="image/png" href="assets/Logo_Acnetrack.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": "https://acne-track.com/#faq",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How does the AI acne scan work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You take a photo of your skin and AcneTrack analyses it in seconds, returning your acne score out of 100, the type of acne it detects, and tailored advice. For close-up analysis of a single spot, the Pimple Scan uses CE-marked medical software built to ISO 13485 quality standards. Each new scan is compared with your previous ones, so the Evolution tab shows whether your skin is actually improving rather than relying on memory."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can the food I eat really cause acne?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For some people, yes. Research has linked high-glycaemic foods and dairy to breakouts, but triggers are highly individual — what wrecks one person's skin does nothing to another's. That is exactly why AcneTrack asks you to log meals and scan food rather than handing you a generic list to avoid. Over time it correlates what you eat with how your skin scores, so your triggers come from your own data."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does it take to see results?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Skin renews itself over roughly four to six weeks, so meaningful change rarely shows up sooner than that — and any product or app promising clear skin in days is overselling. Most users who track consistently start seeing measurable movement in their acne score after about eight to twelve weeks. Consistency matters far more than intensity, which is why the app is built around a daily routine and a streak."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does AcneTrack work for hormonal acne?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Hormonal patterns are one of the causes AcneTrack tracks, alongside diet, sleep, stress, skincare and around twenty others. Logging consistently helps surface cyclical patterns that are hard to spot day to day. That said, hormonal acne often needs medical treatment. AcneTrack helps you understand and document what is happening to your skin — it is not a replacement for a dermatologist."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- ─── Fonts (moved out of the CSS @import so they don't block render) ─── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Manrope:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Manrope:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Manrope:wght@400;500;600;700&display=swap"></noscript>
+
+  <link rel="preload" as="image" href="assets/main-dashboard.webp" fetchpriority="high">
+  <link rel="stylesheet" href="style.css?v=24">
 </head>
 <body>
 
@@ -37,7 +178,7 @@
 <nav class="nav" role="navigation" aria-label="Main navigation">
   <div class="nav-inner">
     <a href="/" class="nav-brand">
-      <img src="assets/Logo_Acnetrack.png" alt="" class="nav-logo" aria-hidden="true">
+      <img src="assets/Logo_Acnetrack.webp" alt="" class="nav-logo" width="28" height="28" aria-hidden="true">
       Acnetrack
     </a>
     <ul class="nav-links">
@@ -105,7 +246,7 @@
       </div>
 
       <!-- Phone mockup -->
-      <img src="assets/main-dashboard.png" alt="AcneTrack — acne score dashboard" class="hero-phone-img" width="280" height="572">
+      <img src="assets/main-dashboard.webp" alt="AcneTrack app dashboard showing an acne score of 22/100, the main acne cause identified as hormonal, and healing progress" class="hero-phone-img" width="880" height="1782" fetchpriority="high" decoding="async">
 
       <!-- Floating cards: right column -->
       <div class="phone-cards-right">
@@ -278,7 +419,7 @@
           <p>Take a close-up photo and get an instant AI analysis of your acne — type, severity, and personalised advice.</p>
         </div>
         <div class="ai-tool-img">
-          <img src="assets/skin-scanner.png" alt="Pimple Scan feature" loading="lazy">
+          <img src="assets/skin-scanner.webp" alt="AcneTrack Pimple Scan analysing a close-up photo of a spot and returning its type and severity" width="700" height="671" loading="lazy" decoding="async">
         </div>
       </div>
       <div class="ai-tool-card">
@@ -289,7 +430,7 @@
           <p>Scan any skincare product and instantly know if it's safe for acne-prone skin — with a compatibility score.</p>
         </div>
         <div class="ai-tool-img">
-          <img src="assets/skincare-matches.png" alt="Product Scanner feature" loading="lazy">
+          <img src="assets/skincare-matches.webp" alt="AcneTrack Product Scanner rating a skincare product's compatibility with acne-prone skin" width="700" height="633" loading="lazy" decoding="async">
         </div>
       </div>
       <div class="ai-tool-card">
@@ -300,7 +441,7 @@
           <p>Scan what you eat and discover how your diet impacts your skin. Identify your triggers, one meal at a time.</p>
         </div>
         <div class="ai-tool-img">
-          <img src="assets/feature-food_scanning.png" alt="Food Scanner feature" loading="lazy">
+          <img src="assets/feature-food_scanning.webp" alt="AcneTrack Food Scanner showing how a scanned meal affects acne-prone skin" width="700" height="582" loading="lazy" decoding="async">
         </div>
       </div>
       <div class="ai-tool-card">
@@ -311,7 +452,7 @@
           <p>Ask anything about acne, ingredients, or routines. Your personal skin coach answers 24/7, instantly.</p>
         </div>
         <div class="ai-tool-img">
-          <img src="assets/ai-chat.png" alt="AI Chat Coach feature" loading="lazy">
+          <img src="assets/ai-chat.webp" alt="AcneTrack AI skin coach answering a question about a skincare ingredient in chat" width="700" height="1290" loading="lazy" decoding="async">
         </div>
       </div>
     </div>
@@ -328,15 +469,15 @@
     </div>
     <div class="certified-badges">
       <div class="certified-chip">
-        <img src="assets/badge-ce.svg" alt="CE marking" width="72" height="72" loading="lazy">
+        <img src="assets/badge-ce.svg" alt="CE marking — AcneTrack's skin scan uses CE-marked medical software" width="72" height="72" loading="lazy" decoding="async">
         <span>CE Marked</span>
       </div>
       <div class="certified-chip">
-        <img src="assets/badge-gdpr.webp" alt="GDPR Compliant" width="72" height="72" loading="lazy">
+        <img src="assets/badge-gdpr.webp" alt="GDPR compliant — AcneTrack protects your personal skin data under EU data protection law" width="72" height="72" loading="lazy" decoding="async">
         <span>GDPR Compliant</span>
       </div>
       <div class="certified-chip">
-        <img src="assets/badge-iso-13485.png" alt="ISO 13485 — LL-C Certification" width="113" height="45" loading="lazy" class="certified-img-iso">
+        <img src="assets/badge-iso-13485.webp" alt="ISO 13485 certified by LL-C — medical device quality management standard" width="113" height="45" loading="lazy" decoding="async" class="certified-img-iso">
         <span>ISO 13485</span>
       </div>
     </div>
@@ -355,7 +496,7 @@
           <h3>Consistency is the real secret to clear skin.</h3>
           <p>AcneTrack builds a custom morning and evening routine based on your skin profile. Check off each step, track your streak, and build the habits that actually make a difference.</p>
         </div>
-        <img src="assets/skincare-routine.png" alt="Your acne routine — morning and night" loading="lazy" class="section-phone-img">
+        <img src="assets/skincare-routine.webp" alt="AcneTrack daily skincare routine screen with morning and evening steps to check off" width="600" height="1215" loading="lazy" decoding="async" class="section-phone-img">
       </div>
       <div class="combo-item">
         <div class="combo-text">
@@ -363,7 +504,7 @@
           <h3>See your skin transform, week by week.</h3>
           <p>Take regular progress photos and let AcneTrack visualize your improvement. Track redness, breakout frequency, and overall clarity over time — with data you can actually trust.</p>
         </div>
-        <img src="assets/evolution-tab.png" alt="Track your skin evolution" loading="lazy" class="section-phone-img">
+        <img src="assets/evolution-tab.webp" alt="AcneTrack evolution tab charting acne score improvement week by week from progress photos" width="600" height="1203" loading="lazy" decoding="async" class="section-phone-img">
       </div>
     </div>
   </div>
@@ -485,6 +626,55 @@
   </div>
 </section>
 
+<!-- ─── FAQ ─── -->
+<section class="section section-white" id="faq">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="eyebrow">FAQ</span>
+      <h2 class="section-title">Questions about tracking your acne</h2>
+      <p class="section-sub">What AcneTrack does, what it doesn't, and what happens to your data.</p>
+    </div>
+
+    <div class="faq-list">
+
+      <details class="faq-item">
+        <summary class="faq-q">How does the AI acne scan work?</summary>
+        <div class="faq-a">
+          <p>You take a photo of your skin and AcneTrack analyses it in seconds, returning your acne score out of 100, the type of acne it detects, and tailored advice. For close-up analysis of a single spot, the Pimple Scan uses CE-marked medical software built to ISO 13485 quality standards.</p>
+          <p>Each new scan is compared with your previous ones, so the Evolution tab shows whether your skin is actually improving rather than relying on memory.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">Can the food I eat really cause acne?</summary>
+        <div class="faq-a">
+          <p>For some people, yes. Research has linked high-glycaemic foods and dairy to breakouts, but triggers are highly individual — what wrecks one person's skin does nothing to another's.</p>
+          <p>That is exactly why AcneTrack asks you to log meals and scan food rather than handing you a generic list to avoid. Over time it correlates what you eat with how your skin scores, so your triggers come from your own data.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">How long does it take to see results?</summary>
+        <div class="faq-a">
+          <p>Skin renews itself over roughly four to six weeks, so meaningful change rarely shows up sooner than that — and any product or app promising clear skin in days is overselling.</p>
+          <p>Most users who track consistently start seeing measurable movement in their acne score after about eight to twelve weeks. Consistency matters far more than intensity, which is why the app is built around a daily routine and a streak.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">Does AcneTrack work for hormonal acne?</summary>
+        <div class="faq-a">
+          <p>Hormonal patterns are one of the causes AcneTrack tracks, alongside diet, sleep, stress, skincare and around twenty others. Logging consistently helps surface cyclical patterns that are hard to spot day to day.</p>
+          <p>That said, hormonal acne often needs medical treatment. AcneTrack helps you understand and document what is happening to your skin — it is not a replacement for a dermatologist.</p>
+        </div>
+      </details>
+
+    </div>
+
+    <p class="faq-footnote">Still have a question? Write to <a href="mailto:contact@acne-track.com">contact@acne-track.com</a> — a human answers.</p>
+  </div>
+</section>
+
 <!-- ─── Final CTA ─── -->
 <section class="cta-section">
   <h2>Your clearest skin is waiting.</h2>
@@ -515,12 +705,12 @@
 </section>
 
 <!-- ─── Footer ─── -->
-<footer>
+<footer id="contact">
   <div class="footer-inner">
     <div class="footer-top">
       <div class="footer-brand">
         <a href="/" class="nav-brand footer-brand-link">
-          <img src="assets/Logo_Acnetrack.png" alt="AcneTrack logo" class="footer-logo">
+          <img src="assets/Logo_Acnetrack.webp" alt="AcneTrack logo" width="34" height="34" loading="lazy" class="footer-logo">
           Acnetrack
         </a>
         <p>Your personal AI skin coach. Track, understand, and improve your acne journey.</p>

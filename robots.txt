@@ -1,4 +1,23 @@
 User-agent: *
 Allow: /
 
+# AI answer engines — allowed, they are a growing source of app discovery.
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
 Sitemap: https://acne-track.com/sitemap.xml

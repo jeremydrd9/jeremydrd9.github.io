@@ -1,5 +1,6 @@
-/* ─── Google Fonts ─── */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Manrope:wght@400;500;600;700&display=swap');
+/* ─── Google Fonts ───
+   Loaded from the HTML <head> (preconnect + async stylesheet) rather than an
+   @import here: an @import chains CSS → CSS and blocks first render. */
 
 /* ─── Variables ─── */
 :root {
@@ -942,6 +943,82 @@ ul { margin: 0 0 1rem; }
 }
 .disclaimer-banner strong { color: var(--text-body); }
 
+/* ─── FAQ accordion ─── */
+.faq-list {
+  max-width: 780px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.faq-item {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  transition: box-shadow .22s, border-color .22s;
+}
+.faq-item:hover { border-color: var(--peach); }
+.faq-item[open] {
+  border-color: var(--peach);
+  box-shadow: var(--shadow-sm);
+}
+.faq-q {
+  display: flex; align-items: center; gap: 16px;
+  padding: 19px 22px;
+  cursor: pointer;
+  font-size: .95rem; font-weight: 600;
+  color: var(--text); line-height: 1.5;
+  list-style: none; /* Firefox */
+}
+.faq-q::-webkit-details-marker { display: none; } /* Safari */
+.faq-q:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: -2px;
+  border-radius: var(--r-lg);
+}
+/* Chevron */
+.faq-q::after {
+  content: '';
+  margin-left: auto; flex-shrink: 0;
+  width: 9px; height: 9px;
+  border-right: 2px solid var(--orange);
+  border-bottom: 2px solid var(--orange);
+  transform: translateY(-3px) rotate(45deg);
+  transition: transform .25s ease;
+}
+.faq-item[open] .faq-q::after { transform: translateY(2px) rotate(-135deg); }
+.faq-a { padding: 0 22px 20px; }
+.faq-item[open] .faq-a { animation: faq-reveal .26s ease both; }
+@keyframes faq-reveal {
+  from { opacity: 0; transform: translateY(-5px); }
+  to   { opacity: 1; transform: none; }
+}
+.faq-a p {
+  font-size: .9rem; color: var(--text-muted);
+  line-height: 1.7; margin: 0 0 .85rem;
+}
+.faq-a p:last-child { margin-bottom: 0; }
+.faq-a a {
+  color: var(--orange-dark);
+  text-decoration: underline; text-underline-offset: 2px;
+}
+.faq-footnote {
+  text-align: center;
+  margin: 32px auto 0;
+  font-size: .875rem; color: var(--text-muted);
+}
+.faq-footnote a { color: var(--orange-dark); font-weight: 600; }
+
+@media (prefers-reduced-motion: reduce) {
+  .faq-item[open] .faq-a { animation: none; }
+  .faq-q::after { transition: none; }
+}
+@media (max-width: 640px) {
+  .faq-q { padding: 16px 18px; font-size: .9rem; gap: 12px; }
+  .faq-a { padding: 0 18px 18px; }
+  .faq-a p { font-size: .86rem; }
+}
+
 /* ─── Final CTA section ─── */
 .cta-section {
   background: linear-gradient(135deg, #FF9F6D 0%, #FFC8A2 60%, #FFEAE0 100%);
@@ -1507,14 +1584,14 @@ footer {
   background-size: cover; background-position: center;
 }
 /* Person skins */
-.ba-p1-before { background-image: url('assets/after-1.png');  background-size: cover; background-position: top center; }
-.ba-p1-after  { background-image: url('assets/before-1.png'); background-size: cover; background-position: top center; }
+.ba-p1-before { background-image: url('assets/after-1.webp');  background-size: cover; background-position: top center; }
+.ba-p1-after  { background-image: url('assets/before-1.webp'); background-size: cover; background-position: top center; }
 
-.ba-p2-before { background-image: url('assets/after-2.png');  background-size: cover; background-position: top center; }
-.ba-p2-after  { background-image: url('assets/before-2.png'); background-size: cover; background-position: top center; }
+.ba-p2-before { background-image: url('assets/after-2.webp');  background-size: cover; background-position: top center; }
+.ba-p2-after  { background-image: url('assets/before-2.webp'); background-size: cover; background-position: top center; }
 
-.ba-p3-before { background-image: url('assets/after-3.png');  background-size: cover; background-position: top center; }
-.ba-p3-after  { background-image: url('assets/before-3.png'); background-size: cover; background-position: top center; }
+.ba-p3-before { background-image: url('assets/after-3.webp');  background-size: cover; background-position: top center; }
+.ba-p3-after  { background-image: url('assets/before-3.webp'); background-size: cover; background-position: top center; }
 
 /* Tags */
 .ba-tag {

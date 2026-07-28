@@ -1,20 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://acne-track.com/</loc>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://acne-track.com/assets/og-image.jpg</image:loc>
+      <image:title>AcneTrack — AI acne tracker and skin analysis app</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://acne-track.com/assets/main-dashboard.webp</image:loc>
+      <image:title>AcneTrack dashboard with acne score and main acne cause</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://acne-track.com/assets/skin-scanner.webp</image:loc>
+      <image:title>AcneTrack Pimple Scan — AI acne analysis</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://acne-track.com/assets/skincare-matches.webp</image:loc>
+      <image:title>AcneTrack Product Scanner — skincare compatibility score</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://acne-track.com/assets/feature-food_scanning.webp</image:loc>
+      <image:title>AcneTrack Food Scanner — dietary acne triggers</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://acne-track.com/assets/skincare-routine.webp</image:loc>
+      <image:title>AcneTrack daily skincare routine</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://acne-track.com/assets/evolution-tab.webp</image:loc>
+      <image:title>AcneTrack skin evolution tracking</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://acne-track.com/privacy.html</loc>
-    <lastmod>2026-03-13</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://acne-track.com/terms.html</loc>
     <lastmod>2025-03-31</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.3</priority>
   </url>
 </urlset>
