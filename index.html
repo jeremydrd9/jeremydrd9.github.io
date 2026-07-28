@@ -128,6 +128,30 @@
     "mainEntity": [
       {
         "@type": "Question",
+        "name": "Why does the AcneTrack method work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Because it treats acne as a problem with a cause, rather than a surface to cover up. Most routines attack the spot that is already there while whatever produced it carries on untouched. AcneTrack works the other way round. It builds a profile of your skin, gives you a routine to follow daily, and measures the result with a score you can compare over time. That loop — act, measure, adjust — is what turns guesswork into something you can steer. When your score moves, you know what moved it."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need to know what's causing my acne before I start?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No — finding that out is the whole point. Most people have a theory about their acne and no way to test it. AcneTrack tracks more than twenty possible causes, from hormones and stress to sleep, skincare and diet. As you use it, the app narrows them down and surfaces the one most likely to be driving your breakouts, so you stop treating everything at once and start treating the thing that actually matters."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "I've already tried everything. Why would this be different?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If products alone were the answer, they would have worked by now. What usually fails is not the product — it is that nothing was ever measured, so there was no way to tell what helped, what did nothing, and what quietly made things worse. AcneTrack is not another cream. It gives you a way to see your skin objectively: a score that moves, a history you can scroll back through, and a cause you can finally name. It will not clear your skin overnight, but it stops you repeating the same cycle blind."
+        }
+      },
+      {
+        "@type": "Question",
         "name": "How does the AI acne scan work?",
         "acceptedAnswer": {
           "@type": "Answer",
@@ -139,7 +163,7 @@
         "name": "Can the food I eat really cause acne?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "For some people, yes. Research has linked high-glycaemic foods and dairy to breakouts, but triggers are highly individual — what wrecks one person's skin does nothing to another's. That is exactly why AcneTrack asks you to log meals and scan food rather than handing you a generic list to avoid. Over time it correlates what you eat with how your skin scores, so your triggers come from your own data."
+          "text": "For some people, yes. Research has linked high-glycaemic foods and dairy to breakouts, but triggers are highly individual — what wrecks one person's skin does nothing to another's. Rather than hand you a generic list of things to avoid, AcneTrack lets you scan a meal and tells you how well it fits your skin profile — before you eat it. Diet is one of the causes the app weighs when narrowing down what is driving your breakouts."
         }
       },
       {
@@ -632,10 +656,34 @@
     <div class="section-header">
       <span class="eyebrow">FAQ</span>
       <h2 class="section-title">Questions about tracking your acne</h2>
-      <p class="section-sub">What AcneTrack does, what it doesn't, and what happens to your data.</p>
+      <p class="section-sub">How the method works — and what to realistically expect from it.</p>
     </div>
 
     <div class="faq-list">
+
+      <details class="faq-item">
+        <summary class="faq-q">Why does the AcneTrack method work?</summary>
+        <div class="faq-a">
+          <p>Because it treats acne as a problem with a cause, rather than a surface to cover up. Most routines attack the spot that is already there while whatever produced it carries on untouched.</p>
+          <p>AcneTrack works the other way round. It builds a profile of your skin, gives you a routine to follow daily, and measures the result with a score you can compare over time. That loop — act, measure, adjust — is what turns guesswork into something you can steer. When your score moves, you know what moved it.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">Do I need to know what's causing my acne before I start?</summary>
+        <div class="faq-a">
+          <p>No — finding that out is the whole point. Most people have a theory about their acne and no way to test it.</p>
+          <p>AcneTrack tracks more than twenty possible causes, from hormones and stress to sleep, skincare and diet. As you use it, the app narrows them down and surfaces the one most likely to be driving your breakouts, so you stop treating everything at once and start treating the thing that actually matters.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">I've already tried everything. Why would this be different?</summary>
+        <div class="faq-a">
+          <p>If products alone were the answer, they would have worked by now. What usually fails is not the product — it is that nothing was ever measured, so there was no way to tell what helped, what did nothing, and what quietly made things worse.</p>
+          <p>AcneTrack is not another cream. It gives you a way to see your skin objectively: a score that moves, a history you can scroll back through, and a cause you can finally name. It will not clear your skin overnight, but it stops you repeating the same cycle blind.</p>
+        </div>
+      </details>
 
       <details class="faq-item">
         <summary class="faq-q">How does the AI acne scan work?</summary>
@@ -649,7 +697,7 @@
         <summary class="faq-q">Can the food I eat really cause acne?</summary>
         <div class="faq-a">
           <p>For some people, yes. Research has linked high-glycaemic foods and dairy to breakouts, but triggers are highly individual — what wrecks one person's skin does nothing to another's.</p>
-          <p>That is exactly why AcneTrack asks you to log meals and scan food rather than handing you a generic list to avoid. Over time it correlates what you eat with how your skin scores, so your triggers come from your own data.</p>
+          <p>Rather than hand you a generic list of things to avoid, AcneTrack lets you scan a meal and tells you how well it fits your skin profile — before you eat it. Diet is one of the causes the app weighs when narrowing down what is driving your breakouts.</p>
         </div>
       </details>
 
@@ -910,6 +958,7 @@ function initHeroScroll() {
       '.ai-tool-card',
       '.combo-item',
       '.result-card',
+      '.faq-item',
       '.cause-text',
       '.cause-board',
       '.cta-section',
