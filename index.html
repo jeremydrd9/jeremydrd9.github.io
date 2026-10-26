@@ -2,23 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
-  <!-- ─── Primary meta ─── -->
-  <title>AcneTrack — AI Acne Tracker &amp; Skin Analysis App | iOS &amp; Android</title>
-  <meta name="description" content="AI acne tracker: scan your skin for an instant analysis, follow a routine built for you, and scan products &amp; food for your triggers. Free on iOS &amp; Android.">
+  <title>AcneTrack — Your Anti-Acne Plan, Built From a Face Scan | iOS &amp; Android</title>
+  <meta name="description" content="Scan your face, answer a few questions, and get an anti-acne plan built for your skin: the cause of your acne, your routine, and every tool to follow it. Free on iOS &amp; Android.">
   <link rel="canonical" href="https://acne-track.com/">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="author" content="Bsr Labs">
-  <meta name="theme-color" content="#FF9F6D">
+  <meta name="theme-color" content="#FBF8F4">
   <link rel="alternate" hreflang="en" href="https://acne-track.com/">
+  <link rel="alternate" hreflang="fr" href="https://acne-track.com/?lang=fr">
+  <link rel="alternate" hreflang="de" href="https://acne-track.com/?lang=de">
   <link rel="alternate" hreflang="x-default" href="https://acne-track.com/">
 
-  <!-- ─── Open Graph ─── -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://acne-track.com/">
-  <meta property="og:title" content="AcneTrack — AI Acne Tracker &amp; Skin Analysis App">
-  <meta property="og:description" content="Instant AI skin scans, a daily routine built for your skin, and product &amp; food scanners that reveal what's really triggering your acne. Free on iOS &amp; Android.">
+  <meta property="og:title" content="AcneTrack — Your anti-acne plan, built from a face scan">
+  <meta property="og:description" content="Scan your face, answer a few questions, get a plan built for your skin. Free on iOS &amp; Android.">
   <meta property="og:site_name" content="AcneTrack">
   <meta property="og:locale" content="en_US">
   <meta property="og:image" content="https://acne-track.com/assets/og-image.jpg">
@@ -26,975 +26,395 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="AcneTrack app dashboard showing an acne score, main acne cause and healing progress">
-
-  <!-- ─── Twitter ─── -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="AcneTrack — AI Acne Tracker &amp; Skin Analysis App">
-  <meta name="twitter:description" content="Instant AI skin scans, daily routines, and product &amp; food scanners that reveal your acne triggers. Free on iOS &amp; Android.">
+  <meta name="twitter:title" content="AcneTrack — Your anti-acne plan, built from a face scan">
+  <meta name="twitter:description" content="Scan your face, answer a few questions, get a plan built for your skin.">
   <meta name="twitter:image" content="https://acne-track.com/assets/og-image.jpg">
-  <meta name="twitter:image:alt" content="AcneTrack app dashboard showing an acne score, main acne cause and healing progress">
-
-  <!-- ─── iOS Smart App Banner ─── -->
   <meta name="apple-itunes-app" content="app-id=6743371480">
-
-  <!-- ─── Icons ─── -->
-  <link rel="icon" type="image/png" sizes="512x512" href="assets/Logo_Acnetrack.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512.png">
   <link rel="apple-touch-icon" href="assets/Logo_Acnetrack.png">
 
-  <!-- ─── Structured data ─── -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://acne-track.com/#organization",
-        "name": "Bsr Labs",
-        "url": "https://acne-track.com/",
-        "email": "contact@acne-track.com",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://acne-track.com/assets/Logo_Acnetrack.png",
-          "width": 512,
-          "height": 512
-        }
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://acne-track.com/#website",
-        "url": "https://acne-track.com/",
-        "name": "AcneTrack",
-        "description": "AI acne tracker and skin analysis app.",
-        "inLanguage": "en",
-        "publisher": { "@id": "https://acne-track.com/#organization" }
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://acne-track.com/#webpage",
-        "url": "https://acne-track.com/",
-        "name": "AcneTrack — AI Acne Tracker & Skin Analysis App",
-        "isPartOf": { "@id": "https://acne-track.com/#website" },
-        "about": { "@id": "https://acne-track.com/#app" },
-        "primaryImageOfPage": "https://acne-track.com/assets/og-image.jpg",
-        "inLanguage": "en"
-      },
-      {
-        "@type": "MobileApplication",
-        "@id": "https://acne-track.com/#app",
-        "name": "AcneTrack",
-        "alternateName": "Acnetrack",
-        "description": "AI acne tracking app. Scan your skin for an instant acne analysis, follow a daily routine built for your skin profile, scan skincare products and food for compatibility, and track your progress week by week.",
-        "url": "https://acne-track.com/",
-        "operatingSystem": "iOS 15.0+, Android 8.0+",
-        "applicationCategory": "HealthApplication",
-        "applicationSubCategory": "Skin care",
+      { "@type": "Organization", "@id": "https://acne-track.com/#organization", "name": "Bsr Labs", "url": "https://acne-track.com/", "email": "contact@acne-track.com",
+        "logo": { "@type": "ImageObject", "url": "https://acne-track.com/assets/Logo_Acnetrack.png", "width": 512, "height": 512 } },
+      { "@type": "WebSite", "@id": "https://acne-track.com/#website", "url": "https://acne-track.com/", "name": "AcneTrack", "description": "AI acne tracker and skin analysis app.", "inLanguage": "en", "publisher": { "@id": "https://acne-track.com/#organization" } },
+      { "@type": "WebPage", "@id": "https://acne-track.com/#webpage", "url": "https://acne-track.com/", "name": "AcneTrack — Your anti-acne plan, built from a face scan", "isPartOf": { "@id": "https://acne-track.com/#website" }, "about": { "@id": "https://acne-track.com/#app" }, "primaryImageOfPage": "https://acne-track.com/assets/og-image.jpg", "inLanguage": "en" },
+      { "@type": "MobileApplication", "@id": "https://acne-track.com/#app", "name": "AcneTrack", "alternateName": "Acnetrack",
+        "description": "AI acne app. Scan your face, answer a few questions and get a personalized anti-acne plan: the likely cause of your acne, a skincare routine built for your profile, and tools to follow it (food scanner, product scanner, AI coach, daily tracking and progress photos).",
+        "url": "https://acne-track.com/", "operatingSystem": "iOS 15.1+, Android 8.0+", "applicationCategory": "HealthApplication", "applicationSubCategory": "Skin care",
         "image": "https://acne-track.com/assets/og-image.jpg",
-        "screenshot": [
-          "https://acne-track.com/assets/main-dashboard.webp",
-          "https://acne-track.com/assets/skin-scanner.webp",
-          "https://acne-track.com/assets/skincare-routine.webp",
-          "https://acne-track.com/assets/evolution-tab.webp"
-        ],
-        "featureList": [
-          "AI pimple scan and acne severity score",
-          "Personalized morning and evening skincare routine",
-          "Skincare product scanner with compatibility score",
-          "Food scanner to identify dietary acne triggers",
-          "24/7 AI skin coach",
-          "Progress photos and skin evolution tracking"
-        ],
-        "installUrl": [
-          "https://apps.apple.com/us/app/acnetrack-your-acne-journey/id6743371480",
-          "https://play.google.com/store/apps/details?id=com.acnetrack.app"
-        ],
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "USD",
-          "availability": "https://schema.org/InStock"
-        },
-        "publisher": { "@id": "https://acne-track.com/#organization" },
-        "author": { "@id": "https://acne-track.com/#organization" }
-      }
+        "screenshot": ["https://acne-track.com/assets/app/en/dashboard.jpg", "https://acne-track.com/assets/app/en/routine.jpg", "https://acne-track.com/assets/app/en/evolution.jpg", "https://acne-track.com/assets/app/en/food-scan.jpg"],
+        "featureList": ["AI face scan", "Personalized anti-acne plan", "Main acne cause out of 20+ factors", "Personalized morning and evening skincare routine", "Food scanner", "Skincare product scanner", "24/7 AI skin coach", "Daily skin tracking and progress photos"],
+        "installUrl": ["https://apps.apple.com/us/app/acnetrack-your-acne-journey/id6743371480", "https://play.google.com/store/apps/details?id=com.acnetrack.app"],
+        "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.7", "ratingCount": "900", "bestRating": "5" },
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "availability": "https://schema.org/InStock" },
+        "publisher": { "@id": "https://acne-track.com/#organization" }, "author": { "@id": "https://acne-track.com/#organization" } }
     ]
   }
   </script>
-
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "@id": "https://acne-track.com/#faq",
+    "@context": "https://schema.org", "@type": "FAQPage", "@id": "https://acne-track.com/#faq",
     "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Why does the AcneTrack method work?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Because it treats acne as a problem with a cause, rather than a surface to cover up. Most routines attack the spot that is already there while whatever produced it carries on untouched. AcneTrack works the other way round. It builds a profile of your skin, gives you a routine to follow daily, and measures the result with a score you can compare over time. That loop — act, measure, adjust — is what turns guesswork into something you can steer. When your score moves, you know what moved it."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do I need to know what's causing my acne before I start?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No — finding that out is the whole point. Most people have a theory about their acne and no way to test it. You get a first answer straight away: the onboarding questions and your very first face scan are enough for AcneTrack to name a likely main cause out of the twenty-plus it tracks — hormones, stress, sleep, skincare, diet and more. That reading then sharpens the longer you use the app and the more you scan, so a first strong hypothesis turns into something you can rely on."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "I've already tried everything. Why would this be different?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "If products alone were the answer, they would have worked by now. What usually fails is not the product — it is that nothing was ever measured, so there was no way to tell what helped, what did nothing, and what quietly made things worse. AcneTrack is not another cream. It gives you a way to see your skin objectively: a score that moves, a history you can scroll back through, and a cause you can finally name. It will not clear your skin overnight, but it stops you repeating the same cycle blind."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How does the AI acne scan work?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "You take a photo of your skin and AcneTrack analyses it in seconds, returning your acne score out of 100, the type of acne it detects, and tailored advice. For close-up analysis of a single spot, the Pimple Scan uses CE-marked medical software built to ISO 13485 quality standards. Each new scan is compared with your previous ones, so the Evolution tab shows whether your skin is actually improving rather than relying on memory."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can the food I eat really cause acne?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "For some people, yes. Research has linked high-glycaemic foods and dairy to breakouts, but triggers are highly individual — what wrecks one person's skin does nothing to another's. Rather than hand you a generic list of things to avoid, AcneTrack lets you scan a meal and tells you how well it fits your skin profile — before you eat it. Diet is one of the causes the app weighs when narrowing down what is driving your breakouts."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How long does it take to see results?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Skin renews itself over roughly four to six weeks, so meaningful change rarely shows up sooner than that — and any product or app promising clear skin in days is overselling. Most users who track consistently start seeing measurable movement in their acne score after about eight to twelve weeks. Consistency matters far more than intensity, which is why the app is built around a daily routine and a streak."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Does AcneTrack work for hormonal acne?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Hormonal patterns are one of the causes AcneTrack tracks, alongside diet, sleep, stress, skincare and around twenty others. Logging consistently helps surface cyclical patterns that are hard to spot day to day. That said, hormonal acne often needs medical treatment. AcneTrack helps you understand and document what is happening to your skin — it is not a replacement for a dermatologist."
-        }
-      }
+      { "@type": "Question", "name": "How does AcneTrack work?", "acceptedAnswer": { "@type": "Answer", "text": "You scan your face and answer a few questions about your skin and your daily life. AcneTrack uses both to build your anti-acne plan: the likely cause of your acne, a routine made for your skin, and the tools to follow it day after day." } },
+      { "@type": "Question", "name": "Do I need to know what's causing my acne?", "acceptedAnswer": { "@type": "Answer", "text": "No, finding it is the point. Your answers and your face scan are enough for AcneTrack to name a likely main cause out of the twenty-plus factors it weighs." } },
+      { "@type": "Question", "name": "Are my photos safe?", "acceptedAnswer": { "@type": "Answer", "text": "Your photos are stored in a private, access-controlled space, used only for your analysis, never shared or sold, and deleted with your account whenever you ask." } },
+      { "@type": "Question", "name": "How long does it take to see results?", "acceptedAnswer": { "@type": "Answer", "text": "Skin renews itself over roughly four to six weeks. Most users who follow their plan see measurable change after eight to twelve weeks." } },
+      { "@type": "Question", "name": "Does it replace a dermatologist?", "acceptedAnswer": { "@type": "Answer", "text": "No. AcneTrack helps you understand and follow your skin. Severe or hormonal acne often needs medical treatment." } },
+      { "@type": "Question", "name": "How much does AcneTrack cost?", "acceptedAnswer": { "@type": "Answer", "text": "The scan and the questionnaire are free. The full plan and the tools are part of a subscription you can cancel anytime." } }
     ]
   }
   </script>
 
-  <!-- ─── Fonts (moved out of the CSS @import so they don't block render) ─── -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Manrope:wght@400;500;600;700&display=swap">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Manrope:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Manrope:wght@400;500;600;700&display=swap"></noscript>
-
-  <link rel="preload" as="image" href="assets/main-dashboard.webp" fetchpriority="high">
-  <link rel="stylesheet" href="style.css?v=24">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap">
+  <link rel="preload" as="image" href="assets/app/facescan.jpg" fetchpriority="high">
+  <link rel="stylesheet" href="site.css?v=15">
 </head>
 <body>
 
-<!-- ─── Navigation ─── -->
-<nav class="nav" role="navigation" aria-label="Main navigation">
-  <div class="nav-inner">
-    <a href="/" class="nav-brand">
-      <img src="assets/Logo_Acnetrack.webp" alt="" class="nav-logo" width="28" height="28" aria-hidden="true">
-      Acnetrack
-    </a>
+<nav class="nav" id="nav" aria-label="Main navigation">
+  <div class="wrap">
+    <a href="/" class="brand"><img src="assets/Logo_Acnetrack.webp" alt="" width="28" height="28">AcneTrack</a>
     <ul class="nav-links">
-      <li><a href="/" class="active">Home</a></li>
-      <li><a href="#features">Features</a></li>
+      <li><a href="#how" data-i18n="nav.how">How it works</a></li>
+      <li><a href="#tools" data-i18n="nav.tools">The app</a></li>
+      <li><a href="#reviews" data-i18n="nav.reviews">Reviews</a></li>
+      <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
     </ul>
     <div class="nav-right">
-      <a href="https://apps.apple.com/us/app/acnetrack-your-acne-journey/id6743371480" class="nav-store-btn nav-store-apple" target="_blank" rel="noopener">
-        <svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true">
-          <path fill="currentColor" d="M3,17 C2.44771525,17 2,16.5522847 2,16 C2,15.4477153 2.44771525,15 3,15 L13.5,15 C14.5,15 15.5,17 15,17 L3,17 Z M17,17 C16.4477153,17 16,16.5522847 16,16 C16,15.4477153 16.4477153,15 17,15 L21,15 C21.5522847,15 22,15.4477153 22,16 C22,16.5522847 21.5522847,17 21,17 L17,17 Z M12.6333775,3.50103556 C12.908948,3.02241319 13.5203421,2.85780709 13.9989644,3.13337754 C14.4775868,3.408948 14.6421929,4.02034208 14.3666225,4.49896444 L7.45953351,16.4954873 C7.18396306,16.9741097 6.57256898,17.1387158 6.09394661,16.8631454 C5.61532424,16.5875749 5.45071815,15.9761808 5.7262886,15.4975585 L12.6333775,3.50103556 Z M4,18.5 C4.5,17.5 7.5,16.5 6.5,18.2208385 C6.32221095,18.5267848 5.77775177,19.4528267 4.86662246,20.9989644 C4.591052,21.4775868 3.97965792,21.6421929 3.50103556,21.3666225 C3.02241319,21.091052 2.85780709,20.4796579 3.13337754,20.0010356 L4,18.5 Z M9.13337754,4.49896444 C8.85780709,4.02034208 9.02241319,3.408948 9.50103556,3.13337754 C9.97965792,2.85780709 10.591052,3.02241319 10.8666225,3.50103556 L12.6104584,6.52980328 C12.8860289,7.00842564 12.7214228,7.61981972 12.2428004,7.89539018 C11.764178,8.17096063 11.152784,8.00635453 10.8772135,7.52773217 L9.13337754,4.49896444 Z M13,11.5 C12.1018662,10 13,7 13.7163439,8.49589818 L20.3666225,20.0010356 C20.6421929,20.4796579 20.4775868,21.091052 19.9989644,21.3666225 C19.5203421,21.6421929 18.908948,21.4775868 18.6333775,20.9989644 L13,11.5 Z"/>
-        </svg>
-        <span>App Store</span>
-      </a>
-      <a href="https://play.google.com/store/apps/details?id=com.acnetrack.app" class="nav-store-btn nav-store-google" target="_blank" rel="noopener">
-        <svg width="15" height="15" viewBox="0 0 20 22" fill="none" aria-hidden="true"><path d="M1.5 1.3C1.2 1.6 1 2.1 1 2.7v16.6c0 .6.2 1.1.5 1.4l.1.1 9.3-9.3v-.2L1.5 1.3z" fill="currentColor" opacity=".8"/><path d="M14 14.3l-3.1-3.1v-.4L14 7.7l.1.1 3.7 2.1c1 .6 1 1.6 0 2.2L14 14.3z" fill="currentColor"/><path d="M14.1 14.2L10.9 11 1.5 20.4c.3.3.9.4 1.5.1l11.1-6.3" fill="currentColor" opacity=".7"/><path d="M14.1 7.8L3 1.5C2.4 1.2 1.8 1.3 1.5 1.6L10.9 11l3.2-3.2z" fill="currentColor" opacity=".6"/></svg>
-        <span>Google Play</span>
-      </a>
-      <button class="nav-hamburger" id="hamburger" aria-label="Open menu" onclick="toggleMobileNav()">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="lang">
+        <button class="lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false" aria-label="Language">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/></svg>
+          <span id="langLabel">EN</span>
+        </button>
+        <div class="lang-menu" id="langMenu" role="menu">
+          <button data-lang="en" role="menuitem">English</button>
+          <button data-lang="fr" role="menuitem">Français</button>
+          <button data-lang="de" role="menuitem">Deutsch</button>
+        </div>
+      </div>
+      <a class="btn btn-dark btn-sm cta" href="#download" data-i18n="nav.cta">Start</a>
     </div>
   </div>
 </nav>
 
-<!-- Mobile nav -->
-<nav class="nav-mobile" id="mobileNav" aria-label="Mobile navigation">
-  <a href="/" class="active" onclick="toggleMobileNav()">Home</a>
-  <a href="#features" onclick="toggleMobileNav()">Features</a>
-  <a href="https://apps.apple.com/us/app/acnetrack-your-acne-journey/id6743371480" target="_blank" rel="noopener" onclick="toggleMobileNav()">Download on App Store</a>
-  <a href="https://play.google.com/store/apps/details?id=com.acnetrack.app" target="_blank" rel="noopener" onclick="toggleMobileNav()">Get it on Google Play</a>
-</nav>
+<main>
 
 <!-- ─── Hero ─── -->
-<section class="hero hero-v2">
-  <div class="hero-v2-inner">
-
-    <!-- Left: text -->
-    <div class="hero-v2-text">
-      <h1 class="hero-big">Acne ends when<br>you <span class="hero-big-accent">understand it.</span></h1>
-      <p class="hero-sub">Your personal AI acne coach — daily routines, smart product &amp; food scanners, and measurable progress toward clear skin.</p>
+<section class="hero" id="hero">
+  <div class="wrap">
+    <span class="pill"><span class="stars" aria-hidden="true">★★★★★</span> <span data-i18n="hero.pill">4.7 · 200,000+ users</span></span>
+    <h1 data-i18n-html="hero.h1">Your anti-acne plan, <em>built for your skin.</em></h1>
+    <p class="lead" data-i18n="hero.lead">Scan your face, answer a few questions, and get a plan made for you: what's causing your acne, your routine, and everything to follow it.</p>
+    <div class="hero-cta">
+      <a class="btn btn-dark cta" href="#download">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="3.5"/></svg>
+        <span data-i18n="hero.cta">Scan my face for free</span>
+      </a>
+      <p class="cta-note" data-i18n="hero.note">Free · 2 minutes · iOS &amp; Android</p>
     </div>
-
-    <!-- Right: phone + floating cards -->
-    <div class="phone-scene">
-
-      <!-- Orange halo glow -->
-      <div class="phone-halo"></div>
-
-      <!-- Floating cards: left column -->
-      <div class="phone-cards-left">
-        <div class="float-card">
-          <span class="float-icon">🧬</span>
-          <div>
-            <div class="float-label">Main cause</div>
-            <div class="float-val">Hormonal</div>
-          </div>
-        </div>
-        <div class="float-card">
-          <span class="float-icon">🔥</span>
-          <div>
-            <div class="float-label">Active streak</div>
-            <div class="float-val">7 days</div>
-          </div>
+  </div>
+  <div class="fan" id="heroFan" aria-hidden="true">
+    <div class="phone p-l"><img data-shot="dashboard" src="assets/app/en/dashboard.jpg" alt="" decoding="async"></div>
+    <div class="phone p-c">
+      <div class="scr facescan">
+        <img src="assets/app/facescan.jpg" alt="" fetchpriority="high" decoding="async">
+        <i class="fs-sweep"></i>
+        <div class="fs-pills">
+          <span class="fs-pill"><span data-i18n="scan.p1">Analyzing your profile…</span><b></b></span>
+          <span class="fs-pill"><span data-i18n="scan.p2">Finding acne causes…</span><b></b></span>
+          <span class="fs-pill"><span data-i18n="scan.p3">Building your skin plan…</span><b></b></span>
         </div>
       </div>
-
-      <!-- Phone mockup -->
-      <img src="assets/main-dashboard.webp" alt="AcneTrack app dashboard showing an acne score of 22/100, the main acne cause identified as hormonal, and healing progress" class="hero-phone-img" width="880" height="1782" fetchpriority="high" decoding="async">
-
-      <!-- Floating cards: right column -->
-      <div class="phone-cards-right">
-        <div class="float-card">
-          <div>
-            <div class="float-label">Up to</div>
-            <div class="float-val">93% clearer 🏆</div>
-          </div>
-        </div>
-        <div class="float-card">
-          <span class="float-icon">🧴</span>
-          <div>
-            <div class="float-label">Product compat.</div>
-            <div class="float-val">93% <span>match</span></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Store buttons below the phone -->
-      <div class="phone-cta-row">
-        <a href="https://apps.apple.com/us/app/acnetrack-your-acne-journey/id6743371480" class="phone-cta-btn" target="_blank" rel="noopener">
-          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
-            <path fill="currentColor" d="M3,17 C2.44771525,17 2,16.5522847 2,16 C2,15.4477153 2.44771525,15 3,15 L13.5,15 C14.5,15 15.5,17 15,17 L3,17 Z M17,17 C16.4477153,17 16,16.5522847 16,16 C16,15.4477153 16.4477153,15 17,15 L21,15 C21.5522847,15 22,15.4477153 22,16 C22,16.5522847 21.5522847,17 21,17 L17,17 Z M12.6333775,3.50103556 C12.908948,3.02241319 13.5203421,2.85780709 13.9989644,3.13337754 C14.4775868,3.408948 14.6421929,4.02034208 14.3666225,4.49896444 L7.45953351,16.4954873 C7.18396306,16.9741097 6.57256898,17.1387158 6.09394661,16.8631454 C5.61532424,16.5875749 5.45071815,15.9761808 5.7262886,15.4975585 L12.6333775,3.50103556 Z M4,18.5 C4.5,17.5 7.5,16.5 6.5,18.2208385 C6.32221095,18.5267848 5.77775177,19.4528267 4.86662246,20.9989644 C4.591052,21.4775868 3.97965792,21.6421929 3.50103556,21.3666225 C3.02241319,21.091052 2.85780709,20.4796579 3.13337754,20.0010356 L4,18.5 Z M9.13337754,4.49896444 C8.85780709,4.02034208 9.02241319,3.408948 9.50103556,3.13337754 C9.97965792,2.85780709 10.591052,3.02241319 10.8666225,3.50103556 L12.6104584,6.52980328 C12.8860289,7.00842564 12.7214228,7.61981972 12.2428004,7.89539018 C11.764178,8.17096063 11.152784,8.00635453 10.8772135,7.52773217 L9.13337754,4.49896444 Z M13,11.5 C12.1018662,10 13,7 13.7163439,8.49589818 L20.3666225,20.0010356 C20.6421929,20.4796579 20.4775868,21.091052 19.9989644,21.3666225 C19.5203421,21.6421929 18.908948,21.4775868 18.6333775,20.9989644 L13,11.5 Z"/>
-          </svg>
-          <span><small>Download on the</small>App Store</span>
-        </a>
-        <a href="https://play.google.com/store/apps/details?id=com.acnetrack.app" class="phone-cta-btn" target="_blank" rel="noopener">
-          <svg width="18" height="20" viewBox="0 0 20 22" fill="none" aria-hidden="true"><path d="M1.5 1.3C1.2 1.6 1 2.1 1 2.7v16.6c0 .6.2 1.1.5 1.4l.1.1 9.3-9.3v-.2L1.5 1.3z" fill="currentColor" opacity=".8"/><path d="M14 14.3l-3.1-3.1v-.4L14 7.7l.1.1 3.7 2.1c1 .6 1 1.6 0 2.2L14 14.3z" fill="currentColor"/><path d="M14.1 14.2L10.9 11 1.5 20.4c.3.3.9.4 1.5.1l11.1-6.3" fill="currentColor" opacity=".7"/><path d="M14.1 7.8L3 1.5C2.4 1.2 1.8 1.3 1.5 1.6L10.9 11l3.2-3.2z" fill="currentColor" opacity=".6"/></svg>
-          <span><small>Get it on</small>Google Play</span>
-        </a>
-      </div>
-
-      <!-- Social proof moved below CTA -->
-      <div class="hero-social-proof hero-proof-below">
-        <div class="hero-rating">
-          <span class="stars">★★★★★</span>
-          <span>4.8</span>
-        </div>
-        <div class="hero-divider"></div>
-        <div class="hero-users"><strong>200,000+</strong> users</div>
-      </div>
-
-    </div><!-- /.phone-scene -->
-  </div><!-- /.hero-v2-inner -->
+    </div>
+    <div class="phone p-r"><img data-shot="routine" src="assets/app/en/routine.jpg" alt="" decoding="async"></div>
+  </div>
 </section>
 
-<!-- ─── Features overview ─── -->
-<section class="section section-white" id="features">
-  <div class="section-inner">
-    <div class="section-header">
-      <span class="eyebrow">Features</span>
-      <h2 class="section-title">Everything you need to clear your skin</h2>
-      <p class="section-sub">From personalized onboarding to daily tracking and AI coaching — AcneTrack guides you every step of the way.</p>
-    </div>
-    <div class="features-grid">
-      <div class="feature-card">
-        <div class="feature-icon">🧬</div>
-        <h3>Personalized Onboarding</h3>
-        <p>Answer a few questions about your skin type, habits, and triggers. AcneTrack builds a profile tailored exactly to you.</p>
+<!-- ─── Avant / après ─── -->
+<section class="ba" id="results">
+  <div class="wrap">
+    <h2 class="ba-title rv" data-i18n="ba.h2">They followed their plan.</h2>
+  </div>
+  <div class="marquee rv" aria-label="Before and after photos">
+    <div class="marquee-track" id="baTrack">
+      <div class="ba-pair">
+        <figure><img src="assets/ba/f2-before.jpg" alt="" loading="lazy"><figcaption data-i18n="ba.before">Before</figcaption></figure>
+        <figure class="after"><img src="assets/ba/f2-after.jpg" alt="" loading="lazy"><figcaption data-i18n="ba.after">After</figcaption></figure>
       </div>
-      <div class="feature-card">
-        <div class="feature-icon">✅</div>
-        <h3>Daily Routine &amp; Checklist</h3>
-        <p>A morning and evening routine adapted to your profile. Check off steps, build consistency, and watch your streak grow.</p>
+      <div class="ba-pair">
+        <figure><img src="assets/ba/f3-before.jpg" alt="" loading="lazy"><figcaption data-i18n="ba.before">Before</figcaption></figure>
+        <figure class="after"><img src="assets/ba/f3-after.jpg" alt="" loading="lazy"><figcaption data-i18n="ba.after">After</figcaption></figure>
       </div>
-      <div class="feature-card">
-        <div class="feature-icon">📸</div>
-        <h3>Progress Tracking</h3>
-        <p>Take progress photos and visualize your skin journey over days, weeks, and months. Measurable improvement, always.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">💬</div>
-        <h3>AI Coach — 24/7</h3>
-        <p>Ask anything about acne, routines, or ingredients. Your personal skin coach is always available, always patient.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">🔬</div>
-        <h3>Pimple Scan</h3>
-        <p>Zoom in on a single spot and get an instant analysis powered by CE-certified medical AI — then follow its healing day by day in the Evolution tab.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">🧴</div>
-        <h3>Product &amp; Food Scanners</h3>
-        <p>Scan any skincare product or meal and instantly see how it matches your skin profile — before it ends up on your face or your plate.</p>
+      <div class="ba-pair">
+        <figure><img src="assets/ba/f1-before.jpg" alt="" loading="lazy"><figcaption data-i18n="ba.before">Before</figcaption></figure>
+        <figure class="after"><img src="assets/ba/f1-after.jpg" alt="" loading="lazy"><figcaption data-i18n="ba.after">After</figcaption></figure>
       </div>
     </div>
   </div>
 </section>
 
-
-<!-- ─── Acne Cause Finder ─── -->
-<section class="section section-alt" id="cause">
-  <div class="section-inner">
-    <div class="cause-layout">
-      <div class="cause-text">
-        <h2>Stop struggling<br>with your skin alone.</h2>
-        <p>AcneTrack connects the dots; analyzing your food, sleep, stress, and daily habits to reveal the real trigger behind your skin.</p>
-        <p>Your skin has a story, and AcneTrack reads it.</p>
-      </div>
-      <div class="cause-visual">
-        <div class="cause-board">
-          <p class="cause-board-prompt">Your potential acne triggers</p>
-          <div class="cause-pill-grid cause-pill-grid--collapsed" id="causePills">
-            <div class="cause-pill cause-pill-active">🧬 Hormones</div>
-            <div class="cause-pill">🥛 Dairy</div>
-            <div class="cause-pill">😣 Stress</div>
-            <div class="cause-pill">😴 Bad sleep</div>
-            <div class="cause-pill">🍭 Sugar</div>
-            <div class="cause-pill">💧 Dehydration</div>
-            <div class="cause-pill">📱 Phone screen</div>
-            <div class="cause-pill">☕ Caffeine</div>
-            <div class="cause-pill">🥤 Protein shakes</div>
-            <div class="cause-pill">🌫️ Pollution</div>
-            <div class="cause-pill">🛏️ Dirty pillow</div>
-            <div class="cause-pill">🤚 Touching face</div>
-            <div class="cause-pill">💦 Sweat</div>
-            <div class="cause-pill">🌾 Gluten</div>
-            <div class="cause-pill">🦠 Gym bacteria</div>
-            <div class="cause-pill">🚬 Smoking</div>
-            <div class="cause-pill">🌶️ Spicy food</div>
-            <div class="cause-pill">🌿 Lack of fiber</div>
-            <div class="cause-pill">💄 Makeup</div>
-            <div class="cause-pill">🪮 Hair products</div>
-            <div class="cause-pill">🍔 Bad diet</div>
-            <div class="cause-pill">💊 Birth control</div>
-            <div class="cause-pill">🧴 Skincare</div>
-          </div>
-          <button class="cause-more-btn" id="causeMoreBtn" type="button" aria-expanded="false">
-            Show more
-          </button>
-          <!-- Stats strip -->
-          <div class="cause-stats">
-            <div class="cause-stat">
-              <span class="cause-stat-val">20+</span>
-              <span class="cause-stat-label">Causes tracked</span>
-            </div>
-            <div class="cause-stat">
-              <span class="cause-stat-val">100K+</span>
-              <span class="cause-stat-label">Active users</span>
-            </div>
-            <div class="cause-stat">
-              <span class="cause-stat-val">368K+</span>
-              <span class="cause-stat-label">Skin scans</span>
-            </div>
-            <div class="cause-stat">
-              <span class="cause-stat-val">93%</span>
-              <span class="cause-stat-label">Clearer skin</span>
+<!-- ─── Comment ça marche ─── -->
+<section class="sec" id="how">
+  <div class="wrap">
+    <h2 class="sec-title rv" data-i18n="how.h2">How it works</h2>
+    <div class="cards cards-3">
+      <article class="card rv">
+        <div class="card-media">
+          <div class="phone">
+            <div class="scr facescan">
+              <img src="assets/app/facescan.jpg" alt="" loading="lazy" decoding="async">
+              <i class="fs-sweep"></i>
+              <div class="fs-pills">
+                <span class="fs-pill"><span data-i18n="scan.p1">Analyzing your profile…</span><b></b></span>
+                <span class="fs-pill"><span data-i18n="scan.p2">Finding acne causes…</span><b></b></span>
+                <span class="fs-pill"><span data-i18n="scan.p3">Building your skin plan…</span><b></b></span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+        <h3 data-i18n="how.s1.h">Scan your face</h3>
+        <p data-i18n="how.s1.p">Turn your head, the AI maps your skin</p>
+      </article>
+      <article class="card rv d1">
+        <div class="card-media"><div class="phone"><img data-shot="quiz" src="assets/app/en/quiz.jpg" alt="AcneTrack questionnaire: what kind of acne are you struggling with" loading="lazy"></div></div>
+        <h3 data-i18n="how.s2.h">Tell us about you</h3>
+        <p data-i18n="how.s2.p">We learn your situation to personalize your plan</p>
+      </article>
+      <article class="card rv d2">
+        <div class="card-media multi">
+          <div class="phone m-l"><img data-shot="routine" src="assets/app/en/routine.jpg" alt="Personalized skincare routine" loading="lazy"></div>
+          <div class="phone m-r"><img data-shot="food-scan" src="assets/app/en/food-scan.jpg" alt="Food scanner" loading="lazy"></div>
+          <div class="phone m-c"><img data-shot="dashboard" src="assets/app/en/dashboard.jpg" alt="AcneTrack plan: main cause, goal date and acne score" loading="lazy"></div>
+        </div>
+        <h3 data-i18n="how.s3.h">Get your plan</h3>
+        <p data-i18n="how.s3.p">Full analysis, skincare routine, daily advice</p>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- ─── AI Tools ─── -->
-<section class="section section-white">
-  <div class="section-inner">
-    <div class="section-header">
-      <span class="eyebrow">AI Tools</span>
-      <h2 class="section-title">Powered by AI, built for your skin</h2>
-      <p class="section-sub">Four specialized AI tools that give you insights no generic app can match.</p>
+<!-- ─── Ce que contient le plan ─── -->
+<section class="sec plan" id="plan">
+  <div class="wrap plan-grid">
+    <div class="plan-text rv">
+      <span class="eyebrow" data-i18n="plan.eyebrow">Your plan</span>
+      <h2 data-i18n="plan.h2">Everything you need to finally understand your acne.</h2>
+      <ul class="checks">
+        <li><b data-i18n="plan.l1.h">Where your acne comes from</b><span data-i18n="plan.l1.p">Your main cause, out of 20+ factors: hormones, stress, sleep, diet, skincare…</span></li>
+        <li><b data-i18n="plan.l2.h">A full analysis of your skin</b><span data-i18n="plan.l2.p">Acne type, zones affected, score out of 100.</span></li>
+        <li><b data-i18n="plan.l3.h">Your routine, morning and night</b><span data-i18n="plan.l3.p">Products chosen for your skin, your budget and your cause.</span></li>
+        <li><b data-i18n="plan.l4.h">What to do, what to avoid</b><span data-i18n="plan.l4.p">Clear daily habits, week after week.</span></li>
+      </ul>
     </div>
-    <div class="ai-tools-grid">
-      <div class="ai-tool-card">
-        <div class="ai-tool-info">
-          <div class="ai-tool-icon">🔬</div>
-          <span class="tool-badge">Skin Scan</span>
-          <h3>Pimple Scan</h3>
-          <p>Take a close-up photo and get an instant AI analysis of your acne — type, severity, and personalised advice.</p>
+    <div class="plan-shot rv d1"><div class="phone"><img data-shot="routine" src="assets/app/en/routine.jpg" alt="AcneTrack personalized morning routine" loading="lazy"></div></div>
+  </div>
+</section>
+
+<!-- ─── Les outils (grille de cartes) ─── -->
+<section class="sec bento-sec" id="tools">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <h2 data-i18n="tools.h2">The app we dreamed of when we had acne.</h2>
+      <p data-i18n="tools.p">Analysis, routine, scanners, coach, daily tracking: everything in one place.</p>
+    </div>
+    <div class="bento">
+      <article class="tile tile-cause span2 rv">
+        <div class="tile-text">
+          <h3 data-i18n="app.causes.h">Find what's really causing it</h3>
+          <p data-i18n="app.causes.p">Your answers and your scan are weighed against 20+ factors. You get one main cause, explained.</p>
+          <ul class="cause-list">
+            <li><span data-i18n-html="app.cause.l1"><b>Your main cause</b>, in plain words</span></li>
+            <li><span data-i18n-html="app.cause.l2"><b>Your acne type</b> and the zones affected</span></li>
+            <li><span data-i18n-html="app.cause.l3"><b>Your goal date</b>, if you follow your plan</span></li>
+          </ul>
         </div>
-        <div class="ai-tool-img">
-          <img src="assets/skin-scanner.webp" alt="AcneTrack Pimple Scan analysing a close-up photo of a spot and returning its type and severity" width="700" height="671" loading="lazy" decoding="async">
+        <div class="shot"><div class="phone"><img data-shot="dashboard" src="assets/app/en/dashboard.jpg" alt="AcneTrack dashboard showing the main acne cause" loading="lazy"></div></div>
+      </article>
+      <article class="tile tile-compare rv d1">
+        <div class="compare" id="compare">
+          <img src="assets/ba/f2-after.jpg" alt="Week 6" loading="lazy">
+          <div class="compare-before"><img src="assets/ba/f2-before.jpg" alt="Week 1" loading="lazy"></div>
+          <span class="compare-tag l" data-i18n="app.week1">Week 1</span><span class="compare-tag r" data-i18n="app.week6">Week 6</span>
+          <i class="compare-handle"></i>
+          <input type="range" min="0" max="100" value="50" aria-label="Compare before and after">
         </div>
-      </div>
-      <div class="ai-tool-card">
-        <div class="ai-tool-info">
-          <div class="ai-tool-icon">🧴</div>
-          <span class="tool-badge">Ingredient Check</span>
-          <h3>Product Scanner</h3>
-          <p>Scan any skincare product and instantly know if it's safe for acne-prone skin — with a compatibility score.</p>
+        <div class="tile-text">
+          <h3 data-i18n="tools.evo.h">Your progress</h3>
+          <p data-i18n="app.compare.p">Same spot, same light. Slide to see the change.</p>
         </div>
-        <div class="ai-tool-img">
-          <img src="assets/skincare-matches.webp" alt="AcneTrack Product Scanner rating a skincare product's compatibility with acne-prone skin" width="700" height="633" loading="lazy" decoding="async">
+      </article>
+      <article class="tile rv">
+        <div class="tile-text">
+          <h3 data-i18n="tools.food.h">Food scanner</h3>
+          <p data-i18n="tools.food.p">Scan your meal, see if it suits your skin</p>
         </div>
-      </div>
-      <div class="ai-tool-card">
-        <div class="ai-tool-info">
-          <div class="ai-tool-icon">🥗</div>
-          <span class="tool-badge">Food Trigger</span>
-          <h3>Food Scanner</h3>
-          <p>Scan what you eat and discover how your diet impacts your skin. Identify your triggers, one meal at a time.</p>
+        <div class="shot"><div class="phone"><img data-shot="food-scan" src="assets/app/en/food-scan.jpg" alt="Food scanner result" loading="lazy"></div></div>
+      </article>
+      <article class="tile rv d1">
+        <div class="tile-text">
+          <h3 data-i18n="tools.product.h">Skincare scanner</h3>
+          <p data-i18n="tools.product.p">Check that your products suit your skin: the ones you use and the ones you plan to buy</p>
         </div>
-        <div class="ai-tool-img">
-          <img src="assets/feature-food_scanning.webp" alt="AcneTrack Food Scanner showing how a scanned meal affects acne-prone skin" width="700" height="582" loading="lazy" decoding="async">
+        <div class="shot"><div class="phone"><img data-shot="product-scan" src="assets/app/en/product-scan.jpg" alt="Product scanner result" loading="lazy"></div></div>
+      </article>
+      <article class="tile rv d2">
+        <div class="tile-text">
+          <h3 data-i18n="tools.today.h">Daily skin tracking</h3>
+          <p data-i18n="tools.today.p">A photo and how your skin feels, every day, to spot what makes it react</p>
         </div>
-      </div>
-      <div class="ai-tool-card">
-        <div class="ai-tool-info">
-          <div class="ai-tool-icon">💬</div>
-          <span class="tool-badge">24/7 Coach</span>
-          <h3>AI Chat Coach</h3>
-          <p>Ask anything about acne, ingredients, or routines. Your personal skin coach answers 24/7, instantly.</p>
+        <div class="shot"><div class="phone"><img data-shot="today" src="assets/app/en/today.jpg" alt="Today tab with daily tasks" loading="lazy"></div></div>
+      </article>
+      <article class="tile tile-coach span3 rv">
+        <div class="tile-text">
+          <h3 data-i18n="tools.coach.h">AI coach</h3>
+          <p data-i18n="app.coach.p">Not a generic chatbot: it knows your skin, your cause, your routine and your history.</p>
+          <div class="chat" id="chat" aria-hidden="true">
+            <div class="chat-profile">
+              <span data-i18n="chat.tag1">Combination skin</span><span data-i18n="chat.tag2">Hormonal cause</span><span data-i18n="chat.tag3">Evening routine</span><span data-i18n="chat.tag4">Day 24</span>
+            </div>
+            <div class="chat-log" id="chatLog"></div>
+          </div>
+          <div class="chat-src" hidden>
+            <p data-i18n="chat.q1">My period starts in 3 days, what should I do?</p>
+            <p data-i18n="chat.a1">Your acne is hormonal, so this is the week it flares. Keep your routine, use your niacinamide every evening and skip dairy until Sunday.</p>
+            <p data-i18n="chat.q2">Can I add a new serum to my routine?</p>
+            <p data-i18n="chat.a2">It works with your CeraVe cleanser and your niacinamide. Start with evenings only, every other day for the first week.</p>
+            <p data-i18n="chat.q3">Why do I have a new pimple on my chin?</p>
+            <p data-i18n="chat.a3">Your diary shows two nights under 6 hours this week, and the chin is your hormonal zone. Don't touch it: it should go in 4 to 6 days.</p>
+          </div>
         </div>
-        <div class="ai-tool-img">
-          <img src="assets/ai-chat.webp" alt="AcneTrack AI skin coach answering a question about a skincare ingredient in chat" width="700" height="1290" loading="lazy" decoding="async">
-        </div>
-      </div>
+        <div class="shot"><div class="phone"><img data-shot="coach" src="assets/app/en/coach.jpg" alt="AI coach conversation" loading="lazy"></div></div>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- ─── Certified technology ─── -->
-<section class="section section-white certified-section" id="certified">
-  <div class="section-inner">
-    <div class="section-header">
-      <span class="eyebrow">Certified technology</span>
-      <h2 class="section-title">We use medical-grade technology for our scans</h2>
-      <p class="section-sub">AcneTrack integrates CE-marked medical software used by dermatologists across Europe — built to medical-device quality standards, with your data protected under the GDPR.</p>
+<!-- ─── Avis ─── -->
+<section class="sec reviews-sec" id="reviews">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="big-score"><b>4.7</b><span class="stars" aria-hidden="true">★★★★★</span></div>
+      <h2 data-i18n="rev.h2">What our users say</h2>
+      <p data-i18n="rev.sub">900+ ratings on the App Store</p>
     </div>
-    <div class="certified-badges">
-      <div class="certified-chip">
-        <img src="assets/badge-ce.svg" alt="CE marking — AcneTrack's skin scan uses CE-marked medical software" width="72" height="72" loading="lazy" decoding="async">
-        <span>CE Marked</span>
-      </div>
-      <div class="certified-chip">
-        <img src="assets/badge-gdpr.webp" alt="GDPR compliant — AcneTrack protects your personal skin data under EU data protection law" width="72" height="72" loading="lazy" decoding="async">
-        <span>GDPR Compliant</span>
-      </div>
-      <div class="certified-chip">
-        <img src="assets/badge-iso-13485.webp" alt="ISO 13485 certified by LL-C — medical device quality management standard" width="113" height="45" loading="lazy" decoding="async" class="certified-img-iso">
-        <span>ISO 13485</span>
-      </div>
-    </div>
-    <p class="certified-note">*Results are an indication only, not a medical diagnosis.</p>
   </div>
-</section>
-
-
-<!-- ─── Routine + Progress ─── -->
-<section class="section section-white">
-  <div class="section-inner">
-    <div class="combo-grid">
-      <div class="combo-item">
-        <div class="combo-text">
-          <span class="eyebrow">Daily Routine</span>
-          <h3>Consistency is the real secret to clear skin.</h3>
-          <p>AcneTrack builds a custom morning and evening routine based on your skin profile. Check off each step, track your streak, and build the habits that actually make a difference.</p>
-        </div>
-        <img src="assets/skincare-routine.webp" alt="AcneTrack daily skincare routine screen with morning and evening steps to check off" width="600" height="1215" loading="lazy" decoding="async" class="section-phone-img">
-      </div>
-      <div class="combo-item">
-        <div class="combo-text">
-          <span class="eyebrow">Progress</span>
-          <h3>See your skin transform, week by week.</h3>
-          <p>Take regular progress photos and let AcneTrack visualize your improvement. Track redness, breakout frequency, and overall clarity over time — with data you can actually trust.</p>
-        </div>
-        <img src="assets/evolution-tab.webp" alt="AcneTrack evolution tab charting acne score improvement week by week from progress photos" width="600" height="1203" loading="lazy" decoding="async" class="section-phone-img">
-      </div>
+  <div class="wall rv">
+    <div class="wall-row" data-dir="left">
+      <article class="review"><span class="stars">★★★★★</span><p data-i18n="rev.r7">I have severe acne and already see a dermatologist. This app turned out to be a great complement: it recommended the same things as my derm, explained more, and tracks whether my products actually help.</p><div class="who"><i>L</i><b>Lucas</b><small data-age="23">23</small></div></article>
+      <article class="review"><span class="stars">★★★★★</span><p data-i18n="rev.r2">I had really bad acne for years and thought nothing would help anymore. The app followed me for months, I could track my progress and got great tips. All in one place.</p><div class="who"><i>S</i><b>Sofia</b><small data-age="21">21</small></div></article>
+      <article class="review"><span class="stars">★★★★★</span><p data-i18n="rev.r1">It tells you what's causing your acne, what to do about it and what to do every day. Really great.</p><div class="who"><i>S</i><b>Sara</b><small data-age="19">19</small></div></article>
+      <article class="review"><span class="stars">★★★★★</span><p data-i18n="rev.r8">I've been using this app for a while and I can already see changes.</p><div class="who"><i>N</i><b>Noah</b><small data-age="17">17</small></div></article>
+    </div>
+    <div class="wall-row" data-dir="right">
+      <article class="review"><span class="stars">★★★★★</span><p data-i18n="rev.r3">You'll have to pay a little. But it's amazing for anyone struggling with acne. I spent so much on skincare products, this is worth way more.</p><div class="who"><i>E</i><b>Ethan</b><small data-age="22">22</small></div></article>
+      <article class="review"><span class="stars">★★★★★</span><p data-i18n="rev.r4">A great way to follow and improve your skin. Clean, super intuitive. Very satisfied!</p><div class="who"><i>A</i><b>Adam</b><small data-age="20">20</small></div></article>
+      <article class="review"><span class="stars">★★★★★</span><p data-i18n="rev.r5">Top app for tracking the acne I'm so self-conscious about. Thank you.</p><div class="who"><i>M</i><b>Mathis</b><small data-age="18">18</small></div></article>
+      <article class="review"><span class="stars">★★★★★</span><p data-i18n="rev.r6">Honestly, the app is really well made. It genuinely helps.</p><div class="who"><i>L</i><b>Léa</b><small data-age="24">24</small></div></article>
     </div>
   </div>
 </section>
 
-<!-- ─── Results & Reviews ─── -->
-<section class="section section-alt">
-  <div class="section-inner">
-    <div class="section-header">
-      <span class="eyebrow">Testimonials</span>
-      <h2 class="section-title">Real users, real transformations</h2>
-      <p class="section-sub">Drag the handle to see the change. Real users, consistent tracking.</p>
+<!-- ─── Confiance ─── -->
+<section class="trust-sec">
+  <div class="wrap">
+    <div class="trust rv">
+      <span class="badge"><img src="assets/badge-ce.svg" alt="">CE</span>
+      <span class="badge"><img src="assets/badge-iso-13485.webp" alt="">ISO 13485</span>
+      <span class="badge"><img src="assets/badge-gdpr.webp" alt="">GDPR</span>
+      <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg><span data-i18n="trust.private">Private photos</span></span>
     </div>
-    <div class="results-grid">
+    <p class="trust-note" data-i18n="trust.note">Spot scans run on CE-marked medical software (ISO 13485). AcneTrack does not replace a dermatologist.</p>
+  </div>
+</section>
 
-      <!-- Card 1 -->
-      <div class="result-card">
-        <div class="ba-slider">
-          <div class="ba-before"><div class="ba-bg ba-p1-before"></div></div>
-          <div class="ba-after-wrap"><div class="ba-bg ba-p1-after"></div></div>
-          <div class="ba-handle">
-            <div class="ba-line"></div>
-            <div class="ba-btn">
-              <svg width="16" height="10" viewBox="0 0 20 12" fill="none" aria-hidden="true"><path d="M1 6L5 2L5 10Z M19 6L15 2L15 10Z" fill="#444" stroke="#444" stroke-width=".5"/></svg>
-            </div>
-          </div>
-          <span class="ba-tag ba-tag-b">Before</span>
-          <span class="ba-tag ba-tag-a">After</span>
-        </div>
-        <div class="ba-score">
-          <span class="ba-score-b">22</span><span class="ba-score-arr">→</span><span class="ba-score-a">58</span>
-          <span style="color:var(--text-muted);font-size:.75rem;font-weight:500">/100 · 12 weeks</span>
-        </div>
-        <div class="result-cause">
-          <span class="result-cause-label">Identified cause</span>
-          <span class="result-cause-pill">🍭 Sugar</span>
-        </div>
-        <div class="result-review">
-          <div class="result-stars">★★★★★</div>
-          <p class="result-quote">"The food scanner is a game changer. I had no idea dairy was triggering my breakouts until AcneTrack connected the dots."</p>
-          <div class="result-author">
-            <div>
-              <strong class="result-name">Evan G.</strong>
-              <div class="result-dur">Using AcneTrack for 3 months</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="result-card">
-        <div class="ba-slider">
-          <div class="ba-before"><div class="ba-bg ba-p2-before"></div></div>
-          <div class="ba-after-wrap"><div class="ba-bg ba-p2-after"></div></div>
-          <div class="ba-handle">
-            <div class="ba-line"></div>
-            <div class="ba-btn">
-              <svg width="16" height="10" viewBox="0 0 20 12" fill="none" aria-hidden="true"><path d="M1 6L5 2L5 10Z M19 6L15 2L15 10Z" fill="#444" stroke="#444" stroke-width=".5"/></svg>
-            </div>
-          </div>
-          <span class="ba-tag ba-tag-b">Before</span>
-          <span class="ba-tag ba-tag-a">After</span>
-        </div>
-        <div class="ba-score">
-          <span class="ba-score-b">22</span><span class="ba-score-arr">→</span><span class="ba-score-a">91</span>
-          <span style="color:var(--text-muted);font-size:.75rem;font-weight:500">/100 · 25 weeks</span>
-        </div>
-        <div class="result-cause">
-          <span class="result-cause-label">Identified cause</span>
-          <span class="result-cause-pill">🧴 Skincare</span>
-        </div>
-        <div class="result-review">
-          <div class="result-stars">★★★★★</div>
-          <p class="result-quote">"I tried so many apps but none felt this personal. The AI coach answered questions my dermatologist never had time for."</p>
-          <div class="result-author">
-            <div>
-              <strong class="result-name">Thomas R.</strong>
-              <div class="result-dur">Using AcneTrack for 7 months</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="result-card">
-        <div class="ba-slider">
-          <div class="ba-before"><div class="ba-bg ba-p3-before"></div></div>
-          <div class="ba-after-wrap"><div class="ba-bg ba-p3-after"></div></div>
-          <div class="ba-handle">
-            <div class="ba-line"></div>
-            <div class="ba-btn">
-              <svg width="16" height="10" viewBox="0 0 20 12" fill="none" aria-hidden="true"><path d="M1 6L5 2L5 10Z M19 6L15 2L15 10Z" fill="#444" stroke="#444" stroke-width=".5"/></svg>
-            </div>
-          </div>
-          <span class="ba-tag ba-tag-b">Before</span>
-          <span class="ba-tag ba-tag-a">After</span>
-        </div>
-        <div class="ba-score">
-          <span class="ba-score-b">18</span><span class="ba-score-arr">→</span><span class="ba-score-a">75</span>
-          <span style="color:var(--text-muted);font-size:.75rem;font-weight:500">/100 · 14 weeks</span>
-        </div>
-        <div class="result-cause">
-          <span class="result-cause-label">Identified cause</span>
-          <span class="result-cause-pill">🧬 Hormonal</span>
-        </div>
-        <div class="result-review">
-          <div class="result-stars">★★★★★</div>
-          <p class="result-quote">"Seeing my before/after side by side is incredibly motivating. My skin is genuinely 60% clearer after 6 weeks."</p>
-          <div class="result-author">
-            <div>
-              <strong class="result-name">Sara T.</strong>
-              <div class="result-dur">Using AcneTrack for 3.5 months</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
+<!-- ─── Second éventail + CTA ─── -->
+<section class="sec again" id="again">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <h2 data-i18n="again.h2">Your plan is 2 minutes away.</h2>
+      <p data-i18n="again.p">Start with a free face scan.</p>
     </div>
+    <div class="hero-cta rv d1">
+      <a class="btn btn-dark cta" href="#download"><span data-i18n="hero.cta">Scan my face for free</span></a>
+    </div>
+  </div>
+  <div class="fan" id="againFan" aria-hidden="true">
+    <div class="phone p-ll"><img data-shot="food-scan" src="assets/app/en/food-scan.jpg" alt="" loading="lazy"></div>
+    <div class="phone p-l"><img data-shot="routine" src="assets/app/en/routine.jpg" alt="" loading="lazy"></div>
+    <div class="phone p-c"><img data-shot="dashboard" src="assets/app/en/dashboard.jpg" alt="" loading="lazy"></div>
+    <div class="phone p-r"><img data-shot="today" src="assets/app/en/today.jpg" alt="" loading="lazy"></div>
+    <div class="phone p-rr"><img data-shot="coach" src="assets/app/en/coach.jpg" alt="" loading="lazy"></div>
   </div>
 </section>
 
 <!-- ─── FAQ ─── -->
-<section class="section section-white" id="faq">
-  <div class="section-inner">
-    <div class="section-header">
-      <span class="eyebrow">FAQ</span>
-      <h2 class="section-title">Questions about tracking your acne</h2>
-      <p class="section-sub">How the method works — and what to realistically expect from it.</p>
+<section class="sec faq" id="faq">
+  <div class="wrap">
+    <h2 class="sec-title rv" data-i18n="faq.h2">Questions</h2>
+    <div class="rv">
+      <details><summary><span data-i18n="faq.q1">How does AcneTrack work?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><div class="a" data-i18n-html="faq.a1"><p>You scan your face and answer a few questions about your skin and your daily life. AcneTrack uses both to build your anti-acne plan: the likely cause of your acne, a routine made for your skin, and the tools to follow it day after day.</p></div></details>
+      <details><summary><span data-i18n="faq.q2">Do I need to know what's causing my acne?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><div class="a" data-i18n-html="faq.a2"><p>No, finding it is the point. Your answers and your face scan are enough for AcneTrack to name a likely main cause out of the twenty-plus factors it weighs. That reading sharpens as you use the app.</p></div></details>
+      <details><summary><span data-i18n="faq.q3">Are my photos safe?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><div class="a" data-i18n-html="faq.a3"><p>Your photos are stored in a private, access-controlled space and used only for your analysis. They are never shared or sold, and they are deleted with your account whenever you ask.</p></div></details>
+      <details><summary><span data-i18n="faq.q4">How long does it take to see results?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><div class="a" data-i18n-html="faq.a4"><p>Skin renews itself over roughly four to six weeks, so real change rarely shows up sooner. Most users who follow their plan see measurable change after eight to twelve weeks.</p></div></details>
+      <details><summary><span data-i18n="faq.q5">Does it replace a dermatologist?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><div class="a" data-i18n-html="faq.a5"><p>No. AcneTrack helps you understand and follow your skin. Severe or hormonal acne often needs medical treatment: see a dermatologist, and bring your progress photos.</p></div></details>
+      <details><summary><span data-i18n="faq.q6">How much does it cost?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><div class="a" data-i18n-html="faq.a6"><p>The face scan and the questionnaire are free. The full plan and the tools are part of a subscription you can cancel anytime from your App Store or Google Play account.</p></div></details>
     </div>
-
-    <div class="faq-list">
-
-      <details class="faq-item">
-        <summary class="faq-q">Why does the AcneTrack method work?</summary>
-        <div class="faq-a">
-          <p>Because it treats acne as a problem with a cause, rather than a surface to cover up. Most routines attack the spot that is already there while whatever produced it carries on untouched.</p>
-          <p>AcneTrack works the other way round. It builds a profile of your skin, gives you a routine to follow daily, and measures the result with a score you can compare over time. That loop — act, measure, adjust — is what turns guesswork into something you can steer. When your score moves, you know what moved it.</p>
-        </div>
-      </details>
-
-      <details class="faq-item">
-        <summary class="faq-q">Do I need to know what's causing my acne before I start?</summary>
-        <div class="faq-a">
-          <p>No — finding that out is the whole point. Most people have a theory about their acne and no way to test it.</p>
-          <p>You get a first answer straight away: the onboarding questions and your very first face scan are enough for AcneTrack to name a likely main cause out of the twenty-plus it tracks — hormones, stress, sleep, skincare, diet and more. That reading then sharpens the longer you use the app and the more you scan, so a first strong hypothesis turns into something you can rely on.</p>
-        </div>
-      </details>
-
-      <details class="faq-item">
-        <summary class="faq-q">I've already tried everything. Why would this be different?</summary>
-        <div class="faq-a">
-          <p>If products alone were the answer, they would have worked by now. What usually fails is not the product — it is that nothing was ever measured, so there was no way to tell what helped, what did nothing, and what quietly made things worse.</p>
-          <p>AcneTrack is not another cream. It gives you a way to see your skin objectively: a score that moves, a history you can scroll back through, and a cause you can finally name. It will not clear your skin overnight, but it stops you repeating the same cycle blind.</p>
-        </div>
-      </details>
-
-      <details class="faq-item">
-        <summary class="faq-q">How does the AI acne scan work?</summary>
-        <div class="faq-a">
-          <p>You take a photo of your skin and AcneTrack analyses it in seconds, returning your acne score out of 100, the type of acne it detects, and tailored advice. For close-up analysis of a single spot, the Pimple Scan uses CE-marked medical software built to ISO 13485 quality standards.</p>
-          <p>Each new scan is compared with your previous ones, so the Evolution tab shows whether your skin is actually improving rather than relying on memory.</p>
-        </div>
-      </details>
-
-      <details class="faq-item">
-        <summary class="faq-q">Can the food I eat really cause acne?</summary>
-        <div class="faq-a">
-          <p>For some people, yes. Research has linked high-glycaemic foods and dairy to breakouts, but triggers are highly individual — what wrecks one person's skin does nothing to another's.</p>
-          <p>Rather than hand you a generic list of things to avoid, AcneTrack lets you scan a meal and tells you how well it fits your skin profile — before you eat it. Diet is one of the causes the app weighs when narrowing down what is driving your breakouts.</p>
-        </div>
-      </details>
-
-      <details class="faq-item">
-        <summary class="faq-q">How long does it take to see results?</summary>
-        <div class="faq-a">
-          <p>Skin renews itself over roughly four to six weeks, so meaningful change rarely shows up sooner than that — and any product or app promising clear skin in days is overselling.</p>
-          <p>Most users who track consistently start seeing measurable movement in their acne score after about eight to twelve weeks. Consistency matters far more than intensity, which is why the app is built around a daily routine and a streak.</p>
-        </div>
-      </details>
-
-      <details class="faq-item">
-        <summary class="faq-q">Does AcneTrack work for hormonal acne?</summary>
-        <div class="faq-a">
-          <p>Hormonal patterns are one of the causes AcneTrack tracks, alongside diet, sleep, stress, skincare and around twenty others. Logging consistently helps surface cyclical patterns that are hard to spot day to day.</p>
-          <p>That said, hormonal acne often needs medical treatment. AcneTrack helps you understand and document what is happening to your skin — it is not a replacement for a dermatologist.</p>
-        </div>
-      </details>
-
-    </div>
-
-    <p class="faq-footnote">Still have a question? Write to <a href="mailto:contact@acne-track.com">contact@acne-track.com</a> — a human answers.</p>
+    <p class="faq-foot rv" data-i18n-html="faq.foot">Another question? <a href="mailto:contact@acne-track.com">contact@acne-track.com</a></p>
   </div>
 </section>
 
-<!-- ─── Final CTA ─── -->
-<section class="cta-section">
-  <h2>Your clearest skin is waiting.</h2>
-  <p>Join thousands already tracking, improving, and understanding their skin with AcneTrack.</p>
-  <div class="cta-store-row">
-    <a href="https://apps.apple.com/us/app/acnetrack-your-acne-journey/id6743371480" class="btn-store-white" target="_blank" rel="noopener">
-      <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
-        <path fill="currentColor" d="M3,17 C2.44771525,17 2,16.5522847 2,16 C2,15.4477153 2.44771525,15 3,15 L13.5,15 C14.5,15 15.5,17 15,17 L3,17 Z M17,17 C16.4477153,17 16,16.5522847 16,16 C16,15.4477153 16.4477153,15 17,15 L21,15 C21.5522847,15 22,15.4477153 22,16 C22,16.5522847 21.5522847,17 21,17 L17,17 Z M12.6333775,3.50103556 C12.908948,3.02241319 13.5203421,2.85780709 13.9989644,3.13337754 C14.4775868,3.408948 14.6421929,4.02034208 14.3666225,4.49896444 L7.45953351,16.4954873 C7.18396306,16.9741097 6.57256898,17.1387158 6.09394661,16.8631454 C5.61532424,16.5875749 5.45071815,15.9761808 5.7262886,15.4975585 L12.6333775,3.50103556 Z M4,18.5 C4.5,17.5 7.5,16.5 6.5,18.2208385 C6.32221095,18.5267848 5.77775177,19.4528267 4.86662246,20.9989644 C4.591052,21.4775868 3.97965792,21.6421929 3.50103556,21.3666225 C3.02241319,21.091052 2.85780709,20.4796579 3.13337754,20.0010356 L4,18.5 Z M9.13337754,4.49896444 C8.85780709,4.02034208 9.02241319,3.408948 9.50103556,3.13337754 C9.97965792,2.85780709 10.591052,3.02241319 10.8666225,3.50103556 L12.6104584,6.52980328 C12.8860289,7.00842564 12.7214228,7.61981972 12.2428004,7.89539018 C11.764178,8.17096063 11.152784,8.00635453 10.8772135,7.52773217 L9.13337754,4.49896444 Z M13,11.5 C12.1018662,10 13,7 13.7163439,8.49589818 L20.3666225,20.0010356 C20.6421929,20.4796579 20.4775868,21.091052 19.9989644,21.3666225 C19.5203421,21.6421929 18.908948,21.4775868 18.6333775,20.9989644 L13,11.5 Z"/>
-      </svg>
-      <span class="store-label">
-        <small>Download on the</small>
-        App Store
-      </span>
-    </a>
-    <a href="https://play.google.com/store/apps/details?id=com.acnetrack.app" class="btn-store-white" target="_blank" rel="noopener">
-      <svg width="20" height="22" viewBox="0 0 20 22" fill="none" aria-hidden="true">
-        <path d="M1.5 1.3C1.2 1.6 1 2.1 1 2.7v16.6c0 .6.2 1.1.5 1.4l.1.1 9.3-9.3v-.2L1.5 1.3z" fill="currentColor" opacity=".8"/>
-        <path d="M14 14.3l-3.1-3.1v-.4L14 7.7l.1.1 3.7 2.1c1 .6 1 1.6 0 2.2L14 14.3z" fill="currentColor"/>
-        <path d="M14.1 14.2L10.9 11 1.5 20.4c.3.3.9.4 1.5.1l11.1-6.3" fill="currentColor" opacity=".7"/>
-        <path d="M14.1 7.8L3 1.5C2.4 1.2 1.8 1.3 1.5 1.6L10.9 11l3.2-3.2z" fill="currentColor" opacity=".6"/>
-      </svg>
-      <span class="store-label">
-        <small>Get it on</small>
-        Google Play
-      </span>
-    </a>
+<section class="download" id="download">
+  <div class="wrap rv">
+    <h2 data-i18n="dl.h2">Get AcneTrack</h2>
+    <div class="stores">
+      <a class="store" href="https://apps.apple.com/us/app/acnetrack-your-acne-journey/id6743371480" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.8-3.5.8s-1.9-.8-3-.8c-1.6 0-3 .9-3.8 2.3-1.6 2.8-.4 7 1.2 9.3.8 1.1 1.7 2.4 2.9 2.3 1.2 0 1.6-.7 3-.7s1.8.7 3 .7c1.3 0 2.1-1.1 2.8-2.3.9-1.3 1.3-2.6 1.3-2.6s-2.5-1-2.5-3.7zM14.1 5.8c.6-.8 1.1-1.8 1-2.9-.9 0-2.1.6-2.7 1.4-.6.7-1.1 1.8-1 2.8 1 .1 2.1-.5 2.7-1.3z"/></svg>
+        <span><small data-i18n="dl.apple.s">Download on the</small>App Store</span>
+      </a>
+      <a class="store" href="https://play.google.com/store/apps/details?id=com.acnetrack.app" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.6 2.3c-.3.3-.5.8-.5 1.4v16.6c0 .6.2 1.1.5 1.4l.1.1 9.3-9.3v-.2L3.6 2.3z" opacity=".8"/><path d="M16 15.3l-3.1-3.1v-.4L16 8.7l.1.1 3.7 2.1c1 .6 1 1.6 0 2.2L16 15.3z"/><path d="M16.1 15.2L12.9 12l-9.4 9.4c.3.3.9.4 1.5.1l11.1-6.3" opacity=".7"/><path d="M16.1 8.8L5 2.5c-.6-.3-1.2-.2-1.5.1L12.9 12l3.2-3.2z" opacity=".6"/></svg>
+        <span><small data-i18n="dl.google.s">Get it on</small>Google Play</span>
+      </a>
+    </div>
   </div>
 </section>
 
-<!-- ─── Footer ─── -->
-<footer id="contact">
-  <div class="footer-inner">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <a href="/" class="nav-brand footer-brand-link">
-          <img src="assets/Logo_Acnetrack.webp" alt="AcneTrack logo" width="34" height="34" loading="lazy" class="footer-logo">
-          Acnetrack
-        </a>
-        <p>Your personal AI skin coach. Track, understand, and improve your acne journey.</p>
-        <a class="footer-email" href="mailto:contact@acne-track.com">contact@acne-track.com</a>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a href="/" class="brand"><img src="assets/Logo_Acnetrack.webp" alt="" width="28" height="28">AcneTrack</a>
+        <p class="about" data-i18n="foot.about">Your anti-acne plan, built for your skin.</p>
       </div>
-      <div class="footer-links-col">
-        <h5>App</h5>
-        <ul>
-          <li><a href="https://apps.apple.com/us/app/acnetrack-your-acne-journey/id6743371480" target="_blank" rel="noopener">App Store</a></li>
-          <li><a href="https://play.google.com/store/apps/details?id=com.acnetrack.app" target="_blank" rel="noopener">Google Play</a></li>
-        </ul>
-      </div>
-      <div class="footer-links-col">
-        <h5>Legal</h5>
-        <ul>
-          <li><a href="privacy.html">Privacy Policy</a></li>
-          <li><a href="terms.html">Terms &amp; Conditions</a></li>
-        </ul>
-      </div>
+      <div><h5 data-i18n="foot.company">Company</h5><ul><li><a href="mailto:contact@acne-track.com" data-i18n="foot.contact">Contact</a></li><li><a href="privacy.html" data-i18n="foot.privacy">Privacy policy</a></li><li><a href="terms.html" data-i18n="foot.terms">Terms</a></li></ul></div>
+      <div><h5 data-i18n="foot.languages">Languages</h5><ul><li><button type="button" data-lang="en">English</button></li><li><button type="button" data-lang="fr">Français</button></li><li><button type="button" data-lang="de">Deutsch</button></li></ul></div>
     </div>
-    <div class="footer-bottom">
-      <p class="footer-copy">&copy; 2026 Bsr Labs — Acnetrack. All rights reserved.</p>
-      <p class="footer-disc">Acnetrack is not a medical device and does not provide medical advice. Consult a dermatologist for any skin-related medical concerns.</p>
+    <div class="foot-bottom">
+      <span>© 2026 Bsr Labs · AcneTrack</span>
+      <span data-i18n="foot.disc">AcneTrack is not a medical device and does not provide medical advice.</span>
     </div>
   </div>
 </footer>
 
-<script>
-// ─── Mobile nav ───
-function toggleMobileNav() {
-  document.getElementById('mobileNav').classList.toggle('open');
-}
+<!-- ─── Barre épinglée (façon Predigoal) ─── -->
+<div class="dock" id="dock" aria-hidden="true">
+  <a class="dock-pill cta" href="#download" tabindex="-1">
+    <span class="dock-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M9 9.5h.01M15 9.5h.01M9.5 15a3.5 3.5 0 0 0 5 0"/></svg></span>
+    <span class="dock-text"><b data-i18n="dock.h">Free face scan</b><small data-i18n="dock.p">Your face · 2 minutes</small></span>
+    <span class="dock-btn" data-i18n="dock.btn">Start</span>
+  </a>
+</div>
 
-// ─── Hero scroll animation ───
-// The hero section is 180vh tall. The inner is sticky (100vh).
-// As the user scrolls through those extra 80vh:
-//   0 → 0.42  : headline fades up and lifts out
-//   0 → 0.5   : iPhone rises from below the viewport
-//   0.32 → 0.62: floating cards slide in from the sides
-function initHeroScroll() {
-  if (window.innerWidth < 860) return; // static layout on mobile
-
-  var hero   = document.querySelector('.hero.hero-v2');
-  var text   = document.querySelector('.hero-v2-text');
-  var scene  = document.querySelector('.hero.hero-v2 .phone-scene');
-  var cardsL = document.querySelector('.phone-cards-left');
-  var cardsR = document.querySelector('.phone-cards-right');
-  if (!hero || !text || !scene) return;
-
-  function prog(p, a, b) {
-    return Math.max(0, Math.min(1, (p - a) / (b - a)));
-  }
-
-  // Initial phone offset: 50vh on laptops, but capped in px so tall/large screens
-  // don't push the phone fully out of view and leave a huge empty band.
-  var maxOff = Math.min(window.innerHeight * 0.5, 400);
-  window.addEventListener('resize', function () {
-    maxOff = Math.min(window.innerHeight * 0.5, 400);
-    tick();
-  }, { passive: true });
-
-  // — set initial states —
-  text.style.transform   = 'translateX(-50%) scale(1)';
-  text.style.opacity     = '1';
-  scene.style.transform  = 'translateX(-50%) translateY(' + maxOff + 'px) scale(0.92)';
-  cardsL.style.opacity   = '0';
-  cardsL.style.transform = 'translateX(180px)';
-  cardsR.style.opacity   = '0';
-  cardsR.style.transform = 'translateX(-180px)';
-
-  function tick() {
-    var rect  = hero.getBoundingClientRect();
-    var total = hero.offsetHeight - window.innerHeight;
-    if (total <= 0) return;
-    var p = Math.max(0, Math.min(1, -rect.top / total));
-
-    // 1. Headline dezoom + fade — gone by 38% scroll
-    var tP = prog(p, 0.04, 0.38);
-    text.style.opacity   = String(1 - tP);
-    text.style.transform = 'translateX(-50%) scale(' + (1 - tP * 0.16) + ')';
-
-    // 2. iPhone rises across the FULL scroll range (0→1): always moving, zero freeze
-    var sP = p; // linear, 0→1 across entire hero scroll
-    var phoneY     = (1 - sP) * maxOff;   // capped px offset → 0
-    var phoneScale = 0.92 + sP * 0.08;    // 0.92 → 1.0
-    scene.style.transform = 'translateX(-50%) translateY(' + phoneY + 'px) scale(' + phoneScale + ')';
-
-    // 3. Cards slide out from behind phone — final 35% of scroll
-    var cP = prog(p, 0.65, 1.0);
-    cardsL.style.opacity   = String(cP);
-    cardsL.style.transform = 'translateX(' + ((1 - cP) * 180) + 'px)';
-    cardsR.style.opacity   = String(cP);
-    cardsR.style.transform = 'translateX(' + ((1 - cP) * -180) + 'px)';
-  }
-
-  window.addEventListener('scroll', tick, { passive: true });
-  tick();
-}
-
-// ─── Before / After sliders ───
-(function() {
-  function initSliders() {
-    document.querySelectorAll('.ba-slider').forEach(function(slider) {
-      var afterWrap = slider.querySelector('.ba-after-wrap');
-      var handle    = slider.querySelector('.ba-handle');
-      var dragging  = false;
-
-      function setPos(clientX) {
-        var rect = slider.getBoundingClientRect();
-        var pct  = Math.min(Math.max((clientX - rect.left) / rect.width * 100, 4), 96);
-        afterWrap.style.clipPath = 'inset(0 ' + (100 - pct) + '% 0 0)';
-        handle.style.left = pct + '%';
-        handle.style.transform = 'translateX(-50%)';
-      }
-
-      // Mouse
-      handle.addEventListener('mousedown', function(e) { dragging = true; e.preventDefault(); });
-      window.addEventListener('mouseup',   function()  { dragging = false; });
-      window.addEventListener('mousemove', function(e) { if (dragging) setPos(e.clientX); });
-
-      // Touch
-      handle.addEventListener('touchstart', function(e) { dragging = true; e.preventDefault(); }, { passive: false });
-      window.addEventListener('touchend',   function()  { dragging = false; });
-      window.addEventListener('touchmove',  function(e) { if (dragging) setPos(e.touches[0].clientX); }, { passive: false });
-
-      // Click anywhere on slider
-      slider.addEventListener('click', function(e) {
-        if (!e.target.closest('.ba-handle')) setPos(e.clientX);
-      });
-
-      // Initial: 50%
-      setTimeout(function() { setPos(slider.getBoundingClientRect().left + slider.getBoundingClientRect().width * 0.5); }, 0);
-    });
-  }
-
-  function initCauseCycler() {
-    var pills = document.querySelectorAll('.cause-pill');
-    if (!pills.length) return;
-    var current = 0;
-    // Make pills clickable
-    pills.forEach(function(pill, i) {
-      pill.addEventListener('click', function() {
-        pills[current].classList.remove('cause-pill-active');
-        current = i;
-        pill.classList.add('cause-pill-active');
-        clearInterval(timer);
-        timer = setInterval(advance, 2400);
-      });
-    });
-    function advance() {
-      pills[current].classList.remove('cause-pill-active');
-      current = (current + 1) % pills.length;
-      pills[current].classList.add('cause-pill-active');
-    }
-    var timer = setInterval(advance, 2400);
-  }
-
-  function initCauseMore() {
-    var grid = document.getElementById('causePills');
-    var btn = document.getElementById('causeMoreBtn');
-    if (!grid || !btn) return;
-
-    function setExpanded(expanded) {
-      btn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
-      if (expanded) {
-        grid.classList.remove('cause-pill-grid--collapsed');
-        btn.textContent = 'Show less';
-      } else {
-        grid.classList.add('cause-pill-grid--collapsed');
-        btn.textContent = 'Show more';
-      }
-    }
-
-    // Only show the button if we are actually collapsing (mobile)
-    function updateVisibility() {
-      var isMobile = window.matchMedia('(max-width: 680px)').matches;
-      btn.style.display = isMobile ? 'inline-flex' : 'none';
-      if (!isMobile) setExpanded(true);
-      else setExpanded(false);
-    }
-
-    btn.addEventListener('click', function() {
-      var expanded = btn.getAttribute('aria-expanded') === 'true';
-      setExpanded(!expanded);
-    });
-
-    window.addEventListener('resize', updateVisibility, { passive: true });
-    updateVisibility();
-  }
-
-  function initReveal() {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-
-    var nodes = Array.from(document.querySelectorAll([
-      '.section-header',
-      '.feature-card',
-      '.ai-tool-card',
-      '.combo-item',
-      '.result-card',
-      '.faq-item',
-      '.cause-text',
-      '.cause-board',
-      '.cta-section',
-      'footer .footer-top',
-      'footer .footer-bottom'
-    ].join(',')));
-
-    nodes.forEach(function(n) { n.classList.add('reveal'); });
-
-    if (!('IntersectionObserver' in window)) {
-      nodes.forEach(function(n) { n.classList.add('is-visible'); });
-      return;
-    }
-
-    var io = new IntersectionObserver(function(entries) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          io.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
-
-    nodes.forEach(function(n) { io.observe(n); });
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', function() { initSliders(); initHeroScroll(); initCauseCycler(); initCauseMore(); initReveal(); });
-  } else {
-    initSliders();
-    initHeroScroll();
-    initCauseCycler();
-    initCauseMore();
-    initReveal();
-  }
-})();
-</script>
+<script src="i18n.js?v=15"></script>
+<script src="site.js?v=15" defer></script>
 </body>
 </html>
