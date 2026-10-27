@@ -56,7 +56,12 @@
 
   /* ── Apparitions ── */
   html.classList.add('anim');
-  var revealables = $$('.rv, .fan');
+  // blocs dont les enfants arrivent en cascade
+  $$('.sec-head, .plan-text, .checks, .card, .tile-text, .faq .rv, .download .wrap').forEach(function (el) {
+    el.classList.add('st');
+    Array.prototype.forEach.call(el.children, function (c, i) { c.style.setProperty('--i', i); });
+  });
+  var revealables = $$('.rv, .fan, .st');
   if ('IntersectionObserver' in window) {
     var io = new IntersectionObserver(function (es) {
       es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
@@ -66,7 +71,7 @@
       revealables.forEach(function (el) { var r = el.getBoundingClientRect(); if (r.top < innerHeight * .9 && r.bottom > 0) el.classList.add('in'); });
     }, 900);
   } else revealables.forEach(function (el) { el.classList.add('in'); });
-  requestAnimationFrame(function () { requestAnimationFrame(function () { $('heroFan').classList.add('in'); }); });
+  requestAnimationFrame(function () { requestAnimationFrame(function () { html.classList.add('ready'); $('heroFan').classList.add('in'); }); });
 
   /* ── Scan visage : les trois étapes s'enchaînent en boucle ── */
   $$('.facescan').forEach(function (scr, k) {

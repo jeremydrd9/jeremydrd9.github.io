@@ -401,3 +401,42 @@ footer { border-top: 1px solid var(--fg-10); padding: 40px 0 120px; background: 
 .dock-icon { width: 44px; height: 44px; border-radius: 50%; flex: none; display: grid; place-items: center; background: var(--peach-soft); color: var(--peach-deep); }
 .dock-icon svg { width: 22px; height: 22px; }
 .dock-btn { background: var(--grad); color: #fff; box-shadow: 0 6px 16px -6px rgba(255, 146, 72, .7); }
+
+/* ── iPhones plus petits sur mobile (calés sur Adermio : ~35 % de l'écran dans le hero, ~195 px dans les cartes) ── */
+@media (max-width: 719px) {
+  .fan { height: 92vw; margin-top: 24px; }
+  .fan .p-c { --w: 40vw; bottom: -6%; }
+  .fan .p-l, .fan .p-r { --w: 33vw; bottom: -10%; }
+  .fan .p-l { transform: translateX(-82%) rotate(-8deg); }
+  .fan .p-r { transform: translateX(82%) rotate(8deg); }
+  .again .fan { height: 84vw; }
+  .card-media { height: 330px; padding-top: 30px; }
+  .card-media .phone { --w: 196px; }
+  .card-media.multi .m-c { --w: 172px; margin-left: -86px; top: 30px; }
+  .card-media.multi .m-l, .card-media.multi .m-r { --w: 146px; margin-left: -73px; top: 56px; }
+  .shot { height: 340px; padding-top: 20px; }
+  .shot .phone, .tile-cause .shot .phone { --w: 200px; }
+  .plan-shot { height: 360px; }
+  .plan-shot .phone { --w: 210px; }
+}
+
+/* ── Animations d'entrée façon Predigoal : fondu + légère remontée, en cascade ── */
+.anim .nav { opacity: 0; transform: translateY(-10px); }
+.nav { transition: opacity .6s ease, transform .8s var(--ease), border-color .25s; }
+.ready .nav { opacity: 1; transform: none; }
+.anim .hero .wrap > * { opacity: 0; transform: translateY(14px); }
+.hero .wrap > * { transition: opacity .7s ease, transform .9s var(--ease); }
+.hero .wrap > :nth-child(1) { transition-delay: .05s; }
+.hero .wrap > :nth-child(2) { transition-delay: .15s; }
+.hero .wrap > :nth-child(3) { transition-delay: .27s; }
+.hero .wrap > :nth-child(4) { transition-delay: .39s; }
+.ready .hero .wrap > * { opacity: 1; transform: none; }
+#heroFan .p-c { transition-delay: .45s; }
+#heroFan .p-l, #heroFan .p-r { transition-delay: .58s; }
+
+/* Sections : les enfants d'un bloc .st arrivent l'un après l'autre */
+.anim .rv.st:not(.in) { opacity: 1; transform: none; }
+.anim .st:not(.in) > * { opacity: 0; transform: translateY(14px); }
+.st > * { transition: opacity .6s ease, transform .8s var(--ease); transition-delay: calc(var(--i, 0) * 90ms); }
+.reduce .st > *, .reduce .hero .wrap > *, .reduce .nav { transition: none !important; }
+@media (max-width: 719px) { .card-media { height: 360px; } }
