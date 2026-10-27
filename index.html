@@ -74,19 +74,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap">
   <link rel="preload" as="image" href="assets/app/facescan.jpg" fetchpriority="high">
-  <link rel="stylesheet" href="site.css?v=18">
+  <link rel="stylesheet" href="site.css?v=19">
 </head>
 <body>
 
 <nav class="nav" id="nav" aria-label="Main navigation">
   <div class="wrap">
     <a href="/" class="brand"><img src="assets/Logo_Acnetrack.webp" alt="" width="28" height="28">AcneTrack</a>
-    <ul class="nav-links">
-      <li><a href="#how" data-i18n="nav.how">How it works</a></li>
-      <li><a href="#tools" data-i18n="nav.tools">The app</a></li>
-      <li><a href="#reviews" data-i18n="nav.reviews">Reviews</a></li>
-      <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
-    </ul>
     <div class="nav-right">
       <div class="lang">
         <button class="lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false" aria-label="Language">
@@ -99,7 +93,7 @@
           <button data-lang="de" role="menuitem">Deutsch</button>
         </div>
       </div>
-      <a class="btn btn-dark btn-sm cta" href="#download" data-i18n="nav.cta">Start</a>
+      <a class="btn btn-sm btn-glow cta" href="#download" data-i18n="nav.cta">Start</a>
     </div>
   </div>
 </nav>
@@ -109,9 +103,9 @@
 <!-- ─── Hero ─── -->
 <section class="hero" id="hero">
   <div class="wrap">
-    <span class="pill"><span class="stars" aria-hidden="true">★★★★★</span> <span data-i18n="hero.pill">4.7 · 300,000+ users</span></span>
-    <h1 data-i18n-html="hero.h1">Finally get rid of <em>your acne.</em></h1>
-    <p class="lead" data-i18n="hero.lead">Scan your face, and the AI builds a tailored plan to get rid of your acne.</p>
+    <span class="pill" data-i18n-html="hero.pill">4.7 <span class="stars" aria-hidden="true">★★★★★</span> · 300,000+ analyses</span>
+    <h1 data-i18n-html="hero.h1">Your acne has a cause. <em>Find it, fix it.</em></h1>
+    <p class="lead" data-i18n="hero.lead">Scan your face and get a tailored plan for your acne.</p>
     <div class="hero-cta">
       <a class="btn btn-dark cta" href="#download">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="3.5"/></svg>
@@ -193,7 +187,7 @@
           <div class="phone m-r"><img data-shot="food-scan" src="assets/app/en/food-scan.jpg" alt="Food scanner" loading="lazy"></div>
           <div class="phone m-c"><img data-shot="dashboard" src="assets/app/en/dashboard.jpg" alt="AcneTrack plan: main cause, goal date and acne score" loading="lazy"></div>
         </div>
-        <h3 data-i18n="how.s3.h">Get your plan</h3>
+        <h3 data-i18n="how.s3.h">Get your program</h3>
         <p data-i18n="how.s3.p">A plan designed to get rid of your acne</p>
       </article>
     </div>
@@ -253,18 +247,6 @@
         </div>
         <div class="shot"><div class="phone"><img data-shot="cause" src="assets/app/en/cause.jpg" alt="AcneTrack identified acne cause with secondary causes" loading="lazy"></div></div>
       </article>
-      <article class="tile tile-trust span3 rv">
-        <div class="tile-text">
-          <h3 data-i18n="trust.h">Certified technology</h3>
-          <p data-i18n="trust.note">Spot scans run on CE-marked medical software (ISO 13485). AcneTrack does not replace a dermatologist.</p>
-        </div>
-        <div class="seals">
-          <div class="seal"><img src="assets/badge-ce.svg" alt="CE"><b>CE</b><span data-i18n="trust.ce">Medical software used for spot scans</span></div>
-          <div class="seal"><img src="assets/badge-iso-13485.webp" alt="ISO 13485"><b>ISO 13485</b><span data-i18n="trust.iso">Quality standard for medical devices</span></div>
-          <div class="seal"><img src="assets/badge-gdpr.webp" alt="GDPR"><b data-i18n="trust.gdpr.name">GDPR</b><span data-i18n="trust.gdpr">Your data protected under EU law</span></div>
-          <div class="seal"><i class="seal-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></i><b data-i18n="trust.private">Private photos</b><span data-i18n="trust.private.p">Never shared, deleted on request</span></div>
-        </div>
-      </article>
       <article class="tile tile-compare rv d1">
         <div class="compare" id="compare">
           <img src="assets/ba/f2-after.jpg" alt="Week 6" loading="lazy">
@@ -277,6 +259,18 @@
         <div class="tile-text">
           <h3 data-i18n="tools.evo.h">Track your progress</h3>
           <p data-i18n="app.compare.p">A photo and a rating of your skin every day, then compare before and after. Your full tracker, in one place.</p>
+        </div>
+      </article>
+      <article class="tile tile-trust span3 rv">
+        <div class="tile-text">
+          <h3 data-i18n="trust.h">Certified technology</h3>
+          <p data-i18n="trust.note">Spot scans run on CE-marked medical software (ISO 13485). AcneTrack does not replace a dermatologist.</p>
+        </div>
+        <div class="seals">
+          <div class="seal"><img src="assets/badge-ce.svg" alt="CE"><b>CE</b><span data-i18n="trust.ce">Medical software used for spot scans</span></div>
+          <div class="seal"><img src="assets/badge-iso-13485.webp" alt="ISO 13485"><b>ISO 13485</b><span data-i18n="trust.iso">Quality standard for medical devices</span></div>
+          <div class="seal"><img src="assets/badge-gdpr.webp" alt="GDPR"><b data-i18n="trust.gdpr.name">GDPR</b><span data-i18n="trust.gdpr">Your data protected under EU law</span></div>
+          <div class="seal"><i class="seal-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></i><b data-i18n="trust.private">Private photos</b><span data-i18n="trust.private.p">Never shared, deleted on request</span></div>
         </div>
       </article>
       <article class="tile rv">
@@ -430,7 +424,7 @@
   </a>
 </div>
 
-<script src="i18n.js?v=18"></script>
+<script src="i18n.js?v=19"></script>
 <script src="site.js?v=18" defer></script>
 </body>
 </html>

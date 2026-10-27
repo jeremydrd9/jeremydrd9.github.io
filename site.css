@@ -469,3 +469,11 @@ footer { border-top: 1px solid var(--fg-10); padding: 40px 0 120px; background: 
 .compare-dots button.on { width: 20px; background: #fff; }
 .compare img { transition: opacity .35s ease; }
 .compare.swap img { opacity: 0; }
+
+/* ── Bouton du menu : orange vif avec reflet qui défile ── */
+.btn-glow { position: relative; overflow: hidden; color: #fff; background: linear-gradient(135deg, #FF7A2E 0%, #FF9248 55%, #FFB27A 100%); box-shadow: 0 6px 18px -6px rgba(255, 122, 46, .75), inset 0 1px 0 rgba(255, 255, 255, .35); font-weight: 700; }
+.btn-glow:hover { filter: brightness(1.05); }
+.btn-glow::after { content: ""; position: absolute; top: -20%; bottom: -20%; left: -60%; width: 40%; background: linear-gradient(100deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .75) 50%, rgba(255, 255, 255, 0) 100%); transform: skewX(-20deg); animation: glow-sweep 3.2s ease-in-out infinite; }
+@keyframes glow-sweep { 0%, 55% { left: -60%; } 85%, 100% { left: 130%; } }
+.reduce .btn-glow::after { animation: none; display: none; }
+.pill .stars { margin: 0 2px; }
