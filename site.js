@@ -24,9 +24,9 @@
   /* ── Captures de l'app dans la langue de la page ──
      assets/app/<lang>/<nom>.jpg, repli sur l'anglais si la capture n'existe pas. */
   var SHOTS = {
-    en: ['dashboard', 'routine', 'evolution', 'today', 'quiz', 'coach', 'food-scan', 'product-scan', 'scan'],
-    fr: ['dashboard', 'routine', 'evolution', 'today', 'quiz', 'coach', 'food-scan', 'product-scan'],
-    de: ['dashboard', 'routine', 'evolution', 'today', 'quiz']
+    en: ['dashboard', 'routine', 'evolution', 'today', 'quiz', 'coach', 'food-scan', 'product-scan', 'scan', 'cause'],
+    fr: ['dashboard', 'routine', 'evolution', 'today', 'quiz', 'coach', 'food-scan', 'product-scan', 'cause'],
+    de: ['dashboard', 'routine', 'evolution', 'today', 'quiz', 'cause']
   };
   function applyShots(lang) {
     var have = SHOTS[lang] || [];
@@ -171,6 +171,27 @@
       var started = false;
       new IntersectionObserver(function (es) { if (es[0].isIntersecting && !started) { started = true; playChat(); } }, { threshold: .3 }).observe(chatLog);
     } else playChat();
+  }
+
+  /* ── Comparateur : plusieurs paires avant/après, au choix ou en rotation ── */
+  var cmpBox = $('compare'), cmpDots = $('compareDots');
+  if (cmpBox && cmpDots) {
+    var dotsB = $$('button', cmpDots), cmpTimer = null, cmpIdx = 0;
+    var showPair = function (i) {
+      cmpIdx = i; var id = dotsB[i].dataset.pair;
+      cmpBox.classList.add('swap');
+      setTimeout(function () {
+        cmpBox.querySelector(':scope > img').src = 'assets/ba/' + id + '-after.jpg';
+        cmpBox.querySelector('.compare-before img').src = 'assets/ba/' + id + '-before.jpg';
+        cmpBox.classList.remove('swap');
+      }, 250);
+      dotsB.forEach(function (b, j) { b.classList.toggle('on', j === i); });
+    };
+    dotsB.forEach(function (b, i) { b.addEventListener('click', function (e) { e.stopPropagation(); clearInterval(cmpTimer); showPair(i); }); });
+    if (!still) {
+      cmpTimer = setInterval(function () { showPair((cmpIdx + 1) % dotsB.length); }, 4500);
+      cmpBox.querySelector('input').addEventListener('pointerdown', function () { clearInterval(cmpTimer); });
+    }
   }
 
   /* ── Langues ── */
