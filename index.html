@@ -74,7 +74,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap">
   <link rel="preload" as="image" href="assets/app/facescan.jpg" fetchpriority="high">
-  <link rel="stylesheet" href="site.css?v=19">
+  <link rel="stylesheet" href="site.css?v=20">
 </head>
 <body>
 
@@ -104,7 +104,7 @@
 <section class="hero" id="hero">
   <div class="wrap">
     <span class="pill" data-i18n-html="hero.pill">4.7 <span class="stars" aria-hidden="true">★★★★★</span> · 300,000+ analyses</span>
-    <h1 data-i18n-html="hero.h1">Your acne has a cause. <em>Find it, fix it.</em></h1>
+    <h1 data-i18n-html="hero.h1">Finally understand your acne <em>with AcneTrack.</em></h1>
     <p class="lead" data-i18n="hero.lead">Scan your face and get a tailored plan for your acne.</p>
     <div class="hero-cta">
       <a class="btn btn-dark cta" href="#download">
@@ -143,12 +143,24 @@
         <figure class="after"><img src="assets/ba/f2-after.jpg" alt="" loading="lazy"><figcaption data-i18n="ba.after">After</figcaption></figure>
       </div>
       <div class="ba-pair">
+        <figure><img src="assets/ba/m1-before.jpg" alt="" loading="lazy"><figcaption data-i18n="ba.before">Before</figcaption></figure>
+        <figure class="after"><img src="assets/ba/m1-after.jpg" alt="" loading="lazy"><figcaption data-i18n="ba.after">After</figcaption></figure>
+      </div>
+      <div class="ba-pair">
         <figure><img src="assets/ba/f3-before.jpg" alt="" loading="lazy"><figcaption data-i18n="ba.before">Before</figcaption></figure>
         <figure class="after"><img src="assets/ba/f3-after.jpg" alt="" loading="lazy"><figcaption data-i18n="ba.after">After</figcaption></figure>
       </div>
       <div class="ba-pair">
+        <figure><img src="assets/ba/m2-before.jpg" alt="" loading="lazy"><figcaption data-i18n="ba.before">Before</figcaption></figure>
+        <figure class="after"><img src="assets/ba/m2-after.jpg" alt="" loading="lazy"><figcaption data-i18n="ba.after">After</figcaption></figure>
+      </div>
+      <div class="ba-pair">
         <figure><img src="assets/ba/f1-before.jpg" alt="" loading="lazy"><figcaption data-i18n="ba.before">Before</figcaption></figure>
         <figure class="after"><img src="assets/ba/f1-after.jpg" alt="" loading="lazy"><figcaption data-i18n="ba.after">After</figcaption></figure>
+      </div>
+      <div class="ba-pair">
+        <figure><img src="assets/ba/m3-before.jpg" alt="" loading="lazy"><figcaption data-i18n="ba.before">Before</figcaption></figure>
+        <figure class="after"><img src="assets/ba/m3-after.jpg" alt="" loading="lazy"><figcaption data-i18n="ba.after">After</figcaption></figure>
       </div>
     </div>
   </div>
@@ -254,23 +266,10 @@
           <span class="compare-tag l" data-i18n="app.week1">Week 1</span><span class="compare-tag r" data-i18n="app.week6">Week 6</span>
           <i class="compare-handle"></i>
           <input type="range" min="0" max="100" value="50" aria-label="Compare before and after">
-          <div class="compare-dots" id="compareDots"><button type="button" data-pair="f2" class="on" aria-label="1"></button><button type="button" data-pair="f3" aria-label="2"></button><button type="button" data-pair="f1" aria-label="3"></button></div>
         </div>
         <div class="tile-text">
           <h3 data-i18n="tools.evo.h">Track your progress</h3>
           <p data-i18n="app.compare.p">A photo and a rating of your skin every day, then compare before and after. Your full tracker, in one place.</p>
-        </div>
-      </article>
-      <article class="tile tile-trust span3 rv">
-        <div class="tile-text">
-          <h3 data-i18n="trust.h">Certified technology</h3>
-          <p data-i18n="trust.note">Spot scans run on CE-marked medical software (ISO 13485). AcneTrack does not replace a dermatologist.</p>
-        </div>
-        <div class="seals">
-          <div class="seal"><img src="assets/badge-ce.svg" alt="CE"><b>CE</b><span data-i18n="trust.ce">Medical software used for spot scans</span></div>
-          <div class="seal"><img src="assets/badge-iso-13485.webp" alt="ISO 13485"><b>ISO 13485</b><span data-i18n="trust.iso">Quality standard for medical devices</span></div>
-          <div class="seal"><img src="assets/badge-gdpr.webp" alt="GDPR"><b data-i18n="trust.gdpr.name">GDPR</b><span data-i18n="trust.gdpr">Your data protected under EU law</span></div>
-          <div class="seal"><i class="seal-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></i><b data-i18n="trust.private">Private photos</b><span data-i18n="trust.private.p">Never shared, deleted on request</span></div>
         </div>
       </article>
       <article class="tile rv">
@@ -424,7 +423,7 @@
   </a>
 </div>
 
-<script src="i18n.js?v=19"></script>
-<script src="site.js?v=18" defer></script>
+<script src="i18n.js?v=20"></script>
+<script src="site.js?v=19" defer></script>
 </body>
 </html>
