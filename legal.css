@@ -1,0 +1,24 @@
+/* Pages légales : même habillage que le reste du site (menu, titre, pied de page).
+   Le texte du document garde sa mise en page, reprise ici avec les couleurs et polices de site.css. */
+.phead .back-link { display: inline-flex; align-items: center; gap: 6px; margin-bottom: 18px; font-size: 14px; font-weight: 600; color: var(--fg-55); transition: color .2s; }
+.phead .back-link:hover { color: var(--fg); }
+.phead .meta { margin-top: 4px; font-size: 14px; color: var(--fg-55); }
+.legal-layout { max-width: 860px; margin: 0 auto; padding: 8px var(--gutter) 72px; }
+.toc { margin-bottom: 40px; padding: 22px 24px; background: var(--card); border: 1px solid var(--fg-6); border-radius: 22px; box-shadow: var(--shadow); }
+.toc-heading { margin-bottom: 14px; font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--peach-deep); }
+.toc ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.toc a { font-size: 14.5px; font-weight: 600; color: var(--fg-70); transition: color .2s; }
+.toc a:hover { color: var(--peach-deep); }
+.legal-content h2 { margin: 52px 0 14px; padding-top: 28px; border-top: 1px solid var(--fg-10); font-size: 24px; letter-spacing: -.02em; scroll-margin-top: calc(var(--nav-h) + 16px); }
+.legal-content h2:first-child { margin-top: 0; padding-top: 0; border-top: 0; }
+.legal-content h3 { margin: 28px 0 8px; font-family: "Manrope", system-ui, sans-serif; font-size: 17px; font-weight: 700; letter-spacing: 0; line-height: 1.35; }
+.legal-content h4 { margin: 20px 0 6px; font-family: "Manrope", system-ui, sans-serif; font-size: 15px; font-weight: 700; letter-spacing: 0; color: var(--fg-55); }
+.legal-content p { margin: 0 0 14px; font-size: 15.5px; line-height: 1.65; color: var(--fg-70); }
+.legal-content ul { margin: 0 0 14px; padding-left: 22px; }
+.legal-content li { margin-bottom: 7px; font-size: 15.5px; line-height: 1.6; color: var(--fg-70); }
+.legal-content strong { color: var(--fg); font-weight: 700; }
+.legal-content a { color: var(--fg); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--peach-deep); }
+.legal-content a:hover { color: var(--peach-deep); }
+.callout { margin: 24px 0; padding: 16px 20px; background: var(--peach-soft); border: 1px solid var(--peach); border-radius: 18px; }
+.callout p { margin: 0; font-size: 15px; }
+@media (min-width: 720px) { .legal-layout { padding-bottom: 104px; } .toc { padding: 26px 30px; } }

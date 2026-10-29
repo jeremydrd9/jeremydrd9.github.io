@@ -42,7 +42,7 @@
   var nav = $('nav'), dock = $('dock');
   var onScroll = function () { nav.classList.toggle('scrolled', scrollY > 8); };
   addEventListener('scroll', onScroll, { passive: true }); onScroll();
-  if ('IntersectionObserver' in window) {
+  if ('IntersectionObserver' in window && dock && $('download') && document.querySelector('.hero .hero-cta')) {
     var heroCtaOut = false, dlIn = false;
     var syncDock = function () {
       var show = heroCtaOut && !dlIn;
@@ -57,7 +57,7 @@
   /* ── Apparitions ── */
   html.classList.add('anim');
   // blocs dont les enfants arrivent en cascade
-  $$('.sec-head, .plan-text, .checks, .card, .tile-text, .faq .rv, .download .wrap').forEach(function (el) {
+  $$('.sec-head, .plan-text, .checks, .card, .tile-text, .faq .rv, .download .wrap, .phead .wrap').forEach(function (el) {
     el.classList.add('st');
     Array.prototype.forEach.call(el.children, function (c, i) { c.style.setProperty('--i', i); });
   });
@@ -71,7 +71,7 @@
       revealables.forEach(function (el) { var r = el.getBoundingClientRect(); if (r.top < innerHeight * .9 && r.bottom > 0) el.classList.add('in'); });
     }, 900);
   } else revealables.forEach(function (el) { el.classList.add('in'); });
-  requestAnimationFrame(function () { requestAnimationFrame(function () { html.classList.add('ready'); $('heroFan').classList.add('in'); }); });
+  requestAnimationFrame(function () { requestAnimationFrame(function () { html.classList.add('ready'); if ($('heroFan')) $('heroFan').classList.add('in'); }); });
 
   /* ── Scan visage : les trois étapes s'enchaînent en boucle ── */
   $$('.facescan').forEach(function (scr, k) {
@@ -174,6 +174,53 @@
   }
 
 
+  /* ── Questionnaire : trois questions qui se répondent toutes seules ── */
+  var quiz = $('quiz');
+  if (quiz) {
+    var qs = $$('.qz-slide', quiz), qbar = quiz.querySelector('.qz-bar b'), qbtn = quiz.querySelector('.qz-btn');
+    var QPROG = [28, 46, 64], qi = 0, qt = [], qstarted = false;
+    var qlater = function (fn, ms) { qt.push(setTimeout(fn, ms)); };
+    var picksOf = function (s) { return (s.dataset.pick || '').split(',').map(Number); };
+    var qshow = function (i) {
+      qs.forEach(function (s, k) { s.classList.toggle('before', k < i); s.classList.toggle('after', k > i); });
+      qbar.style.width = QPROG[i] + '%';
+    };
+    var qclear = function () { $$('.qz-opt', quiz).forEach(function (o) { o.classList.remove('sel', 'tap'); }); };
+    qshow(0);
+    if (still) {
+      picksOf(qs[0]).forEach(function (p) { $$('.qz-opt', qs[0])[p].classList.add('sel'); });
+    } else {
+      var qrun = function () {
+        var opts = $$('.qz-opt', qs[qi]), picks = picksOf(qs[qi]), t = 1000;
+        picks.forEach(function (p) {
+          qlater(function () { opts[p].classList.add('tap'); }, t);
+          qlater(function () { opts[p].classList.remove('tap'); opts[p].classList.add('sel'); }, t + 170);
+          t += 800;
+        });
+        qlater(function () { qbtn.classList.add('press'); }, t + 300);
+        qlater(function () {
+          qbtn.classList.remove('press');
+          if (qi < qs.length - 1) { qi++; qshow(qi); }
+          else {
+            // retour à la première question : elle revient par la droite, la dernière sort à gauche
+            var first = qs[0], last = qs[qs.length - 1];
+            qs.slice(0, -1).forEach(function (x) { $$('.qz-opt', x).forEach(function (o) { o.classList.remove('sel', 'tap'); }); });
+            first.classList.add('nt', 'after'); first.classList.remove('before');
+            void first.offsetWidth; first.classList.remove('nt', 'after');
+            last.classList.add('before'); last.classList.remove('after');
+            qs.forEach(function (x, k) { if (k > 0 && k < qs.length - 1) { x.classList.remove('before'); x.classList.add('after'); } });
+            qi = 0; qbar.style.width = QPROG[0] + '%';
+            qlater(qclear, 700);
+          }
+          qlater(qrun, 900);
+        }, t + 650);
+      };
+      if ('IntersectionObserver' in window) {
+        new IntersectionObserver(function (es) { if (es[0].isIntersecting && !qstarted) { qstarted = true; qlater(qrun, 400); } }, { threshold: .35 }).observe(quiz);
+      } else qlater(qrun, 400);
+    }
+  }
+
   /* ── Langues ── */
   var I18N = window.ACNETRACK_I18N || {};
   var AGE_WORD = { en: '', fr: ' ans', de: ' Jahre' };
@@ -183,7 +230,8 @@
   document.addEventListener('click', function () { setMenu(false); });
   addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
 
-  var defaults = { 'meta.title': document.title, 'meta.description': (document.querySelector('meta[name=description]') || {}).content || '' };
+  var PG = document.body.dataset.page ? document.body.dataset.page + '.' : '';
+  var defaults = {}; defaults[PG + 'meta.title'] = document.title; defaults[PG + 'meta.description'] = (document.querySelector('meta[name=description]') || {}).content || '';
   $$('[data-i18n],[data-i18n-html]').forEach(function (el) {
     var k = el.dataset.i18n || el.dataset.i18nHtml;
     if (!(k in defaults)) defaults[k] = el.dataset.i18n ? el.textContent : el.innerHTML;
@@ -196,9 +244,13 @@
     html.lang = lang;
     langLabel.textContent = lang.toUpperCase();
     $$('[data-lang]').forEach(function (b) { b.setAttribute('aria-current', b.dataset.lang === lang ? 'true' : 'false'); });
-    document.title = dict['meta.title'] || defaults['meta.title'];
-    var m = document.querySelector('meta[name=description]'); if (m) m.content = dict['meta.description'] || defaults['meta.description'];
+    document.title = dict[PG + 'meta.title'] || defaults[PG + 'meta.title'];
+    var m = document.querySelector('meta[name=description]'); if (m) m.content = dict[PG + 'meta.description'] || defaults[PG + 'meta.description'];
     applyShots(lang);
+    $$('a[data-mail]').forEach(function (a) {
+      var k = a.dataset.mail, sub = dict[k + '.s'] || a.dataset.subject, body = dict[k + '.b'] || a.dataset.body;
+      a.href = 'mailto:contact@acne-track.com?subject=' + encodeURIComponent(sub) + '&body=' + encodeURIComponent(body);
+    });
     try { localStorage.setItem('lang', lang); } catch (e) { /* navigation privée */ }
   }
   $$('[data-lang]').forEach(function (b) {

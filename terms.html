@@ -8,7 +8,7 @@
   <meta name="description" content="The terms of service governing your use of the AcneTrack app, including subscriptions, billing, acceptable use and medical disclaimers.">
   <link rel="canonical" href="https://acne-track.com/terms.html">
   <meta name="robots" content="index, follow, max-image-preview:large">
-  <meta name="theme-color" content="#FF9F6D">
+  <meta name="theme-color" content="#FBF8F4">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
@@ -24,8 +24,9 @@
   <meta name="twitter:image" content="https://acne-track.com/assets/og-image.jpg">
 
   <!-- Icons -->
-  <link rel="icon" type="image/png" sizes="512x512" href="assets/Logo_Acnetrack.png">
-  <link rel="apple-touch-icon" href="assets/Logo_Acnetrack.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512.png">
+  <link rel="apple-touch-icon" href="assets/favicon-512.png">
 
   <!-- Structured data -->
   <script type="application/ld+json">
@@ -53,36 +54,39 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Manrope:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Manrope:wght@400;500;600;700&display=swap"></noscript>
 
-  <link rel="stylesheet" href="style.css?v=24">
+  <link rel="stylesheet" href="site.css?v=27">
+  <link rel="stylesheet" href="legal.css?v=1">
 </head>
-<body>
+<body data-page="terms">
 
 <!-- ─── Navigation ─── -->
-<nav class="nav" role="navigation" aria-label="Main navigation">
-  <div class="nav-inner">
-    <a href="/" class="nav-brand">
-      <img src="assets/Logo_Acnetrack.webp" alt="" class="nav-logo" width="28" height="28" aria-hidden="true">
-      AcneTrack
-    </a>
-    <ul class="nav-links">
-      <li><a href="/">Home</a></li>
-      <li><a href="/#features">Features</a></li>
-      <li><a href="/#contact">Contact</a></li>
-    </ul>
+<nav class="nav" id="nav" aria-label="Main navigation">
+  <div class="wrap">
+    <a href="/" class="brand"><img src="assets/Logo_Acnetrack.webp" alt="" width="28" height="28">AcneTrack</a>
     <div class="nav-right">
-      <a href="https://apps.apple.com/us/app/acnetrack-your-acne-journey/id6743371480" class="nav-store-pill" target="_blank" rel="noopener">App Store</a>
-      <a href="https://play.google.com/store/apps/details?id=com.acnetrack.app" class="nav-store-pill nav-store-pill-alt" target="_blank" rel="noopener">Google Play</a>
+      <div class="lang">
+        <button class="lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false" aria-label="Language">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/></svg>
+          <span id="langLabel">EN</span>
+        </button>
+        <div class="lang-menu" id="langMenu" role="menu">
+          <button data-lang="en" role="menuitem">English</button>
+          <button data-lang="fr" role="menuitem">Français</button>
+          <button data-lang="de" role="menuitem">Deutsch</button>
+        </div>
+      </div>
+      <a class="btn btn-sm btn-glow cta" href="/#download" data-i18n="nav.cta">Start</a>
     </div>
   </div>
 </nav>
 
 <!-- ─── Page Header ─── -->
-<header class="page-header">
-  <a href="/" class="back-link" aria-label="Back to home">
-    ← Back to home
-  </a>
-  <h1>Terms &amp; Conditions</h1>
-  <p class="meta">Last updated: March 31, 2025</p>
+<header class="phead">
+  <div class="wrap">
+    <a href="/" class="back-link" aria-label="Back to home">← Back to home</a>
+    <h1>Terms &amp; Conditions</h1>
+    <p class="meta">Last updated: March 31, 2025</p>
+  </div>
 </header>
 
 <!-- ─── Content ─── -->
@@ -316,34 +320,26 @@
 
 <!-- ─── Footer ─── -->
 <footer>
-  <div class="footer-inner">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <a href="/" class="nav-brand">AcneTrack<span class="dot">.</span></a>
-        <p>Your personal AI skin coach.</p>
+  <div class="wrap">
+    <div class="foot">
+      <div class="foot-brand">
+        <a href="/" class="brand"><img src="assets/Logo_Acnetrack.webp" alt="" width="28" height="28">AcneTrack</a>
+        <p class="about" data-i18n="foot.about">Your anti-acne plan, built for your skin.</p>
       </div>
-      <div class="footer-links-col">
-        <h5>Legal</h5>
-        <ul>
-          <li><a href="privacy.html">Privacy Policy</a></li>
-          <li><a href="terms.html">Terms &amp; Conditions</a></li>
-          <li><a href="mailto:contact@acne-track.com">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-links-col">
-        <h5>App</h5>
-        <ul>
-          <li><a href="https://apps.apple.com/us/app/acnetrack-your-acne-journey/id6743371480" target="_blank" rel="noopener">App Store</a></li>
-          <li><a href="https://play.google.com/store/apps/details?id=com.acnetrack.app" target="_blank" rel="noopener">Google Play</a></li>
-        </ul>
-      </div>
+      <div><h5 data-i18n="foot.product">Product</h5><ul><li><a href="/#how" data-i18n="nav.how">How it works</a></li><li><a href="/#plan" data-i18n="plan.eyebrow">Your plan</a></li><li><a href="/#skincare" data-i18n="skin.eyebrow">Your skincare</a></li><li><a href="/#tools" data-i18n="nav.tools">The app</a></li><li><a href="technology.html" data-i18n="foot.techpage">Our technology</a></li><li><a href="/#faq" data-i18n="nav.faq">FAQ</a></li></ul></div>
+      <div><h5 data-i18n="foot.company">Company</h5><ul><li><a href="about.html" data-i18n="foot.aboutpage">About us</a></li><li><a href="careers.html" data-i18n="foot.careers">Careers</a></li><li><a href="mailto:contact@acne-track.com" data-i18n="foot.contact">Contact</a></li></ul></div>
+      <div><h5 data-i18n="foot.legal">Legal</h5><ul><li><a href="privacy.html" data-i18n="foot.privacy">Privacy policy</a></li><li><a href="terms.html" data-i18n="foot.terms">Terms</a></li></ul></div>
+      <div><h5 data-i18n="foot.languages">Languages</h5><ul><li><button type="button" data-lang="en">English</button></li><li><button type="button" data-lang="fr">Français</button></li><li><button type="button" data-lang="de">Deutsch</button></li></ul></div>
     </div>
-    <div class="footer-bottom">
-      <p class="footer-copy">&copy; 2026 Bsr Labs — AcneTrack. All rights reserved.</p>
-      <p class="footer-disc">AcneTrack is not a medical device. Consult a dermatologist for medical concerns.</p>
+    <div class="foot-bottom">
+      <span>© 2026 Bsr Labs · AcneTrack</span>
+      <span data-i18n="foot.disc">AcneTrack is not a medical device and does not provide medical advice.</span>
     </div>
   </div>
 </footer>
 
+<script src="i18n.js?v=24"></script>
+<script src="i18n-pages.js?v=24"></script>
+<script src="site.js?v=23" defer></script>
 </body>
 </html>

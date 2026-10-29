@@ -74,7 +74,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap">
   <link rel="preload" as="image" href="assets/app/facescan.jpg" fetchpriority="high">
-  <link rel="stylesheet" href="site.css?v=20">
+  <link rel="stylesheet" href="site.css?v=27">
 </head>
 <body>
 
@@ -174,6 +174,50 @@
       <article class="card rv">
         <div class="card-media">
           <div class="phone">
+            <div class="scr quiz" id="quiz" aria-hidden="true">
+              <div class="qz-top"><i class="qz-back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></i><span class="qz-bar"><b></b></span></div>
+              <div class="qz-slides">
+                <section class="qz-slide" data-pick="1">
+                  <h4 data-i18n="qz.q1.h">How old are you?</h4>
+                  <p data-i18n="qz.q1.p">Skin evolves differently at every age.</p>
+                  <div class="qz-list">
+                    <div class="qz-opt"><b data-i18n="qz.a1">Under 18</b><i></i></div>
+                    <div class="qz-opt"><b data-i18n="qz.a2">18 to 24</b><i></i></div>
+                    <div class="qz-opt"><b data-i18n="qz.a3">25 to 34</b><i></i></div>
+                    <div class="qz-opt"><b data-i18n="qz.a4">35+</b><i></i></div>
+                  </div>
+                </section>
+                <section class="qz-slide" data-pick="1">
+                  <h4 data-i18n="qz.q2.h">How many hours do you sleep per night?</h4>
+                  <p data-i18n="qz.q2.p">Your sleep directly affects how your skin heals.</p>
+                  <div class="qz-list">
+                    <div class="qz-opt"><span class="qz-em">🥱</span><b data-i18n="qz.s1">5-6h</b><i></i></div>
+                    <div class="qz-opt"><span class="qz-em">😴</span><b data-i18n="qz.s2">6-7h</b><i></i></div>
+                    <div class="qz-opt"><span class="qz-em">😌</span><b data-i18n="qz.s3">7-8h</b><i></i></div>
+                    <div class="qz-opt"><span class="qz-em">🙂</span><b data-i18n="qz.s4">8-9h</b><i></i></div>
+                  </div>
+                </section>
+                <section class="qz-slide" data-pick="1">
+                  <h4 data-i18n="qz.q3.h">Do you often feel stressed?</h4>
+                  <p data-i18n="qz.q3.p">Stress can trigger inflammation and breakouts.</p>
+                  <div class="qz-list">
+                    <div class="qz-opt"><b data-i18n="qz.t1">Yes, every day</b><i></i></div>
+                    <div class="qz-opt"><b data-i18n="qz.t2">Often</b><i></i></div>
+                    <div class="qz-opt"><b data-i18n="qz.t3">Rarely</b><i></i></div>
+                    <div class="qz-opt"><b data-i18n="qz.t4">Never</b><i></i></div>
+                  </div>
+                </section>
+              </div>
+              <div class="qz-btn" data-i18n="qz.continue">Continue</div>
+            </div>
+          </div>
+        </div>
+        <h3 data-i18n="how.s1.h">Complete your profile</h3>
+        <p data-i18n="how.s1.p">Answer a few questions so we can understand your situation in depth and personalize your plan.</p>
+      </article>
+      <article class="card rv d1">
+        <div class="card-media">
+          <div class="phone">
             <div class="scr facescan">
               <img src="assets/app/facescan.jpg" alt="" loading="lazy" decoding="async">
               <i class="fs-sweep"></i>
@@ -185,13 +229,8 @@
             </div>
           </div>
         </div>
-        <h3 data-i18n="how.s1.h">Scan your face</h3>
-        <p data-i18n="how.s1.p">The AI analyzes your skin in seconds</p>
-      </article>
-      <article class="card rv d1">
-        <div class="card-media"><div class="phone"><img data-shot="quiz" src="assets/app/en/quiz.jpg" alt="AcneTrack questionnaire: what kind of acne are you struggling with" loading="lazy"></div></div>
-        <h3 data-i18n="how.s2.h">Complete your profile</h3>
-        <p data-i18n="how.s2.p">We learn your situation to personalize your plan</p>
+        <h3 data-i18n="how.s2.h">Scan your face</h3>
+        <p data-i18n="how.s2.p">Our scanner analyzes your face and your acne in a few seconds.</p>
       </article>
       <article class="card rv d2">
         <div class="card-media multi">
@@ -200,7 +239,7 @@
           <div class="phone m-c"><img data-shot="dashboard" src="assets/app/en/dashboard.jpg" alt="AcneTrack plan: main cause, goal date and acne score" loading="lazy"></div>
         </div>
         <h3 data-i18n="how.s3.h">Get your program</h3>
-        <p data-i18n="how.s3.p">A plan designed to get rid of your acne</p>
+        <p data-i18n="how.s3.p">A complete, personalized plan built on what your scan identified, designed to finally clear your acne.</p>
       </article>
     </div>
   </div>
@@ -226,14 +265,19 @@
 <!-- ─── Ta skincare ─── -->
 <section class="sec plan skin" id="skincare">
   <div class="wrap plan-grid">
-    <div class="plan-shot rv"><div class="phone"><img data-shot="routine" src="assets/app/en/routine.jpg" alt="AcneTrack personalized routine with products to check off" loading="lazy"></div></div>
+    <div class="skin-shot rv" aria-hidden="true">
+      <div class="phone"><img data-shot="routine" src="assets/app/en/routine.jpg" alt="" loading="lazy"></div>
+      <div class="pop pop-1"><img src="assets/products/cleanser-cut.png" alt="" loading="lazy"></div>
+      <div class="pop pop-2"><img src="assets/products/bha-cut.png" alt="" loading="lazy"></div>
+      <div class="pop pop-3"><img src="assets/products/moisturizer-cut.png" alt="" loading="lazy"></div>
+    </div>
     <div class="plan-text rv d1">
       <span class="eyebrow" data-i18n="skin.eyebrow">Your skincare</span>
-      <h2 data-i18n="skin.h2">Skincare that finally suits your skin.</h2>
+      <h2 data-i18n="skin.h2">A skincare routine built from your scan.</h2>
       <ul class="checks">
-        <li><b data-i18n="skin.l1.h">A tailored routine</b><span data-i18n="skin.l1.p">Morning and night, products picked for your skin, your budget and the cause of your acne.</span></li>
-        <li><b data-i18n="skin.l2.h">Your current routine, tracked</b><span data-i18n="skin.l2.p">Add your own products and check off each step, day after day.</span></li>
-        <li><b data-i18n="skin.l3.h">Products checked before you buy</b><span data-i18n="skin.l3.p">Scan a product and see if it's recommended for your skin.</span></li>
+        <li><b data-i18n="skin.l1.h">Get your personalized skincare routine</b><span data-i18n="skin.l1.p">Based on your scan results, we recommend a personalized skincare routine, adapted to your skin and your profile.</span></li>
+        <li><b data-i18n="skin.l2.h">Your skincare tracker</b><span data-i18n="skin.l2.p">Add, remove or swap products: the recommended routine becomes yours, and you check off each step, day after day.</span></li>
+        <li><b data-i18n="skin.l3.h">Stay consistent, day after day</b><span data-i18n="skin.l3.p">A streak to keep going, your weekly progress and today's skincare tasks: the motivation to complete everything, every day.</span></li>
       </ul>
     </div>
   </div>
@@ -400,11 +444,13 @@
 <footer>
   <div class="wrap">
     <div class="foot">
-      <div>
+      <div class="foot-brand">
         <a href="/" class="brand"><img src="assets/Logo_Acnetrack.webp" alt="" width="28" height="28">AcneTrack</a>
         <p class="about" data-i18n="foot.about">Your anti-acne plan, built for your skin.</p>
       </div>
-      <div><h5 data-i18n="foot.company">Company</h5><ul><li><a href="mailto:contact@acne-track.com" data-i18n="foot.contact">Contact</a></li><li><a href="privacy.html" data-i18n="foot.privacy">Privacy policy</a></li><li><a href="terms.html" data-i18n="foot.terms">Terms</a></li></ul></div>
+      <div><h5 data-i18n="foot.product">Product</h5><ul><li><a href="/#how" data-i18n="nav.how">How it works</a></li><li><a href="/#plan" data-i18n="plan.eyebrow">Your plan</a></li><li><a href="/#skincare" data-i18n="skin.eyebrow">Your skincare</a></li><li><a href="/#tools" data-i18n="nav.tools">The app</a></li><li><a href="technology.html" data-i18n="foot.techpage">Our technology</a></li><li><a href="/#faq" data-i18n="nav.faq">FAQ</a></li></ul></div>
+      <div><h5 data-i18n="foot.company">Company</h5><ul><li><a href="about.html" data-i18n="foot.aboutpage">About us</a></li><li><a href="careers.html" data-i18n="foot.careers">Careers</a></li><li><a href="mailto:contact@acne-track.com" data-i18n="foot.contact">Contact</a></li></ul></div>
+      <div><h5 data-i18n="foot.legal">Legal</h5><ul><li><a href="privacy.html" data-i18n="foot.privacy">Privacy policy</a></li><li><a href="terms.html" data-i18n="foot.terms">Terms</a></li></ul></div>
       <div><h5 data-i18n="foot.languages">Languages</h5><ul><li><button type="button" data-lang="en">English</button></li><li><button type="button" data-lang="fr">Français</button></li><li><button type="button" data-lang="de">Deutsch</button></li></ul></div>
     </div>
     <div class="foot-bottom">
@@ -423,7 +469,7 @@
   </a>
 </div>
 
-<script src="i18n.js?v=20"></script>
-<script src="site.js?v=19" defer></script>
+<script src="i18n.js?v=24"></script>
+<script src="site.js?v=23" defer></script>
 </body>
 </html>
